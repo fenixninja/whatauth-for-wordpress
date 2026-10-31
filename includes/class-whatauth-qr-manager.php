@@ -348,7 +348,7 @@ class WhatAuth_QR_Manager {
         $line_id                 = isset($_POST['line_id']) ? sanitize_text_field(wp_unslash($_POST['line_id'])) : '';
         $admin_phone             = isset($_POST['admin_phone']) ? sanitize_text_field(wp_unslash($_POST['admin_phone'])) : '';
         $allow_registration      = !empty($_POST['allow_registration']) ? 1 : 0;
-        $default_role            = isset($_POST['default_role']) ? sanitize_text_field(wp_unslash($_POST['default_role'])) : 'subscriber;
+        $default_role            = isset($_POST['default_role']) ? sanitize_text_field(wp_unslash($_POST['default_role'])) : 'subscriber';
         $hide_wp_credentials     = !empty($_POST['hide_wp_credentials']) ? 1 : 0;
         $desktop_show_walink     = !empty($_POST['desktop_show_walink']) ? 1 : 0;
         $mobile_show_walink_only = !empty($_POST['mobile_show_walink_only']) ? 1 : 0;
