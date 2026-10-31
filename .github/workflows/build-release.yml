@@ -42,16 +42,16 @@ jobs:
 
       - name: Build Zip Package
         run: |
-          mkdir -p build/whatauth-for-wordpress
-          rsync -av --exclude='.git*' --exclude='build' ./ build/whatauth-for-wordpress/
+          mkdir -p build/whatauth
+          rsync -av --exclude='.*' --exclude='build' ./ build/whatauth/
           cd build
-          zip -r ../whatauth-for-wordpress.zip whatauth-for-wordpress/
+          zip -r ../whatauth.zip whatauth/
           cd ..
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          files: whatauth-for-wordpress.zip
+          files: whatauth.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
