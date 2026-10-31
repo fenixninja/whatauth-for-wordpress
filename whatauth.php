@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       WhatAuth – Passwordless Login & Smart QR Hub
- * Plugin URI:        https://whatauth.com
+ * Plugin URI:        https://whatauth.com/wordpress
  * Description:       Passwordless authentication, real-time verified sessions, and comprehensive QR campaign studio (Login, Pixel, Print) with instant Auto-Reply.
  * Version:           1.0.0
  * Requires at least: 6.0
