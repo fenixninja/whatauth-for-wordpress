@@ -1,0 +1,188 @@
+/**
+ * WhatAuth Frontend CSS - Botones, Modales y QR Display
+ */
+
+:root {
+  --wa-brand-green: #25D366;
+  --wa-brand-green-hover: #20ba5a;
+  --wa-brand-dark: #128C7E;
+  --wa-brand-surface: #ffffff;
+}
+
+.whatauth-trigger-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  background-color: #25D366 !important;
+  border-color: #20ba5a !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  border-radius: 8px !important;
+  padding: 10px 18px !important;
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+  box-shadow: 0 2px 4px rgba(37, 211, 102, 0.25) !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  text-decoration: none !important;
+}
+
+.whatauth-trigger-btn:hover {
+  background-color: #20ba5a !important;
+  border-color: #1a9e4d !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(37, 211, 102, 0.35) !important;
+}
+
+.whatauth-trigger-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.whatauth-trigger-btn img,
+.whatauth-trigger-btn svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* Modal Emergente de Login */
+.whatauth-front-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.whatauth-front-modal-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.whatauth-front-modal {
+  background: #ffffff;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 16px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+  padding: 24px;
+  text-align: center;
+  position: relative;
+  animation: waFrontModalPop 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+@keyframes waFrontModalPop {
+  from { transform: scale(0.92); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.whatauth-front-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  line-height: 1;
+  color: #888888;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 50%;
+}
+
+.whatauth-front-modal-close:hover {
+  color: #222222;
+  background: #f0f0f0;
+}
+
+.whatauth-qr-container {
+  margin: 16px auto;
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  border: 1px solid #eeeeee;
+}
+
+.whatauth-qr-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+
+.whatauth-pin-box {
+  margin: 12px auto 0;
+  display: inline-block;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #1f2937;
+  letter-spacing: 1px;
+}
+
+.whatauth-status-text {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 14px;
+}
+
+.whatauth-mobile-direct-btn {
+  display: none;
+  width: 100%;
+  margin-top: 14px;
+  background: #25D366;
+  color: #ffffff;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Reglas responsivas Desktop vs Móvil para Inline Login */
+.whatauth-mobile-app-card {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .wa-hide-on-desktop {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .wa-hide-on-mobile {
+    display: none !important;
+  }
+  .whatauth-mobile-app-card {
+    display: block !important;
+  }
+  .whatauth-mobile-direct-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+}
+

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "whatauth/qr-login",
+  "version": "1.0.0",
+  "title": "WhatAuth QR Login",
+  "category": "widgets",
+  "icon": "shield",
+  "description": "Permite a los visitantes iniciar sesión con WhatsApp escaneando un código QR dinámico.",
+  "keywords": ["whatsapp", "login", "passwordless", "whatauth", "qr"],
+  "textdomain": "whatauth-for-wordpress",
+  "attributes": {
+    "redirectUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "Iniciar sesión con WhatsApp"
+    },
+    "displayMode": {
+      "type": "string",
+      "default": "button"
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": ["center", "wide", "full"]
+  }
+}
+
