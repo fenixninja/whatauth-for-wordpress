@@ -3,8 +3,8 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-$domain = wp_parse_url(home_url(), PHP_URL_HOST);
-$available_roles = WhatAuth_Roles::get_available_roles();
+$whatauth_domain          = wp_parse_url(home_url(), PHP_URL_HOST);
+$whatauth_available_roles = WhatAuth_Roles::get_available_roles();
 ?>
 <div class="wrap whatauth-admin-wrap" style="max-width: 680px; margin: 40px auto;">
     <div style="text-align: center; margin-bottom: 30px;">
@@ -32,7 +32,7 @@ $available_roles = WhatAuth_Roles::get_available_roles();
 
             <div style="margin-bottom: 20px;">
                 <label for="wizard-domain" style="display: block; font-weight: 600; margin-bottom: 6px;"><?php esc_html_e('Dominio Autorizado de este WordPress', 'whatauth-for-wordpress'); ?></label>
-                <input type="text" id="wizard-domain" value="<?php echo esc_attr($domain); ?>" style="width: 100%;" required>
+                <input type="text" id="wizard-domain" value="<?php echo esc_attr($whatauth_domain); ?>" style="width: 100%;" required>
             </div>
 
             <div style="margin-bottom: 20px;">
@@ -46,9 +46,9 @@ $available_roles = WhatAuth_Roles::get_available_roles();
             <div style="margin-bottom: 20px;">
                 <label for="wizard-default-role" style="display: block; font-weight: 600; margin-bottom: 6px;"><?php esc_html_e('Rol para Nuevos Registros por WhatsApp', 'whatauth-for-wordpress'); ?></label>
                 <select id="wizard-default-role" style="width: 100%;">
-                    <?php foreach ($available_roles as $role_key => $role_name) : ?>
-                        <option value="<?php echo esc_attr($role_key); ?>" <?php selected('subscriber', $role_key); ?>>
-                            <?php echo esc_html($role_name); ?>
+                    <?php foreach ($whatauth_available_roles as $whatauth_role_key => $whatauth_role_name) : ?>
+                        <option value="<?php echo esc_attr($whatauth_role_key); ?>" <?php selected('subscriber', $whatauth_role_key); ?>>
+                            <?php echo esc_html($whatauth_role_name); ?>
                         </option>
                     <?php endforeach; ?>
                 </select>

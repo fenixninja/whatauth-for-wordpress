@@ -1,4 +1,4 @@
-# WhatAuth – Passwordless WhatsApp Login & Smart QR Hub for WordPress
+# WhatAuth – Passwordless Login & Smart QR Hub
 
 [![GPLv2+ License](https://img.shields.io/badge/License-GPLv2%2B-blue.svg)](https://www.gnu.org/licenses/gpl-2.0.html)
 [![WordPress](https://img.shields.io/badge/WordPress-6.0%2B-21759b.svg)](https://wordpress.org)

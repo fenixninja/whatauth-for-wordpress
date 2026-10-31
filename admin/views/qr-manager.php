@@ -3,9 +3,9 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-$settings = get_option('whatauth_settings', array());
-$current_plan = !empty($settings['plan']) ? strtoupper($settings['plan']) : 'STARTER';
-$is_pro_agency = in_array($current_plan, array('PRO', 'AGENCY'), true);
+$whatauth_settings = get_option('whatauth_settings', array());
+$whatauth_current_plan = !empty($whatauth_settings['plan']) ? strtoupper($whatauth_settings['plan']) : 'STARTER';
+$whatauth_is_pro_agency = in_array($whatauth_current_plan, array('PRO', 'AGENCY'), true);
 ?>
 <div class="wrap whatauth-admin-wrap">
     <div class="whatauth-header">
@@ -81,11 +81,11 @@ $is_pro_agency = in_array($current_plan, array('PRO', 'AGENCY'), true);
                     </button>
                     <button type="button" class="whatauth-studio-tab-btn" data-studio-pane="pane-autoreply">
                         <?php esc_html_e('2. Auto-Reply', 'whatauth-for-wordpress'); ?>
-                        <span class="wa-tab-lock" <?php echo $is_pro_agency ? 'style="display:none;"' : ''; ?> style="display:inline-flex; vertical-align:middle; margin-left:3px;"><svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg></span>
+                        <span class="wa-tab-lock" <?php echo $whatauth_is_pro_agency ? 'style="display:none;"' : ''; ?> style="display:inline-flex; vertical-align:middle; margin-left:3px;"><svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg></span>
                     </button>
                     <button type="button" class="whatauth-studio-tab-btn" data-studio-pane="pane-branding">
                         <?php esc_html_e('3. Estilo & Logo', 'whatauth-for-wordpress'); ?>
-                        <span class="wa-tab-lock" <?php echo $is_pro_agency ? 'style="display:none;"' : ''; ?> style="display:inline-flex; vertical-align:middle; margin-left:3px;"><svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg></span>
+                        <span class="wa-tab-lock" <?php echo $whatauth_is_pro_agency ? 'style="display:none;"' : ''; ?> style="display:inline-flex; vertical-align:middle; margin-left:3px;"><svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg></span>
                     </button>
                 </div>
 
@@ -143,7 +143,7 @@ $is_pro_agency = in_array($current_plan, array('PRO', 'AGENCY'), true);
 
                 <!-- SUB-PESTAÑA 2: AUTO-REPLY -->
                 <div class="whatauth-studio-pane" id="pane-autoreply">
-                    <div class="wa-studio-lock-banner" <?php echo $is_pro_agency ? 'style="display:none;"' : ''; ?> style="background: #fef3c7; border: 1px solid #fde68a; border-radius: 8px; padding: 12px; color: #92400e; font-size: 13px; margin-bottom: 12px;">
+                    <div class="wa-studio-lock-banner" <?php echo $whatauth_is_pro_agency ? 'style="display:none;"' : ''; ?> style="background: #fef3c7; border: 1px solid #fde68a; border-radius: 8px; padding: 12px; color: #92400e; font-size: 13px; margin-bottom: 12px;">
                         <strong><svg style="display:inline-block;vertical-align:-1px;margin-right:4px;" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg><?php esc_html_e('Función Exclusiva PRO / Agency', 'whatauth-for-wordpress'); ?></strong>
                         <p style="margin: 4px 0 0 0; font-size: 12px;">
                             <?php esc_html_e('En la versión Starter el Auto-Reply no está disponible. Para enviar mensajes de bienvenida o catálogos automáticos tras escanear, actualiza a PRO o Agency.', 'whatauth-for-wordpress'); ?>
@@ -180,7 +180,7 @@ $is_pro_agency = in_array($current_plan, array('PRO', 'AGENCY'), true);
                                     <span><?php esc_html_e('Mensaje de Respuesta Automática', 'whatauth-for-wordpress'); ?></span>
                                     <span style="font-size: 10px; background: #e0f2fe; color: #0284c7; padding: 1px 6px; border-radius: 4px; font-weight: 700; text-transform: uppercase;">WYSIWYG</span>
                                 </div>
-                                <div class="wa-composer-tools wa-studio-pro-controls" style="<?php echo !$is_pro_agency ? 'display:none;' : 'display:flex;'; ?>">
+                                <div class="wa-composer-tools wa-studio-pro-controls" style="<?php echo !$whatauth_is_pro_agency ? 'display:none;' : 'display:flex;'; ?>">
                                     <button type="button" class="wa-toolbar-btn wa-wysiwyg-btn" data-syntax="*" title="<?php esc_attr_e('Negrita WhatsApp (*texto*)', 'whatauth-for-wordpress'); ?>"><strong>B</strong></button>
                                     <button type="button" class="wa-toolbar-btn wa-wysiwyg-btn" data-syntax="_" title="<?php esc_attr_e('Cursiva WhatsApp (_texto_)', 'whatauth-for-wordpress'); ?>"><em>I</em></button>
                                     <button type="button" class="wa-toolbar-btn wa-wysiwyg-btn" data-syntax="~" title="<?php esc_attr_e('Tachado WhatsApp (~texto~)', 'whatauth-for-wordpress'); ?>"><del>S</del></button>
@@ -188,7 +188,7 @@ $is_pro_agency = in_array($current_plan, array('PRO', 'AGENCY'), true);
                                 </div>
                             </div>
                             <input type="hidden" id="wa-field-autoreply-mode" value="TEXT">
-                            <textarea id="wa-field-autoreply-text" class="wa-composer-textarea" rows="4" placeholder="<?php esc_attr_e('Escribe el mensaje que recibirá el usuario inmediatamente tras escanear...', 'whatauth-for-wordpress'); ?>" <?php echo !$is_pro_agency ? 'readonly' : ''; ?>></textarea>
+                            <textarea id="wa-field-autoreply-text" class="wa-composer-textarea" rows="4" placeholder="<?php esc_attr_e('Escribe el mensaje que recibirá el usuario inmediatamente tras escanear...', 'whatauth-for-wordpress'); ?>" <?php echo !$whatauth_is_pro_agency ? 'readonly' : ''; ?>></textarea>
                             <div class="wa-composer-footer">
                                 <span class="wa-composer-hint">
                                     <span style="color:#25D366;">●</span> <?php esc_html_e('Admite formato WhatsApp: *negrita*, _cursiva_, ~tachado~', 'whatauth-for-wordpress'); ?>
@@ -255,7 +255,7 @@ $is_pro_agency = in_array($current_plan, array('PRO', 'AGENCY'), true);
 
                 <!-- SUB-PESTAÑA 3: ESTILO & LOGO (BRANDING) -->
                 <div class="whatauth-studio-pane" id="pane-branding">
-                    <div class="wa-studio-lock-banner" <?php echo $is_pro_agency ? 'style="display:none;"' : ''; ?> style="background: #fef3c7; border: 1px solid #fde68a; border-radius: 8px; padding: 12px; color: #92400e; font-size: 13px; margin-bottom: 12px;">
+                    <div class="wa-studio-lock-banner" <?php echo $whatauth_is_pro_agency ? 'style="display:none;"' : ''; ?> style="background: #fef3c7; border: 1px solid #fde68a; border-radius: 8px; padding: 12px; color: #92400e; font-size: 13px; margin-bottom: 12px;">
                         <strong><svg style="display:inline-block;vertical-align:-1px;margin-right:4px;" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg><?php esc_html_e('Estilo Estándar WhatAuth', 'whatauth-for-wordpress'); ?></strong>
                         <p style="margin: 4px 0 0 0; font-size: 12px;">
                             <?php esc_html_e('En la versión Starter el QR se genera con el logotipo oficial de la caja fuerte verde 3D de WhatAuth. Desbloquea colores y logo de marca con PRO o Agency.', 'whatauth-for-wordpress'); ?>
@@ -266,17 +266,17 @@ $is_pro_agency = in_array($current_plan, array('PRO', 'AGENCY'), true);
                     <div style="margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px solid #e2e8f0;">
                         <label style="font-weight: 600; display: block; margin-bottom: 4px; font-size: 13px;"><?php esc_html_e('1. Logotipo Central del QR', 'whatauth-for-wordpress'); ?></label>
                         <div style="display: flex; gap: 8px; align-items: center; margin-bottom: 8px;">
-                            <input type="text" id="wa-field-qr-logo" style="flex: 1; <?php echo !$is_pro_agency ? 'background:#f3f4f6;' : ''; ?>" placeholder="<?php esc_attr_e('URL del logotipo personalizado', 'whatauth-for-wordpress'); ?>" value="" <?php echo !$is_pro_agency ? 'readonly' : ''; ?>>
-                            <button type="button" class="button wa-studio-pro-controls" id="btn-upload-qr-logo" <?php echo !$is_pro_agency ? 'style="display:none;"' : ''; ?>><?php esc_html_e('Medios WP', 'whatauth-for-wordpress'); ?></button>
+                            <input type="text" id="wa-field-qr-logo" style="flex: 1; <?php echo !$whatauth_is_pro_agency ? 'background:#f3f4f6;' : ''; ?>" placeholder="<?php esc_attr_e('URL del logotipo personalizado', 'whatauth-for-wordpress'); ?>" value="" <?php echo !$whatauth_is_pro_agency ? 'readonly' : ''; ?>>
+                            <button type="button" class="button wa-studio-pro-controls" id="btn-upload-qr-logo" <?php echo !$whatauth_is_pro_agency ? 'style="display:none;"' : ''; ?>><?php esc_html_e('Medios WP', 'whatauth-for-wordpress'); ?></button>
                         </div>
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
                             <div>
                                 <label for="wa-field-qr-logo-margin" style="font-size: 11px; font-weight: 600; color: #64748b; display: block; margin-bottom: 2px;"><?php esc_html_e('Margen del Logo (px)', 'whatauth-for-wordpress'); ?></label>
-                                <input type="number" id="wa-field-qr-logo-margin" min="0" max="25" value="6" style="width: 100%;" <?php echo !$is_pro_agency ? 'disabled' : ''; ?>>
+                                <input type="number" id="wa-field-qr-logo-margin" min="0" max="25" value="6" style="width: 100%;" <?php echo !$whatauth_is_pro_agency ? 'disabled' : ''; ?>>
                             </div>
                             <div>
                                 <label for="wa-field-qr-logo-scale" style="font-size: 11px; font-weight: 600; color: #64748b; display: block; margin-bottom: 2px;"><?php esc_html_e('Escala del Logo', 'whatauth-for-wordpress'); ?></label>
-                                <input type="number" id="wa-field-qr-logo-scale" min="0.10" max="0.50" step="0.02" value="0.22" style="width: 100%;" <?php echo !$is_pro_agency ? 'disabled' : ''; ?>>
+                                <input type="number" id="wa-field-qr-logo-scale" min="0.10" max="0.50" step="0.02" value="0.22" style="width: 100%;" <?php echo !$whatauth_is_pro_agency ? 'disabled' : ''; ?>>
                             </div>
                         </div>
                     </div>
@@ -287,11 +287,11 @@ $is_pro_agency = in_array($current_plan, array('PRO', 'AGENCY'), true);
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 8px;">
                             <div>
                                 <label for="wa-field-qr-color-dots" style="font-size: 11px; font-weight: 600; color: #64748b; display: block; margin-bottom: 2px;"><?php esc_html_e('Color Puntos', 'whatauth-for-wordpress'); ?></label>
-                                <input type="color" id="wa-field-qr-color-dots" value="#1a2517" style="width: 100%; height: 36px; padding: 2px; cursor: pointer;" <?php echo !$is_pro_agency ? 'disabled' : ''; ?>>
+                                <input type="color" id="wa-field-qr-color-dots" value="#1a2517" style="width: 100%; height: 36px; padding: 2px; cursor: pointer;" <?php echo !$whatauth_is_pro_agency ? 'disabled' : ''; ?>>
                             </div>
                             <div>
                                 <label for="wa-field-qr-shape-dots" style="font-size: 11px; font-weight: 600; color: #64748b; display: block; margin-bottom: 2px;"><?php esc_html_e('Forma de Puntos', 'whatauth-for-wordpress'); ?></label>
-                                <select id="wa-field-qr-shape-dots" style="width: 100%;" <?php echo !$is_pro_agency ? 'disabled' : ''; ?>>
+                                <select id="wa-field-qr-shape-dots" style="width: 100%;" <?php echo !$whatauth_is_pro_agency ? 'disabled' : ''; ?>>
                                     <option value="square"><?php esc_html_e('Cuadrados (Square)', 'whatauth-for-wordpress'); ?></option>
                                     <option value="dots"><?php esc_html_e('Puntos (Dots)', 'whatauth-for-wordpress'); ?></option>
                                     <option value="rounded"><?php esc_html_e('Redondeados (Rounded)', 'whatauth-for-wordpress'); ?></option>
@@ -303,7 +303,7 @@ $is_pro_agency = in_array($current_plan, array('PRO', 'AGENCY'), true);
                         </div>
                         <div>
                             <label for="wa-field-qr-ec-level" style="font-size: 11px; font-weight: 600; color: #64748b; display: block; margin-bottom: 2px;"><?php esc_html_e('Nivel de Corrección y Nitidez', 'whatauth-for-wordpress'); ?></label>
-                            <select id="wa-field-qr-ec-level" style="width: 100%;" <?php echo !$is_pro_agency ? 'disabled' : ''; ?>>
+                            <select id="wa-field-qr-ec-level" style="width: 100%;" <?php echo !$whatauth_is_pro_agency ? 'disabled' : ''; ?>>
                                 <option value="Q"><?php esc_html_e('Alto - Q (25% • Recomendado para logos)', 'whatauth-for-wordpress'); ?></option>
                                 <option value="H"><?php esc_html_e('Máximo - H (30%)', 'whatauth-for-wordpress'); ?></option>
                                 <option value="M"><?php esc_html_e('Medio - M (15%)', 'whatauth-for-wordpress'); ?></option>
@@ -318,11 +318,11 @@ $is_pro_agency = in_array($current_plan, array('PRO', 'AGENCY'), true);
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
                             <div>
                                 <label for="wa-field-qr-color-corners" style="font-size: 11px; font-weight: 600; color: #64748b; display: block; margin-bottom: 2px;"><?php esc_html_e('Color Esquinas', 'whatauth-for-wordpress'); ?></label>
-                                <input type="color" id="wa-field-qr-color-corners" value="#1a2517" style="width: 100%; height: 36px; padding: 2px; cursor: pointer;" <?php echo !$is_pro_agency ? 'disabled' : ''; ?>>
+                                <input type="color" id="wa-field-qr-color-corners" value="#1a2517" style="width: 100%; height: 36px; padding: 2px; cursor: pointer;" <?php echo !$whatauth_is_pro_agency ? 'disabled' : ''; ?>>
                             </div>
                             <div>
                                 <label for="wa-field-qr-shape-corners" style="font-size: 11px; font-weight: 600; color: #64748b; display: block; margin-bottom: 2px;"><?php esc_html_e('Forma Marco Exterior', 'whatauth-for-wordpress'); ?></label>
-                                <select id="wa-field-qr-shape-corners" style="width: 100%;" <?php echo !$is_pro_agency ? 'disabled' : ''; ?>>
+                                <select id="wa-field-qr-shape-corners" style="width: 100%;" <?php echo !$whatauth_is_pro_agency ? 'disabled' : ''; ?>>
                                     <option value="extra-rounded"><?php esc_html_e('Extra Redondeado', 'whatauth-for-wordpress'); ?></option>
                                     <option value="square"><?php esc_html_e('Cuadrado', 'whatauth-for-wordpress'); ?></option>
                                     <option value="dot"><?php esc_html_e('Círculo (Dot)', 'whatauth-for-wordpress'); ?></option>
@@ -337,11 +337,11 @@ $is_pro_agency = in_array($current_plan, array('PRO', 'AGENCY'), true);
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
                             <div>
                                 <label for="wa-field-qr-color-corner-dot" style="font-size: 11px; font-weight: 600; color: #64748b; display: block; margin-bottom: 2px;"><?php esc_html_e('Color Punto Interior', 'whatauth-for-wordpress'); ?></label>
-                                <input type="color" id="wa-field-qr-color-corner-dot" value="#6f8065" style="width: 100%; height: 36px; padding: 2px; cursor: pointer;" <?php echo !$is_pro_agency ? 'disabled' : ''; ?>>
+                                <input type="color" id="wa-field-qr-color-corner-dot" value="#6f8065" style="width: 100%; height: 36px; padding: 2px; cursor: pointer;" <?php echo !$whatauth_is_pro_agency ? 'disabled' : ''; ?>>
                             </div>
                             <div>
                                 <label for="wa-field-qr-shape-corner-dot" style="font-size: 11px; font-weight: 600; color: #64748b; display: block; margin-bottom: 2px;"><?php esc_html_e('Forma Punto Interior', 'whatauth-for-wordpress'); ?></label>
-                                <select id="wa-field-qr-shape-corner-dot" style="width: 100%;" <?php echo !$is_pro_agency ? 'disabled' : ''; ?>>
+                                <select id="wa-field-qr-shape-corner-dot" style="width: 100%;" <?php echo !$whatauth_is_pro_agency ? 'disabled' : ''; ?>>
                                     <option value="dot"><?php esc_html_e('Círculo (Dot)', 'whatauth-for-wordpress'); ?></option>
                                     <option value="square"><?php esc_html_e('Cuadrado', 'whatauth-for-wordpress'); ?></option>
                                 </select>
@@ -354,7 +354,7 @@ $is_pro_agency = in_array($current_plan, array('PRO', 'AGENCY'), true);
                         <label style="font-weight: 600; display: block; margin-bottom: 6px; font-size: 13px;"><?php esc_html_e('5. Lienzo y Fondo', 'whatauth-for-wordpress'); ?></label>
                         <div>
                             <label for="wa-field-qr-color-bg" style="font-size: 11px; font-weight: 600; color: #64748b; display: block; margin-bottom: 2px;"><?php esc_html_e('Color de Fondo (bgColor)', 'whatauth-for-wordpress'); ?></label>
-                            <input type="color" id="wa-field-qr-color-bg" value="#ffffff" style="width: 100%; height: 36px; padding: 2px; cursor: pointer;" <?php echo !$is_pro_agency ? 'disabled' : ''; ?>>
+                            <input type="color" id="wa-field-qr-color-bg" value="#ffffff" style="width: 100%; height: 36px; padding: 2px; cursor: pointer;" <?php echo !$whatauth_is_pro_agency ? 'disabled' : ''; ?>>
                         </div>
                     </div>
                 </div>

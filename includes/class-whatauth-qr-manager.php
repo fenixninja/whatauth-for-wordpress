@@ -95,7 +95,7 @@ class WhatAuth_QR_Manager {
             wp_send_json_error(array('message' => __('Permisos insuficientes.', 'whatauth-for-wordpress')), 403);
         }
 
-        $type = isset($_GET['type']) ? sanitize_text_field($_GET['type']) : '';
+        $type = isset($_GET['type']) ? sanitize_text_field(wp_unslash($_GET['type'])) : '';
         $client = WhatAuth_API_Client::get_instance();
         $response = $client->get_qrs($type);
 
@@ -117,11 +117,11 @@ class WhatAuth_QR_Manager {
             wp_send_json_error(array('message' => __('Permisos insuficientes.', 'whatauth-for-wordpress')), 403);
         }
 
-        $type = isset($_POST['type']) ? strtoupper(sanitize_text_field($_POST['type'])) : 'LOGIN';
-        $title = isset($_POST['title']) ? sanitize_text_field($_POST['title']) : '';
-        $prefilled = isset($_POST['prefilledMessage']) ? sanitize_textarea_field($_POST['prefilledMessage']) : '';
-        $line_id = isset($_POST['lineId']) ? sanitize_text_field($_POST['lineId']) : null;
-        $id = !empty($_POST['id']) ? sanitize_text_field($_POST['id']) : null;
+        $type = isset($_POST['type']) ? strtoupper(sanitize_text_field(wp_unslash($_POST['type']))) : 'LOGIN';
+        $title = isset($_POST['title']) ? sanitize_text_field(wp_unslash($_POST['title'])) : '';
+        $prefilled = isset($_POST['prefilledMessage']) ? sanitize_textarea_field(wp_unslash($_POST['prefilledMessage'])) : '';
+        $line_id = isset($_POST['lineId']) ? sanitize_text_field(wp_unslash($_POST['lineId'])) : null;
+        $id = !empty($_POST['id']) ? sanitize_text_field(wp_unslash($_POST['id'])) : null;
 
         $settings = get_option('whatauth_settings', array());
         $current_plan = !empty($settings['plan']) ? strtoupper($settings['plan']) : 'STARTER';
@@ -133,14 +133,14 @@ class WhatAuth_QR_Manager {
         $can_autoreply      = ($is_pro_agency && $has_dedicated_line);
         $auto_reply_enabled = ($can_autoreply && !empty($_POST['autoReplyEnabled']));
 
-        $auto_reply_text     = $can_autoreply && isset($_POST['autoReplyText']) ? sanitize_textarea_field($_POST['autoReplyText']) : (isset($_POST['autoReplyContent']) ? sanitize_textarea_field($_POST['autoReplyContent']) : '');
-        $auto_reply_image    = $can_autoreply && isset($_POST['autoReplyImage']) ? esc_url_raw($_POST['autoReplyImage']) : '';
-        $auto_reply_audio    = $can_autoreply && isset($_POST['autoReplyAudio']) ? esc_url_raw($_POST['autoReplyAudio']) : '';
-        $auto_reply_doc      = $can_autoreply && isset($_POST['autoReplyDocument']) ? esc_url_raw($_POST['autoReplyDocument']) : '';
-        $auto_reply_doc_name = $can_autoreply && isset($_POST['autoReplyDocumentName']) ? sanitize_text_field($_POST['autoReplyDocumentName']) : '';
-        $auto_reply_url      = $can_autoreply && isset($_POST['autoReplyUrl']) ? esc_url_raw($_POST['autoReplyUrl']) : '';
+        $auto_reply_text     = $can_autoreply && isset($_POST['autoReplyText']) ? sanitize_textarea_field(wp_unslash($_POST['autoReplyText'])) : (isset($_POST['autoReplyContent']) ? sanitize_textarea_field(wp_unslash($_POST['autoReplyContent'])) : '');
+        $auto_reply_image    = $can_autoreply && isset($_POST['autoReplyImage']) ? esc_url_raw(wp_unslash($_POST['autoReplyImage'])) : '';
+        $auto_reply_audio    = $can_autoreply && isset($_POST['autoReplyAudio']) ? esc_url_raw(wp_unslash($_POST['autoReplyAudio'])) : '';
+        $auto_reply_doc      = $can_autoreply && isset($_POST['autoReplyDocument']) ? esc_url_raw(wp_unslash($_POST['autoReplyDocument'])) : '';
+        $auto_reply_doc_name = $can_autoreply && isset($_POST['autoReplyDocumentName']) ? sanitize_text_field(wp_unslash($_POST['autoReplyDocumentName'])) : '';
+        $auto_reply_url      = $can_autoreply && isset($_POST['autoReplyUrl']) ? esc_url_raw(wp_unslash($_POST['autoReplyUrl'])) : '';
 
-        $webhook_url = isset($_POST['webhookUrl']) ? esc_url_raw($_POST['webhookUrl']) : '';
+        $webhook_url = isset($_POST['webhookUrl']) ? esc_url_raw(wp_unslash($_POST['webhookUrl'])) : '';
         $webhook_enabled = !empty($_POST['webhookEnabled']);
 
         if (empty($title)) {
@@ -181,17 +181,17 @@ class WhatAuth_QR_Manager {
         // Configuración integral de branding para PRO y Agency (o valores por defecto WhatAuth para Starter)
         if ($is_pro_agency) {
             $payload['branding'] = array(
-                'logoUrl'              => isset($_POST['logoUrl']) ? esc_url_raw($_POST['logoUrl']) : '',
-                'logoMargin'           => isset($_POST['logoMargin']) ? intval($_POST['logoMargin']) : 6,
-                'logoSize'             => isset($_POST['logoSize']) ? floatval($_POST['logoSize']) : (isset($_POST['logoScale']) ? floatval($_POST['logoScale']) : 0.22),
-                'dotsColor'            => isset($_POST['dotsColor']) ? sanitize_hex_color($_POST['dotsColor']) : '#1a2517',
-                'dotsType'             => isset($_POST['dotsType']) ? sanitize_text_field($_POST['dotsType']) : (isset($_POST['dotsShape']) ? sanitize_text_field($_POST['dotsShape']) : 'square'),
-                'errorCorrectionLevel' => isset($_POST['errorCorrectionLevel']) ? sanitize_text_field($_POST['errorCorrectionLevel']) : 'Q',
-                'cornersSquareColor'   => isset($_POST['cornersSquareColor']) ? sanitize_hex_color($_POST['cornersSquareColor']) : (isset($_POST['cornersColor']) ? sanitize_hex_color($_POST['cornersColor']) : '#1a2517'),
-                'cornersSquareType'    => isset($_POST['cornersSquareType']) ? sanitize_text_field($_POST['cornersSquareType']) : (isset($_POST['cornersShape']) ? sanitize_text_field($_POST['cornersShape']) : 'extra-rounded'),
-                'cornersDotColor'      => isset($_POST['cornersDotColor']) ? sanitize_hex_color($_POST['cornersDotColor']) : '#6f8065',
-                'cornersDotType'       => isset($_POST['cornersDotType']) ? sanitize_text_field($_POST['cornersDotType']) : 'dot',
-                'bgColor'              => isset($_POST['bgColor']) ? sanitize_hex_color($_POST['bgColor']) : '#ffffff',
+                'logoUrl'              => isset($_POST['logoUrl']) ? esc_url_raw(wp_unslash($_POST['logoUrl'])) : '',
+                'logoMargin'           => isset($_POST['logoMargin']) ? intval(wp_unslash($_POST['logoMargin'])) : 6,
+                'logoSize'             => isset($_POST['logoSize']) ? floatval(wp_unslash($_POST['logoSize'])) : (isset($_POST['logoScale']) ? floatval(wp_unslash($_POST['logoScale'])) : 0.22),
+                'dotsColor'            => isset($_POST['dotsColor']) ? sanitize_hex_color(wp_unslash($_POST['dotsColor'])) : '#1a2517',
+                'dotsType'             => isset($_POST['dotsType']) ? sanitize_text_field(wp_unslash($_POST['dotsType'])) : (isset($_POST['dotsShape']) ? sanitize_text_field(wp_unslash($_POST['dotsShape'])) : 'square'),
+                'errorCorrectionLevel' => isset($_POST['errorCorrectionLevel']) ? sanitize_text_field(wp_unslash($_POST['errorCorrectionLevel'])) : 'Q',
+                'cornersSquareColor'   => isset($_POST['cornersSquareColor']) ? sanitize_hex_color(wp_unslash($_POST['cornersSquareColor'])) : (isset($_POST['cornersColor']) ? sanitize_hex_color(wp_unslash($_POST['cornersColor'])) : '#1a2517'),
+                'cornersSquareType'    => isset($_POST['cornersSquareType']) ? sanitize_text_field(wp_unslash($_POST['cornersSquareType'])) : (isset($_POST['cornersShape']) ? sanitize_text_field(wp_unslash($_POST['cornersShape'])) : 'extra-rounded'),
+                'cornersDotColor'      => isset($_POST['cornersDotColor']) ? sanitize_hex_color(wp_unslash($_POST['cornersDotColor'])) : '#6f8065',
+                'cornersDotType'       => isset($_POST['cornersDotType']) ? sanitize_text_field(wp_unslash($_POST['cornersDotType'])) : 'dot',
+                'bgColor'              => isset($_POST['bgColor']) ? sanitize_hex_color(wp_unslash($_POST['bgColor'])) : '#ffffff',
             );
         }
 
@@ -201,11 +201,11 @@ class WhatAuth_QR_Manager {
 
         // Parámetros específicos para PRINT QR (geolocalización y dirección física)
         if ($type === 'PRINT') {
-            $payload['address']   = isset($_POST['address']) ? sanitize_text_field($_POST['address']) : '';
-            $payload['city']      = isset($_POST['city']) ? sanitize_text_field($_POST['city']) : '';
-            $payload['country']   = isset($_POST['country']) ? sanitize_text_field($_POST['country']) : '';
-            $payload['latitude']  = isset($_POST['latitude']) ? floatval($_POST['latitude']) : null;
-            $payload['longitude'] = isset($_POST['longitude']) ? floatval($_POST['longitude']) : null;
+            $payload['address']   = isset($_POST['address']) ? sanitize_text_field(wp_unslash($_POST['address'])) : '';
+            $payload['city']      = isset($_POST['city']) ? sanitize_text_field(wp_unslash($_POST['city'])) : '';
+            $payload['country']   = isset($_POST['country']) ? sanitize_text_field(wp_unslash($_POST['country'])) : '';
+            $payload['latitude']  = isset($_POST['latitude']) ? floatval(wp_unslash($_POST['latitude'])) : null;
+            $payload['longitude'] = isset($_POST['longitude']) ? floatval(wp_unslash($_POST['longitude'])) : null;
         }
 
         $client = WhatAuth_API_Client::get_instance();
@@ -240,7 +240,7 @@ class WhatAuth_QR_Manager {
             ), 403);
         }
 
-        $qr_id = isset($_POST['id']) ? sanitize_text_field($_POST['id']) : '';
+        $qr_id = isset($_POST['id']) ? sanitize_text_field(wp_unslash($_POST['id'])) : '';
         if (empty($qr_id)) {
             wp_send_json_error(array('message' => __('Identificador de QR inválido.', 'whatauth-for-wordpress')), 400);
         }
@@ -265,8 +265,8 @@ class WhatAuth_QR_Manager {
             wp_send_json_error(array('message' => __('Permisos insuficientes.', 'whatauth-for-wordpress')), 403);
         }
 
-        $token   = isset($_POST['api_key']) ? trim(sanitize_text_field($_POST['api_key'])) : '';
-        $api_url = isset($_POST['api_url']) ? rtrim(sanitize_text_field($_POST['api_url']), '/') : null;
+        $token   = isset($_POST['api_key']) ? trim(sanitize_text_field(wp_unslash($_POST['api_key']))) : '';
+        $api_url = isset($_POST['api_url']) ? rtrim(sanitize_text_field(wp_unslash($_POST['api_url'])), '/') : null;
 
         if (empty($token)) {
             wp_send_json_error(array('message' => __('Introduce un token para verificar.', 'whatauth-for-wordpress')), 400);
@@ -342,24 +342,24 @@ class WhatAuth_QR_Manager {
             wp_send_json_error(array('message' => __('Permisos insuficientes.', 'whatauth-for-wordpress')), 403);
         }
 
-        $api_key            = isset($_POST['api_key']) ? trim(sanitize_text_field($_POST['api_key'])) : '';
-        $api_url                 = isset($_POST['api_url']) ? rtrim(sanitize_text_field($_POST['api_url']), '/') : WHATAUTH_DEFAULT_API_URL;
-        $domain                  = isset($_POST['domain']) ? sanitize_text_field($_POST['domain']) : wp_parse_url(home_url(), PHP_URL_HOST);
-        $line_id                 = isset($_POST['line_id']) ? sanitize_text_field($_POST['line_id']) : '';
-        $admin_phone             = isset($_POST['admin_phone']) ? sanitize_text_field($_POST['admin_phone']) : '';
+        $api_key            = isset($_POST['api_key']) ? trim(sanitize_text_field(wp_unslash($_POST['api_key']))) : '';
+        $api_url                 = isset($_POST['api_url']) ? rtrim(sanitize_text_field(wp_unslash($_POST['api_url'])), '/') : WHATAUTH_DEFAULT_API_URL;
+        $domain                  = isset($_POST['domain']) ? sanitize_text_field(wp_unslash($_POST['domain'])) : wp_parse_url(home_url(), PHP_URL_HOST);
+        $line_id                 = isset($_POST['line_id']) ? sanitize_text_field(wp_unslash($_POST['line_id'])) : '';
+        $admin_phone             = isset($_POST['admin_phone']) ? sanitize_text_field(wp_unslash($_POST['admin_phone'])) : '';
         $allow_registration      = !empty($_POST['allow_registration']) ? 1 : 0;
-        $default_role            = isset($_POST['default_role']) ? sanitize_text_field($_POST['default_role']) : 'subscriber';
+        $default_role            = isset($_POST['default_role']) ? sanitize_text_field(wp_unslash($_POST['default_role'])) : 'subscriber;
         $hide_wp_credentials     = !empty($_POST['hide_wp_credentials']) ? 1 : 0;
         $desktop_show_walink     = !empty($_POST['desktop_show_walink']) ? 1 : 0;
         $mobile_show_walink_only = !empty($_POST['mobile_show_walink_only']) ? 1 : 0;
         $enable_wplogin          = !empty($_POST['enable_wplogin']) ? 1 : 0;
         $enable_woocommerce      = !empty($_POST['enable_woocommerce']) ? 1 : 0;
-        $qr_size                 = isset($_POST['qr_size']) ? intval($_POST['qr_size']) : 280;
-        $button_text             = isset($_POST['button_text']) ? sanitize_text_field($_POST['button_text']) : __('Abrir WhatsApp directamente', 'whatauth-for-wordpress');
-        $login_instruction_text  = isset($_POST['login_instruction_text']) ? sanitize_text_field($_POST['login_instruction_text']) : __('Escanea con tu WhatsApp para acceder al instante sin contraseñas.', 'whatauth-for-wordpress');
+        $qr_size                 = isset($_POST['qr_size']) ? intval(wp_unslash($_POST['qr_size'])) : 280;
+        $button_text             = isset($_POST['button_text']) ? sanitize_text_field(wp_unslash($_POST['button_text'])) : __('Abrir WhatsApp directamente', 'whatauth-for-wordpress');
+        $login_instruction_text  = isset($_POST['login_instruction_text']) ? sanitize_text_field(wp_unslash($_POST['login_instruction_text'])) : __('Escanea con tu WhatsApp para acceder al instante sin contraseñas.', 'whatauth-for-wordpress');
 
         $existing_settings       = get_option('whatauth_settings', array());
-        $current_plan            = isset($_POST['plan']) ? sanitize_text_field($_POST['plan']) : (!empty($existing_settings['plan']) ? $existing_settings['plan'] : 'STARTER');
+        $current_plan            = isset($_POST['plan']) ? sanitize_text_field(wp_unslash($_POST['plan'])) : (!empty($existing_settings['plan']) ? $existing_settings['plan'] : 'STARTER');
         $is_pro_agency           = in_array(strtoupper($current_plan), array('PRO', 'AGENCY'), true);
 
         // Si es STARTER, forzar valores oficiales de WhatAuth
@@ -370,9 +370,9 @@ class WhatAuth_QR_Manager {
             $button_text_color      = '#ffffff';
             $custom_logo_url        = '';
         } else {
-            $button_bg_color        = isset($_POST['button_bg_color']) ? sanitize_hex_color($_POST['button_bg_color']) : (!empty($existing_settings['button_bg_color']) ? $existing_settings['button_bg_color'] : '#25D366');
-            $button_text_color      = isset($_POST['button_text_color']) ? sanitize_hex_color($_POST['button_text_color']) : (!empty($existing_settings['button_text_color']) ? $existing_settings['button_text_color'] : '#ffffff');
-            $custom_logo_url        = isset($_POST['custom_logo_url']) ? esc_url_raw($_POST['custom_logo_url']) : (!empty($existing_settings['custom_logo_url']) ? $existing_settings['custom_logo_url'] : '');
+            $button_bg_color        = isset($_POST['button_bg_color']) ? sanitize_hex_color(wp_unslash($_POST['button_bg_color'])) : (!empty($existing_settings['button_bg_color']) ? $existing_settings['button_bg_color'] : '#25D366');
+            $button_text_color      = isset($_POST['button_text_color']) ? sanitize_hex_color(wp_unslash($_POST['button_text_color'])) : (!empty($existing_settings['button_text_color']) ? $existing_settings['button_text_color'] : '#ffffff');
+            $custom_logo_url        = isset($_POST['custom_logo_url']) ? esc_url_raw(wp_unslash($_POST['custom_logo_url'])) : (!empty($existing_settings['custom_logo_url']) ? $existing_settings['custom_logo_url'] : '');
         }
 
         $settings = array(
@@ -402,7 +402,7 @@ class WhatAuth_QR_Manager {
 
         // Actualizar permisos de roles para gestión de QRs
         if (isset($_POST['qr_allowed_roles']) && is_array($_POST['qr_allowed_roles'])) {
-            $allowed_roles = array_map('sanitize_text_field', $_POST['qr_allowed_roles']);
+            $allowed_roles = array_map('sanitize_text_field', wp_unslash($_POST['qr_allowed_roles']));
             WhatAuth_Roles::update_role_permissions($allowed_roles);
         }
 

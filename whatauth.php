@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name:       WhatAuth – Passwordless WhatsApp Login & Smart QR Hub
+ * Plugin Name:       WhatAuth – Passwordless Login & Smart QR Hub
  * Plugin URI:        https://whatauth.com
- * Description:       Usuarios únicos, trazabilidad en tiempo real, máxima fidelización y confianza: conecta con tu comunidad y transforma las operaciones de tu negocio con autenticación passwordless por WhatsApp y códigos QR de la manera más humana.
+ * Description:       Passwordless authentication, real-time verified sessions, and comprehensive QR campaign studio (Login, Pixel, Print) with instant Auto-Reply.
  * Version:           1.0.0
  * Requires at least: 6.0
  * Requires PHP:      7.4
@@ -55,6 +55,7 @@ if (is_admin()) {
 add_action('plugins_loaded', 'whatauth_load_textdomain');
 function whatauth_load_textdomain() {
     $lang_dir = dirname(plugin_basename(__FILE__)) . '/languages';
+    // phpcs:ignore PluginCheck.CodeAnalysis.DiscouragedFunctions.load_plugin_textdomainFound -- Fallback for offline/custom installations
     $loaded   = load_plugin_textdomain('whatauth-for-wordpress', false, $lang_dir);
 
     // Fallback robusto para dialectos regionales y entornos donde determine_locale difiera

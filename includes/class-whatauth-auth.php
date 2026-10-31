@@ -302,6 +302,7 @@ class WhatAuth_Auth {
         wp_clear_auth_cookie();
         wp_set_current_user($user_id);
         wp_set_auth_cookie($user_id, true);
+        // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- Trigger core WordPress login action
         do_action('wp_login', $user->user_login, $user);
 
         return new WP_REST_Response(array(

@@ -3,9 +3,9 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-$settings = get_option('whatauth_settings', array());
-$api_key  = !empty($settings['api_key']) ? $settings['api_key'] : '';
-$domain   = !empty($settings['domain']) ? $settings['domain'] : wp_parse_url(home_url(), PHP_URL_HOST);
+$whatauth_settings = get_option('whatauth_settings', array());
+$whatauth_api_key  = !empty($whatauth_settings['api_key']) ? $whatauth_settings['api_key'] : '';
+$whatauth_domain   = !empty($whatauth_settings['domain']) ? $whatauth_settings['domain'] : wp_parse_url(home_url(), PHP_URL_HOST);
 ?>
 <div class="wrap whatauth-admin-wrap">
     <div class="whatauth-header">
@@ -14,7 +14,7 @@ $domain   = !empty($settings['domain']) ? $settings['domain'] : wp_parse_url(hom
             <div>
                 <h1>
                     WhatAuth
-                    <?php if (!empty($api_key)) : ?>
+                    <?php if (!empty($whatauth_api_key)) : ?>
                         <span class="whatauth-badge whatauth-badge-active"><?php esc_html_e('Conectado', 'whatauth-for-wordpress'); ?></span>
                     <?php else : ?>
                         <span class="whatauth-badge whatauth-badge-inactive"><?php esc_html_e('Sin Configurar', 'whatauth-for-wordpress'); ?></span>
@@ -120,7 +120,7 @@ $domain   = !empty($settings['domain']) ? $settings['domain'] : wp_parse_url(hom
                 <tr>
                     <th style="width: 220px;"><?php esc_html_e('Pantalla wp-login.php:', 'whatauth-for-wordpress'); ?></th>
                     <td>
-                        <?php if (!empty($settings['enable_wplogin'])) : ?>
+                        <?php if (!empty($whatauth_settings['enable_wplogin'])) : ?>
                             <span class="whatauth-badge whatauth-badge-active"><?php esc_html_e('Activado de fábrica', 'whatauth-for-wordpress'); ?></span>
                         <?php else : ?>
                             <span class="whatauth-badge whatauth-badge-inactive"><?php esc_html_e('Desactivado en Ajustes', 'whatauth-for-wordpress'); ?></span>
@@ -157,7 +157,7 @@ $domain   = !empty($settings['domain']) ? $settings['domain'] : wp_parse_url(hom
             <p style="font-size: 13px; color: var(--wa-text-muted); margin-bottom: 16px;">
                 <?php esc_html_e('Dominio registrado para este sitio de WordPress:', 'whatauth-for-wordpress'); ?>
                 <br>
-                <strong style="color: var(--wa-text); font-size: 15px;"><?php echo esc_html($domain); ?></strong>
+                <strong style="color: var(--wa-text); font-size: 15px;"><?php echo esc_html($whatauth_domain); ?></strong>
             </p>
             <a href="<?php echo esc_url(admin_url('admin.php?page=whatauth-settings')); ?>" class="button button-secondary" style="width: 100%; text-align: center;">
                 <?php esc_html_e('Configurar Ajustes & Roles', 'whatauth-for-wordpress'); ?>
