@@ -81,11 +81,11 @@ $is_pro_agency = in_array($current_plan, array('PRO', 'AGENCY'), true);
                     </button>
                     <button type="button" class="whatauth-studio-tab-btn" data-studio-pane="pane-autoreply">
                         <?php esc_html_e('2. Auto-Reply', 'whatauth-for-wordpress'); ?>
-                        <span class="wa-tab-lock" <?php echo $is_pro_agency ? 'style="display:none;"' : ''; ?> style="font-size: 10px;">🔒</span>
+                        <span class="wa-tab-lock" <?php echo $is_pro_agency ? 'style="display:none;"' : ''; ?> style="display:inline-flex; vertical-align:middle; margin-left:3px;"><svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg></span>
                     </button>
                     <button type="button" class="whatauth-studio-tab-btn" data-studio-pane="pane-branding">
                         <?php esc_html_e('3. Estilo & Logo', 'whatauth-for-wordpress'); ?>
-                        <span class="wa-tab-lock" <?php echo $is_pro_agency ? 'style="display:none;"' : ''; ?> style="font-size: 10px;">🔒</span>
+                        <span class="wa-tab-lock" <?php echo $is_pro_agency ? 'style="display:none;"' : ''; ?> style="display:inline-flex; vertical-align:middle; margin-left:3px;"><svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg></span>
                     </button>
                 </div>
 
@@ -144,7 +144,7 @@ $is_pro_agency = in_array($current_plan, array('PRO', 'AGENCY'), true);
                 <!-- SUB-PESTAÑA 2: AUTO-REPLY -->
                 <div class="whatauth-studio-pane" id="pane-autoreply">
                     <div class="wa-studio-lock-banner" <?php echo $is_pro_agency ? 'style="display:none;"' : ''; ?> style="background: #fef3c7; border: 1px solid #fde68a; border-radius: 8px; padding: 12px; color: #92400e; font-size: 13px; margin-bottom: 12px;">
-                        <strong>🔒 <?php esc_html_e('Función Exclusiva PRO / Agency', 'whatauth-for-wordpress'); ?></strong>
+                        <strong><svg style="display:inline-block;vertical-align:-1px;margin-right:4px;" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg><?php esc_html_e('Función Exclusiva PRO / Agency', 'whatauth-for-wordpress'); ?></strong>
                         <p style="margin: 4px 0 0 0; font-size: 12px;">
                             <?php esc_html_e('En la versión Starter el Auto-Reply no está disponible. Para enviar mensajes de bienvenida o catálogos automáticos tras escanear, actualiza a PRO o Agency.', 'whatauth-for-wordpress'); ?>
                         </p>
@@ -152,7 +152,7 @@ $is_pro_agency = in_array($current_plan, array('PRO', 'AGENCY'), true);
 
                     <!-- Alerta si se selecciona el Bot Anfitrión -->
                     <div id="wa-autoreply-hostbot-notice" style="display: none; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 12px; color: #1e40af; font-size: 13px; margin-bottom: 12px;">
-                        <strong>ℹ️ <?php esc_html_e('Línea Anfitriona Compartida Seleccionada', 'whatauth-for-wordpress'); ?></strong>
+                        <strong><svg style="display:inline-block;vertical-align:-2px;margin-right:4px;" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg><?php esc_html_e('Línea Anfitriona Compartida Seleccionada', 'whatauth-for-wordpress'); ?></strong>
                         <p style="margin: 4px 0 0 0; font-size: 12px;">
                             <?php esc_html_e('El Bot Anfitrión Oficial (+34 631 490 990) solo procesa accesos estándar. Para activar respuestas automáticas (Auto-Reply), selecciona tu línea de WhatsApp dedicada en la Pestaña 1 (Campaña).', 'whatauth-for-wordpress'); ?>
                         </p>
@@ -203,10 +203,10 @@ $is_pro_agency = in_array($current_plan, array('PRO', 'AGENCY'), true);
                                 <?php esc_html_e('Contenido Multimedia Adjunto', 'whatauth-for-wordpress'); ?>
                             </label>
                             <div class="wa-media-type-pills" style="display: flex; gap: 8px; flex-wrap: wrap;">
-                                <button type="button" class="button button-small wa-media-pill-btn active" data-media="none">💬 <?php esc_html_e('Solo Texto', 'whatauth-for-wordpress'); ?></button>
-                                <button type="button" class="button button-small wa-media-pill-btn" data-media="image">🖼️ <?php esc_html_e('Imagen', 'whatauth-for-wordpress'); ?></button>
-                                <button type="button" class="button button-small wa-media-pill-btn" data-media="audio">🎙️ <?php esc_html_e('Nota de Voz / Audio', 'whatauth-for-wordpress'); ?></button>
-                                <button type="button" class="button button-small wa-media-pill-btn" data-media="document">📄 <?php esc_html_e('Documento / PDF', 'whatauth-for-wordpress'); ?></button>
+                                <button type="button" class="button button-small wa-media-pill-btn active" data-media="none"><svg style="display:inline-block;vertical-align:-2px;margin-right:4px;" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg><?php esc_html_e('Solo Texto', 'whatauth-for-wordpress'); ?></button>
+                                <button type="button" class="button button-small wa-media-pill-btn" data-media="image"><svg style="display:inline-block;vertical-align:-2px;margin-right:4px;" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg><?php esc_html_e('Imagen', 'whatauth-for-wordpress'); ?></button>
+                                <button type="button" class="button button-small wa-media-pill-btn" data-media="audio"><svg style="display:inline-block;vertical-align:-2px;margin-right:4px;" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/></svg><?php esc_html_e('Nota de Voz / Audio', 'whatauth-for-wordpress'); ?></button>
+                                <button type="button" class="button button-small wa-media-pill-btn" data-media="document"><svg style="display:inline-block;vertical-align:-2px;margin-right:4px;" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg><?php esc_html_e('Documento / PDF', 'whatauth-for-wordpress'); ?></button>
                             </div>
                         </div>
 
@@ -256,7 +256,7 @@ $is_pro_agency = in_array($current_plan, array('PRO', 'AGENCY'), true);
                 <!-- SUB-PESTAÑA 3: ESTILO & LOGO (BRANDING) -->
                 <div class="whatauth-studio-pane" id="pane-branding">
                     <div class="wa-studio-lock-banner" <?php echo $is_pro_agency ? 'style="display:none;"' : ''; ?> style="background: #fef3c7; border: 1px solid #fde68a; border-radius: 8px; padding: 12px; color: #92400e; font-size: 13px; margin-bottom: 12px;">
-                        <strong>🔒 <?php esc_html_e('Estilo Estándar WhatAuth', 'whatauth-for-wordpress'); ?></strong>
+                        <strong><svg style="display:inline-block;vertical-align:-1px;margin-right:4px;" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg><?php esc_html_e('Estilo Estándar WhatAuth', 'whatauth-for-wordpress'); ?></strong>
                         <p style="margin: 4px 0 0 0; font-size: 12px;">
                             <?php esc_html_e('En la versión Starter el QR se genera con el logotipo oficial de la caja fuerte verde 3D de WhatAuth. Desbloquea colores y logo de marca con PRO o Agency.', 'whatauth-for-wordpress'); ?>
                         </p>

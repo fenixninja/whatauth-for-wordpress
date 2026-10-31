@@ -86,7 +86,7 @@ class WhatAuth_Admin {
 
         wp_enqueue_script(
             'qr-code-styling',
-            'https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js',
+            WHATAUTH_PLUGIN_URL . 'admin/js/vendor/qr-code-styling.js',
             array(),
             '1.5.0',
             true
@@ -164,7 +164,7 @@ class WhatAuth_Admin {
                 'configured'          => __('✓ Configurado', 'whatauth-for-wordpress'),
                 'active'              => __('✓ Activo', 'whatauth-for-wordpress'),
                 'untitled'            => __('Sin título', 'whatauth-for-wordpress'),
-                'deleteLockedTooltip' => __('🔒 Eliminar QRs requiere plan PRO o Agency', 'whatauth-for-wordpress'),
+                'deleteLockedTooltip' => __('Eliminar QRs requiere plan PRO o Agency', 'whatauth-for-wordpress'),
                 'titleRequired'       => __('El título del código QR es obligatorio.', 'whatauth-for-wordpress'),
                 'qrDeleted'           => __('Código QR eliminado correctamente.', 'whatauth-for-wordpress'),
                 'enterToken'          => __('Introduce tu Service Token de WhatAuth.', 'whatauth-for-wordpress'),

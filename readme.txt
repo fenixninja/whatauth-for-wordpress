@@ -64,6 +64,24 @@ Sí, en la pestaña de Ajustes puedes conceder permisos de gestión de QRs a rol
 4. Botón de inicio de sesión por WhatsApp en la pantalla oficial wp-login.php.
 5. Ajustes generales, selección de telefonía y asignación dinámica de roles.
 
+== Third-Party Services ==
+
+This plugin interfaces with the WhatAuth Cloud SaaS service to verify WhatsApp authentication sessions, generate dynamic QR codes, provide real-time socket updates, and dispatch auto-reply messages.
+
+* Service Provider: WhatAuth (https://whatauth.com)
+* API Endpoints: https://api.whatauth.com
+* Terms of Service: https://whatauth.com/terms
+* Privacy Policy: https://whatauth.com/privacy
+* Data Transmitted:
+  - Authorized website domain and API Service Token for authentication.
+  - Temporary session identifiers and QR tokens.
+  - Verified WhatsApp phone numbers during login verification to resolve or create the corresponding WordPress user account.
+  - No private WordPress database contents, passwords, or customer metadata are shared or stored externally.
+
+== Disclaimer & Trademarks ==
+
+WhatsApp is a registered trademark of Meta Platforms, Inc. WhatAuth is an independent integration platform and SaaS service. This plugin and WhatAuth are not affiliated with, associated with, authorized by, endorsed by, or in any way officially connected with Meta Platforms, Inc., WhatsApp Inc., or any of their subsidiaries or affiliates.
+
 == Changelog ==
 
 = 1.0.0 =

@@ -140,8 +140,15 @@
       if (typeof window.io === 'function') {
         return callback();
       }
+      const localUrl = (typeof whatauthData !== 'undefined' && whatauthData.socketIoUrl)
+        ? whatauthData.socketIoUrl
+        : '';
+      if (!localUrl) {
+        console.error('[WhatAuth] Socket.IO local no configurado');
+        return;
+      }
       const script = document.createElement('script');
-      script.src = 'https://cdn.socket.io/4.8.1/socket.io.min.js';
+      script.src = localUrl;
       script.async = true;
       script.onload = callback;
       script.onerror = function () {

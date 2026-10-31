@@ -375,7 +375,7 @@
         if (isProAgency) {
           deleteBtn = '<button type="button" class="button button-small button-link-delete btn-delete-qr" data-id="' + qr.id + '">' + (whatauthAdminData.i18n.delete || 'Eliminar') + '</button>';
         } else {
-          deleteBtn = '<button type="button" class="button button-small disabled" style="opacity:0.45; cursor:not-allowed;" title="' + (whatauthAdminData.i18n.deleteLockedTooltip || '🔒 Eliminar QRs requiere plan PRO o Agency') + '" disabled>🔒 ' + (whatauthAdminData.i18n.delete || 'Eliminar') + '</button>';
+          deleteBtn = '<button type="button" class="button button-small disabled" style="opacity:0.45; cursor:not-allowed;" title="' + (whatauthAdminData.i18n.deleteLockedTooltip || 'Eliminar QRs requiere plan PRO o Agency') + '" disabled><span class="dashicons dashicons-lock" style="font-size:12px;width:12px;height:12px;vertical-align:middle;margin-right:2px;"></span>' + (whatauthAdminData.i18n.delete || 'Eliminar') + '</button>';
         }
 
         // Resumen enriquecido de Auto-Reply
@@ -933,7 +933,7 @@
           '<div class="wa-bubble-audio-btn">▶</div>' +
           '<div class="wa-bubble-audio-bar"></div>' +
           '<span style="font-size:11px; color:#475569; font-weight:600;">0:24</span>' +
-          '<span style="font-size:13px;">🎤</span>' +
+          '<span style="display:inline-flex;align-items:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="#00a884"><path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/></svg></span>' +
         '</div>';
       }
 
@@ -961,7 +961,7 @@
 
       // 5. Botón CTA interactivo si hay URL
       if (ctaUrl && ctaUrl.trim()) {
-        contentHtml += '<a href="' + this.escapeHtml(ctaUrl) + '" target="_blank" rel="noopener noreferrer" class="wa-bubble-cta-btn">🔗 ' + (whatauthAdminData.i18n.openLink || 'Abrir enlace') + '</a>';
+        contentHtml += '<a href="' + this.escapeHtml(ctaUrl) + '" target="_blank" rel="noopener noreferrer" class="wa-bubble-cta-btn"><svg style="display:inline-block;vertical-align:-2px;margin-right:4px;" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>' + (whatauthAdminData.i18n.openLink || 'Abrir enlace') + '</a>';
       }
 
       // 6. Timestamp en la esquina inferior derecha

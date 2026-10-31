@@ -47,9 +47,17 @@ class WhatAuth_Auth {
         );
 
         wp_enqueue_script(
+            'whatauth-socket-io',
+            WHATAUTH_PLUGIN_URL . 'public/js/vendor/socket.io.min.js',
+            array(),
+            '4.8.1',
+            true
+        );
+
+        wp_enqueue_script(
             'whatauth-sdk-js',
             WHATAUTH_PLUGIN_URL . 'public/js/whatauth-frontend.js',
-            array('jquery'),
+            array('jquery', 'whatauth-socket-io'),
             WHATAUTH_VERSION,
             true
         );
@@ -68,6 +76,7 @@ class WhatAuth_Auth {
             'apiKey'                => $api_key,
             'apiUrl'                => $api_url,
             'domain'                => $domain,
+            'socketIoUrl'           => WHATAUTH_PLUGIN_URL . 'public/js/vendor/socket.io.min.js',
             'lineId'                => !empty($settings['line_id']) ? $settings['line_id'] : '',
             'plan'                  => $current_plan,
             'isProAgency'           => $is_pro_agency,

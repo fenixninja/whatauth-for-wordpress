@@ -170,11 +170,11 @@ $available_roles = WhatAuth_Roles::get_available_roles();
                     <td>
                         <input type="text" id="whatauth-instruction-text" name="login_instruction_text" value="<?php echo esc_attr($login_instruction_text); ?>" class="large-text" <?php echo !$is_pro_agency ? 'readonly style="background:#f3f4f6; color:#6b7280; cursor:not-allowed;"' : ''; ?>>
                         <p class="description wa-plan-starter-view" <?php echo $is_pro_agency ? 'style="display:none;"' : ''; ?>>
-                            <span style="background:#fef3c7; color:#92400e; padding:2px 8px; border-radius:4px; font-weight:600; font-size:11px;">🔒 STARTER (Estándar WhatAuth)</span>
+                            <span style="background:#fef3c7; color:#92400e; padding:2px 8px; border-radius:4px; font-weight:600; font-size:11px;"><span class="dashicons dashicons-lock" style="font-size:12px;width:12px;height:12px;vertical-align:middle;margin-right:2px;"></span> STARTER (Estándar WhatAuth)</span>
                             <?php esc_html_e('El texto oficial de instrucción está protegido en el plan Starter. Para personalizarlo actualiza a PRO o Agency.', 'whatauth-for-wordpress'); ?>
                         </p>
                         <p class="description wa-plan-pro-view" <?php echo !$is_pro_agency ? 'style="display:none;"' : ''; ?>>
-                            <span style="background:#dbeafe; color:#1e40af; padding:2px 8px; border-radius:4px; font-weight:600; font-size:11px;">✨ PRO / AGENCY</span>
+                            <span style="background:#dbeafe; color:#1e40af; padding:2px 8px; border-radius:4px; font-weight:600; font-size:11px;"><span class="dashicons dashicons-star-filled" style="font-size:12px;width:12px;height:12px;vertical-align:middle;margin-right:2px;"></span> PRO / AGENCY</span>
                             <?php esc_html_e('Texto explicativo visible sobre el código QR en la pantalla de login.', 'whatauth-for-wordpress'); ?>
                         </p>
                     </td>
@@ -184,11 +184,11 @@ $available_roles = WhatAuth_Roles::get_available_roles();
                     <td>
                         <input type="text" id="whatauth-btn-text" name="button_text" value="<?php echo esc_attr($btn_text); ?>" class="regular-text" <?php echo !$is_pro_agency ? 'readonly style="background:#f3f4f6; color:#6b7280; cursor:not-allowed;"' : ''; ?>>
                         <p class="description wa-plan-starter-view" <?php echo $is_pro_agency ? 'style="display:none;"' : ''; ?>>
-                            <span style="background:#fef3c7; color:#92400e; padding:2px 8px; border-radius:4px; font-weight:600; font-size:11px;">🔒 STARTER (Estándar WhatAuth)</span>
+                            <span style="background:#fef3c7; color:#92400e; padding:2px 8px; border-radius:4px; font-weight:600; font-size:11px;"><span class="dashicons dashicons-lock" style="font-size:12px;width:12px;height:12px;vertical-align:middle;margin-right:2px;"></span> STARTER (Estándar WhatAuth)</span>
                             <?php esc_html_e('El botón utiliza el texto verificado oficial de WhatAuth. Desbloquea textos personalizados en PRO o Agency.', 'whatauth-for-wordpress'); ?>
                         </p>
                         <p class="description wa-plan-pro-view" <?php echo !$is_pro_agency ? 'style="display:none;"' : ''; ?>>
-                            <span style="background:#dbeafe; color:#1e40af; padding:2px 8px; border-radius:4px; font-weight:600; font-size:11px;">✨ PRO / AGENCY</span>
+                            <span style="background:#dbeafe; color:#1e40af; padding:2px 8px; border-radius:4px; font-weight:600; font-size:11px;"><span class="dashicons dashicons-star-filled" style="font-size:12px;width:12px;height:12px;vertical-align:middle;margin-right:2px;"></span> PRO / AGENCY</span>
                             <?php esc_html_e('Texto del botón para abrir WhatsApp directamente.', 'whatauth-for-wordpress'); ?>
                         </p>
                     </td>
@@ -208,7 +208,7 @@ $available_roles = WhatAuth_Roles::get_available_roles();
                                 </div>
                             </div>
                             <p class="description">
-                                <span style="background:#fef3c7; color:#92400e; padding:2px 8px; border-radius:4px; font-weight:600; font-size:11px;">🔒 <?php esc_html_e('STARTER (Estándar WhatAuth)', 'whatauth-for-wordpress'); ?></span>
+                                <span style="background:#fef3c7; color:#92400e; padding:2px 8px; border-radius:4px; font-weight:600; font-size:11px;"><span class="dashicons dashicons-lock" style="font-size:12px;width:12px;height:12px;vertical-align:middle;margin-right:2px;"></span> <?php esc_html_e('STARTER (Estándar WhatAuth)', 'whatauth-for-wordpress'); ?></span>
                                 <?php esc_html_e('En la versión Starter el botón utiliza exclusivamente los colores y contrastes verificados de WhatAuth. Desbloquea colores de marca en PRO o Agency.', 'whatauth-for-wordpress'); ?>
                             </p>
                         </div>
@@ -224,7 +224,7 @@ $available_roles = WhatAuth_Roles::get_available_roles();
                                 </div>
                             </div>
                             <p class="description">
-                                <span style="background:#dbeafe; color:#1e40af; padding:2px 8px; border-radius:4px; font-weight:600; font-size:11px;">✨ <?php esc_html_e('PRO / AGENCY', 'whatauth-for-wordpress'); ?></span>
+                                <span style="background:#dbeafe; color:#1e40af; padding:2px 8px; border-radius:4px; font-weight:600; font-size:11px;"><span class="dashicons dashicons-star-filled" style="font-size:12px;width:12px;height:12px;vertical-align:middle;margin-right:2px;"></span> <?php esc_html_e('PRO / AGENCY', 'whatauth-for-wordpress'); ?></span>
                                 <?php esc_html_e('Personaliza la paleta del botón de acceso para adaptarlo a la identidad visual de tu marca o tienda.', 'whatauth-for-wordpress'); ?>
                             </p>
                         </div>
@@ -239,7 +239,7 @@ $available_roles = WhatAuth_Roles::get_available_roles();
                                 <span style="font-size:12px; color:#4b5563; font-weight:600;"><?php esc_html_e('Logo Oficial WhatAuth (Caja Fuerte Verde 3D)', 'whatauth-for-wordpress'); ?></span>
                             </div>
                             <p class="description">
-                                <span style="background:#fef3c7; color:#92400e; padding:2px 8px; border-radius:4px; font-weight:600; font-size:11px;">🔒 <?php esc_html_e('STARTER (Estándar WhatAuth)', 'whatauth-for-wordpress'); ?></span>
+                                <span style="background:#fef3c7; color:#92400e; padding:2px 8px; border-radius:4px; font-weight:600; font-size:11px;"><span class="dashicons dashicons-lock" style="font-size:12px;width:12px;height:12px;vertical-align:middle;margin-right:2px;"></span> <?php esc_html_e('STARTER (Estándar WhatAuth)', 'whatauth-for-wordpress'); ?></span>
                                 <?php esc_html_e('Muestra el logo 3D oficial de WhatAuth. En planes PRO y Agency puedes reemplazarlo por el logotipo de tu propia empresa.', 'whatauth-for-wordpress'); ?>
                             </p>
                         </div>
