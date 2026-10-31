@@ -10,7 +10,7 @@
  * Author URI:        https://whatauth.com
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       whatauth-for-wordpress
+ * Text Domain:       whatauth
  * Domain Path:       /languages
  */
 
@@ -56,7 +56,7 @@ add_action('plugins_loaded', 'whatauth_load_textdomain');
 function whatauth_load_textdomain() {
     $lang_dir = dirname(plugin_basename(__FILE__)) . '/languages';
     // phpcs:ignore PluginCheck.CodeAnalysis.DiscouragedFunctions.load_plugin_textdomainFound -- Fallback for offline/custom installations
-    $loaded   = load_plugin_textdomain('whatauth-for-wordpress', false, $lang_dir);
+    $loaded   = load_plugin_textdomain('whatauth', false, $lang_dir);
 
     // Fallback robusto para dialectos regionales y entornos donde determine_locale difiera
     if (!$loaded) {
@@ -77,9 +77,9 @@ function whatauth_load_textdomain() {
         );
 
         $target_mo = isset($fallback_map[$lang_prefix]) ? $fallback_map[$lang_prefix] : 'en_US';
-        $mo_file   = WHATAUTH_PLUGIN_DIR . 'languages/whatauth-for-wordpress-' . $target_mo . '.mo';
+        $mo_file   = WHATAUTH_PLUGIN_DIR . 'languages/whatauth-' . $target_mo . '.mo';
         if (file_exists($mo_file)) {
-            load_textdomain('whatauth-for-wordpress', $mo_file);
+            load_textdomain('whatauth', $mo_file);
         }
     }
 }
@@ -103,8 +103,8 @@ function whatauth_activate_plugin() {
         'enable_wplogin'          => 1,
         'enable_woocommerce'      => 1,
         'qr_size'                 => 280,
-        'button_text'             => __('Abrir WhatsApp directamente', 'whatauth-for-wordpress'),
-        'login_instruction_text'  => __('Escanea con tu WhatsApp para acceder al instante sin contraseñas.', 'whatauth-for-wordpress'),
+        'button_text'             => __('Abrir WhatsApp directamente', 'whatauth'),
+        'login_instruction_text'  => __('Escanea con tu WhatsApp para acceder al instante sin contraseñas.', 'whatauth'),
         'button_bg_color'         => '#25D366',
         'button_text_color'       => '#ffffff',
         'custom_logo_url'         => '',

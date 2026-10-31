@@ -88,7 +88,7 @@ class WhatAuth_API_Client {
             );
         }
 
-        $error_message = __('Error desconocido en la API de WhatAuth', 'whatauth-for-wordpress');
+        $error_message = __('Error desconocido en la API de WhatAuth', 'whatauth');
         if (is_array($data) && !empty($data['error'])) {
             $error_message = $data['error'];
         } elseif (is_array($data) && !empty($data['message'])) {

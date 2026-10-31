@@ -22,7 +22,7 @@ class WhatAuth_QR_Manager {
         check_ajax_referer('whatauth_admin_nonce', 'nonce');
 
         if (!WhatAuth_Roles::can_manage_qrs()) {
-            wp_send_json_error(array('message' => __('Permisos insuficientes.', 'whatauth-for-wordpress')), 403);
+            wp_send_json_error(array('message' => __('Permisos insuficientes.', 'whatauth')), 403);
         }
 
         $client = WhatAuth_API_Client::get_instance();
@@ -92,7 +92,7 @@ class WhatAuth_QR_Manager {
         check_ajax_referer('whatauth_admin_nonce', 'nonce');
 
         if (!WhatAuth_Roles::can_manage_qrs()) {
-            wp_send_json_error(array('message' => __('Permisos insuficientes.', 'whatauth-for-wordpress')), 403);
+            wp_send_json_error(array('message' => __('Permisos insuficientes.', 'whatauth')), 403);
         }
 
         $type = isset($_GET['type']) ? sanitize_text_field(wp_unslash($_GET['type'])) : '';
@@ -114,7 +114,7 @@ class WhatAuth_QR_Manager {
         check_ajax_referer('whatauth_admin_nonce', 'nonce');
 
         if (!WhatAuth_Roles::can_manage_qrs()) {
-            wp_send_json_error(array('message' => __('Permisos insuficientes.', 'whatauth-for-wordpress')), 403);
+            wp_send_json_error(array('message' => __('Permisos insuficientes.', 'whatauth')), 403);
         }
 
         $type = isset($_POST['type']) ? strtoupper(sanitize_text_field(wp_unslash($_POST['type']))) : 'LOGIN';
@@ -144,7 +144,7 @@ class WhatAuth_QR_Manager {
         $webhook_enabled = !empty($_POST['webhookEnabled']);
 
         if (empty($title)) {
-            wp_send_json_error(array('message' => __('El título del código QR es obligatorio.', 'whatauth-for-wordpress')), 400);
+            wp_send_json_error(array('message' => __('El título del código QR es obligatorio.', 'whatauth')), 400);
         }
 
         $payload = array(
@@ -216,7 +216,7 @@ class WhatAuth_QR_Manager {
         }
 
         wp_send_json_success(array(
-            'message' => __('Código QR guardado correctamente.', 'whatauth-for-wordpress'),
+            'message' => __('Código QR guardado correctamente.', 'whatauth'),
             'qr'      => !empty($response['data']) ? $response['data'] : array(),
         ));
     }
@@ -228,7 +228,7 @@ class WhatAuth_QR_Manager {
         check_ajax_referer('whatauth_admin_nonce', 'nonce');
 
         if (!WhatAuth_Roles::can_manage_qrs()) {
-            wp_send_json_error(array('message' => __('Permisos insuficientes.', 'whatauth-for-wordpress')), 403);
+            wp_send_json_error(array('message' => __('Permisos insuficientes.', 'whatauth')), 403);
         }
 
         // Restricción por Plan: Cuentas Starter no pueden eliminar códigos QR
@@ -236,13 +236,13 @@ class WhatAuth_QR_Manager {
         $current_plan = !empty($settings['plan']) ? strtoupper($settings['plan']) : 'STARTER';
         if (!in_array($current_plan, array('PRO', 'AGENCY'), true)) {
             wp_send_json_error(array(
-                'message' => __('La eliminación de códigos QR está reservada para cuentas PRO y Agency.', 'whatauth-for-wordpress')
+                'message' => __('La eliminación de códigos QR está reservada para cuentas PRO y Agency.', 'whatauth')
             ), 403);
         }
 
         $qr_id = isset($_POST['id']) ? sanitize_text_field(wp_unslash($_POST['id'])) : '';
         if (empty($qr_id)) {
-            wp_send_json_error(array('message' => __('Identificador de QR inválido.', 'whatauth-for-wordpress')), 400);
+            wp_send_json_error(array('message' => __('Identificador de QR inválido.', 'whatauth')), 400);
         }
 
         $client = WhatAuth_API_Client::get_instance();
@@ -252,7 +252,7 @@ class WhatAuth_QR_Manager {
             wp_send_json_error(array('message' => $response['error']), $response['status']);
         }
 
-        wp_send_json_success(array('message' => __('Código QR eliminado.', 'whatauth-for-wordpress')));
+        wp_send_json_success(array('message' => __('Código QR eliminado.', 'whatauth')));
     }
 
     /**
@@ -262,14 +262,14 @@ class WhatAuth_QR_Manager {
         check_ajax_referer('whatauth_admin_nonce', 'nonce');
 
         if (!WhatAuth_Roles::can_manage_settings()) {
-            wp_send_json_error(array('message' => __('Permisos insuficientes.', 'whatauth-for-wordpress')), 403);
+            wp_send_json_error(array('message' => __('Permisos insuficientes.', 'whatauth')), 403);
         }
 
         $token   = isset($_POST['api_key']) ? trim(sanitize_text_field(wp_unslash($_POST['api_key']))) : '';
         $api_url = isset($_POST['api_url']) ? rtrim(sanitize_text_field(wp_unslash($_POST['api_url'])), '/') : null;
 
         if (empty($token)) {
-            wp_send_json_error(array('message' => __('Introduce un token para verificar.', 'whatauth-for-wordpress')), 400);
+            wp_send_json_error(array('message' => __('Introduce un token para verificar.', 'whatauth')), 400);
         }
 
         $client = WhatAuth_API_Client::get_instance();
@@ -280,7 +280,7 @@ class WhatAuth_QR_Manager {
         $response = $client->verify_token($token);
 
         if (!$response['success'] || empty($response['data']['valid'])) {
-            $err_msg = !empty($response['error']) ? $response['error'] : __('Credencial inválida o no reconocida.', 'whatauth-for-wordpress');
+            $err_msg = !empty($response['error']) ? $response['error'] : __('Credencial inválida o no reconocida.', 'whatauth');
             wp_send_json_error(array('message' => $err_msg));
             return;
         }
@@ -323,7 +323,7 @@ class WhatAuth_QR_Manager {
         update_option('whatauth_settings', $settings);
 
         wp_send_json_success(array(
-            'message'        => __('Conexión exitosa con WhatAuth.', 'whatauth-for-wordpress'),
+            'message'        => __('Conexión exitosa con WhatAuth.', 'whatauth'),
             'data'           => $api_data,
             'plan'           => $plan,
             'lines'          => $lines,
@@ -339,7 +339,7 @@ class WhatAuth_QR_Manager {
         check_ajax_referer('whatauth_admin_nonce', 'nonce');
 
         if (!WhatAuth_Roles::can_manage_settings()) {
-            wp_send_json_error(array('message' => __('Permisos insuficientes.', 'whatauth-for-wordpress')), 403);
+            wp_send_json_error(array('message' => __('Permisos insuficientes.', 'whatauth')), 403);
         }
 
         $api_key            = isset($_POST['api_key']) ? trim(sanitize_text_field(wp_unslash($_POST['api_key']))) : '';
@@ -355,8 +355,8 @@ class WhatAuth_QR_Manager {
         $enable_wplogin          = !empty($_POST['enable_wplogin']) ? 1 : 0;
         $enable_woocommerce      = !empty($_POST['enable_woocommerce']) ? 1 : 0;
         $qr_size                 = isset($_POST['qr_size']) ? intval(wp_unslash($_POST['qr_size'])) : 280;
-        $button_text             = isset($_POST['button_text']) ? sanitize_text_field(wp_unslash($_POST['button_text'])) : __('Abrir WhatsApp directamente', 'whatauth-for-wordpress');
-        $login_instruction_text  = isset($_POST['login_instruction_text']) ? sanitize_text_field(wp_unslash($_POST['login_instruction_text'])) : __('Escanea con tu WhatsApp para acceder al instante sin contraseñas.', 'whatauth-for-wordpress');
+        $button_text             = isset($_POST['button_text']) ? sanitize_text_field(wp_unslash($_POST['button_text'])) : __('Abrir WhatsApp directamente', 'whatauth');
+        $login_instruction_text  = isset($_POST['login_instruction_text']) ? sanitize_text_field(wp_unslash($_POST['login_instruction_text'])) : __('Escanea con tu WhatsApp para acceder al instante sin contraseñas.', 'whatauth');
 
         $existing_settings       = get_option('whatauth_settings', array());
         $current_plan            = isset($_POST['plan']) ? sanitize_text_field(wp_unslash($_POST['plan'])) : (!empty($existing_settings['plan']) ? $existing_settings['plan'] : 'STARTER');
@@ -364,8 +364,8 @@ class WhatAuth_QR_Manager {
 
         // Si es STARTER, forzar valores oficiales de WhatAuth
         if (!$is_pro_agency) {
-            $button_text            = __('Abrir WhatsApp directamente', 'whatauth-for-wordpress');
-            $login_instruction_text = __('Escanea con tu WhatsApp para acceder al instante sin contraseñas.', 'whatauth-for-wordpress');
+            $button_text            = __('Abrir WhatsApp directamente', 'whatauth');
+            $login_instruction_text = __('Escanea con tu WhatsApp para acceder al instante sin contraseñas.', 'whatauth');
             $button_bg_color        = '#25D366';
             $button_text_color      = '#ffffff';
             $custom_logo_url        = '';
@@ -407,7 +407,7 @@ class WhatAuth_QR_Manager {
         }
 
         wp_send_json_success(array(
-            'message'  => __('Ajustes guardados correctamente.', 'whatauth-for-wordpress'),
+            'message'  => __('Ajustes guardados correctamente.', 'whatauth'),
             'settings' => $settings,
         ));
     }

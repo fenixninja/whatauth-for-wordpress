@@ -87,21 +87,21 @@ class WhatAuth_Auth {
             'hideWpCredentials'     => !empty($settings['hide_wp_credentials']) ? 1 : 0,
             'desktopShowWalink'     => isset($settings['desktop_show_walink']) ? intval($settings['desktop_show_walink']) : 1,
             'mobileShowWalinkOnly'  => isset($settings['mobile_show_walink_only']) ? intval($settings['mobile_show_walink_only']) : 1,
-            'loginInstructionText'  => !empty($settings['login_instruction_text']) ? $settings['login_instruction_text'] : __('Escanea con tu WhatsApp para acceder al instante sin contraseñas.', 'whatauth-for-wordpress'),
-            'buttonText'            => !empty($settings['button_text']) ? $settings['button_text'] : __('Abrir WhatsApp directamente', 'whatauth-for-wordpress'),
+            'loginInstructionText'  => !empty($settings['login_instruction_text']) ? $settings['login_instruction_text'] : __('Escanea con tu WhatsApp para acceder al instante sin contraseñas.', 'whatauth'),
+            'buttonText'            => !empty($settings['button_text']) ? $settings['button_text'] : __('Abrir WhatsApp directamente', 'whatauth'),
             'i18n'                  => array(
-                'modalTitle'        => __('Iniciar sesión con WhatsApp', 'whatauth-for-wordpress'),
-                'scanInstruction'   => !empty($settings['login_instruction_text']) ? $settings['login_instruction_text'] : __('Escanea el código QR con tu WhatsApp y envía el mensaje de verificación.', 'whatauth-for-wordpress'),
-                'openWhatsApp'      => !empty($settings['button_text']) ? $settings['button_text'] : __('Abrir WhatsApp directamente', 'whatauth-for-wordpress'),
-                'waitingScan'       => __('Esperando verificación...', 'whatauth-for-wordpress'),
-                'successLogin'      => __('¡Verificado con éxito! Redirigiendo...', 'whatauth-for-wordpress'),
-                'errorLogin'        => __('Error al verificar la sesión. Inténtalo de nuevo.', 'whatauth-for-wordpress'),
-                'expiredQr'         => __('El código QR ha expirado. Haz clic para recargar.', 'whatauth-for-wordpress'),
-                'close'             => __('Cerrar', 'whatauth-for-wordpress'),
-                'brandingBadge'     => __('Crea tu login con QR con Whatauth.com', 'whatauth-for-wordpress'),
-                'mobileHint'        => __('Toca el botón para abrir WhatsApp y verificar tu acceso en 1 segundo.', 'whatauth-for-wordpress'),
-                'generatingQr'      => __('Generando QR WhatAuth...', 'whatauth-for-wordpress'),
-                'loadingQr'         => __('Cargando código QR...', 'whatauth-for-wordpress'),
+                'modalTitle'        => __('Iniciar sesión con WhatsApp', 'whatauth'),
+                'scanInstruction'   => !empty($settings['login_instruction_text']) ? $settings['login_instruction_text'] : __('Escanea el código QR con tu WhatsApp y envía el mensaje de verificación.', 'whatauth'),
+                'openWhatsApp'      => !empty($settings['button_text']) ? $settings['button_text'] : __('Abrir WhatsApp directamente', 'whatauth'),
+                'waitingScan'       => __('Esperando verificación...', 'whatauth'),
+                'successLogin'      => __('¡Verificado con éxito! Redirigiendo...', 'whatauth'),
+                'errorLogin'        => __('Error al verificar la sesión. Inténtalo de nuevo.', 'whatauth'),
+                'expiredQr'         => __('El código QR ha expirado. Haz clic para recargar.', 'whatauth'),
+                'close'             => __('Cerrar', 'whatauth'),
+                'brandingBadge'     => __('Crea tu login con QR con Whatauth.com', 'whatauth'),
+                'mobileHint'        => __('Toca el botón para abrir WhatsApp y verificar tu acceso en 1 segundo.', 'whatauth'),
+                'generatingQr'      => __('Generando QR WhatAuth...', 'whatauth'),
+                'loadingQr'         => __('Cargando código QR...', 'whatauth'),
             )
         ));
     }
@@ -155,7 +155,7 @@ class WhatAuth_Auth {
         if (empty($token)) {
             return new WP_REST_Response(array(
                 'success' => false,
-                'error'   => __('Token de sesión de WhatsApp ausente', 'whatauth-for-wordpress')
+                'error'   => __('Token de sesión de WhatsApp ausente', 'whatauth')
             ), 400);
         }
 
@@ -166,7 +166,7 @@ class WhatAuth_Auth {
         if (!$verification['success'] || empty($verification['data']['valid'])) {
             return new WP_REST_Response(array(
                 'success' => false,
-                'error'   => !empty($verification['error']) ? $verification['error'] : __('Validación de ticket fallida o expirada', 'whatauth-for-wordpress')
+                'error'   => !empty($verification['error']) ? $verification['error'] : __('Validación de ticket fallida o expirada', 'whatauth')
             ), 401);
         }
 
@@ -181,7 +181,7 @@ class WhatAuth_Auth {
         if (empty($phone)) {
             return new WP_REST_Response(array(
                 'success' => false,
-                'error'   => __('No se pudo resolver el número de teléfono verificado', 'whatauth-for-wordpress')
+                'error'   => __('No se pudo resolver el número de teléfono verificado', 'whatauth')
             ), 400);
         }
 
@@ -205,9 +205,10 @@ class WhatAuth_Auth {
 
         $is_admin_phone = (!empty($configured_admin_phone) && self::phones_match($clean_phone, $configured_admin_phone));
 
+        // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key, WordPress.DB.SlowDBQuery.slow_db_query_meta_value -- Phone lookup requires meta_key search
         $user_query = new WP_User_Query(array(
-            'meta_key'     => 'whatauth_phone',
-            'meta_value'   => $clean_phone,
+            'meta_key'     => 'whatauth_phone', // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+            'meta_value'   => $clean_phone,     // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
             'number'       => 1,
             'fields'       => 'ID',
         ));
@@ -241,7 +242,7 @@ class WhatAuth_Auth {
             if (!$allow_registration && !$is_admin_phone && !get_option('users_can_register')) {
                 return new WP_REST_Response(array(
                     'success' => false,
-                    'error'   => __('El registro de nuevos usuarios está deshabilitado en este sitio.', 'whatauth-for-wordpress')
+                    'error'   => __('El registro de nuevos usuarios está deshabilitado en este sitio.', 'whatauth')
                 ), 403);
             }
 
@@ -294,7 +295,7 @@ class WhatAuth_Auth {
         if (!$user) {
             return new WP_REST_Response(array(
                 'success' => false,
-                'error'   => __('No se pudo recuperar la cuenta de usuario.', 'whatauth-for-wordpress')
+                'error'   => __('No se pudo recuperar la cuenta de usuario.', 'whatauth')
             ), 500);
         }
 
@@ -307,7 +308,7 @@ class WhatAuth_Auth {
 
         return new WP_REST_Response(array(
             'success'     => true,
-            'message'     => __('Sesión iniciada con éxito', 'whatauth-for-wordpress'),
+            'message'     => __('Sesión iniciada con éxito', 'whatauth'),
             'redirectUrl' => $redirect_url,
             'user'        => array(
                 'id'          => $user_id,
@@ -331,11 +332,11 @@ class WhatAuth_Auth {
 
         // En Starter los textos están protegidos y estandarizados con WhatAuth
         if (!$is_pro_agency) {
-            $btn_text    = __('Iniciar sesión con WhatsApp', 'whatauth-for-wordpress');
-            $instruction = __('Escanea con tu WhatsApp para acceder al instante sin contraseñas.', 'whatauth-for-wordpress');
+            $btn_text    = __('Iniciar sesión con WhatsApp', 'whatauth');
+            $instruction = __('Escanea con tu WhatsApp para acceder al instante sin contraseñas.', 'whatauth');
         } else {
-            $btn_text    = !empty($settings['button_text']) ? $settings['button_text'] : __('Iniciar sesión con WhatsApp', 'whatauth-for-wordpress');
-            $instruction = !empty($settings['login_instruction_text']) ? $settings['login_instruction_text'] : __('Escanea con tu WhatsApp para acceder al instante sin contraseñas.', 'whatauth-for-wordpress');
+            $btn_text    = !empty($settings['button_text']) ? $settings['button_text'] : __('Iniciar sesión con WhatsApp', 'whatauth');
+            $instruction = !empty($settings['login_instruction_text']) ? $settings['login_instruction_text'] : __('Escanea con tu WhatsApp para acceder al instante sin contraseñas.', 'whatauth');
         }
 
         $hide_wp_cred       = !empty($settings['hide_wp_credentials']);
@@ -360,7 +361,7 @@ class WhatAuth_Auth {
             <?php if (!$hide_wp_cred) : ?>
             <div style="display: flex; align-items: center; text-align: center; margin: 12px 0 16px 0; color: #8c8f94;">
                 <span style="flex: 1; border-bottom: 1px solid #dcdcde;"></span>
-                <span style="padding: 0 10px; font-size: 12px; text-transform: uppercase; font-weight: 600;"><?php esc_html_e('O accede con WhatsApp', 'whatauth-for-wordpress'); ?></span>
+                <span style="padding: 0 10px; font-size: 12px; text-transform: uppercase; font-weight: 600;"><?php esc_html_e('O accede con WhatsApp', 'whatauth'); ?></span>
                 <span style="flex: 1; border-bottom: 1px solid #dcdcde;"></span>
             </div>
             <?php endif; ?>
@@ -373,7 +374,7 @@ class WhatAuth_Auth {
             <!-- Contenedor QR Inline (se muestra directamente al entrar al login) -->
             <div id="whatauth-inline-login" class="whatauth-qr-container" style="margin: 0 auto 12px auto; display: inline-block;">
                 <div id="wa-inline-qr-loading" style="width: 210px; height: 210px; display: flex; align-items: center; justify-content: center; font-size: 13px; color: #9ca3af; background: #f9fafb; border-radius: 8px;">
-                    <?php esc_html_e('Generando QR WhatAuth...', 'whatauth-for-wordpress'); ?>
+                    <?php esc_html_e('Generando QR WhatAuth...', 'whatauth'); ?>
                 </div>
                 <img id="wa-inline-qr-img" class="whatauth-qr-image" style="display: none; width: 210px; height: 210px;" alt="WhatAuth QR Code">
             </div>
@@ -387,7 +388,7 @@ class WhatAuth_Auth {
 
             <!-- Estado de verificación en vivo -->
             <div id="wa-inline-status" class="whatauth-status-text" style="margin: 6px 0 12px 0; font-size: 13px; color: #6b7280;">
-                <?php esc_html_e('Esperando escaneo o envío de WhatsApp...', 'whatauth-for-wordpress'); ?>
+                <?php esc_html_e('Esperando escaneo o envío de WhatsApp...', 'whatauth'); ?>
             </div>
 
             <!-- Botón WaLink directo para abrir WhatsApp en escritorio -->
@@ -405,7 +406,7 @@ class WhatAuth_Auth {
             <div class="whatauth-branding-footer" style="margin-top: 14px; padding-top: 10px; border-top: 1px dashed #e5e7eb;">
                 <a href="https://whatauth.com?utm_source=wp_plugin&utm_medium=login_footer&utm_campaign=powered_by" target="_blank" rel="noopener noreferrer" style="font-size: 11px; color: #16a34a; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; font-weight: 600; opacity: 0.9; transition: opacity 0.2s ease;">
                     <img src="<?php echo esc_url($official_logo); ?>" alt="WhatAuth" style="width: 14px; height: 14px; object-fit: contain;">
-                    <span><?php esc_html_e('Crea tu login con QR con Whatauth.com', 'whatauth-for-wordpress'); ?></span>
+                    <span><?php esc_html_e('Crea tu login con QR con Whatauth.com', 'whatauth'); ?></span>
                 </a>
             </div>
             <?php endif; ?>
@@ -416,7 +417,7 @@ class WhatAuth_Auth {
             <?php if (!$hide_wp_cred) : ?>
             <div style="display: flex; align-items: center; text-align: center; margin: 8px 0 14px 0; color: #8c8f94;">
                 <span style="flex: 1; border-bottom: 1px solid #dcdcde;"></span>
-                <span style="padding: 0 10px; font-size: 11px; text-transform: uppercase; font-weight: 600;"><?php esc_html_e('O accede con WhatsApp', 'whatauth-for-wordpress'); ?></span>
+                <span style="padding: 0 10px; font-size: 11px; text-transform: uppercase; font-weight: 600;"><?php esc_html_e('O accede con WhatsApp', 'whatauth'); ?></span>
                 <span style="flex: 1; border-bottom: 1px solid #dcdcde;"></span>
             </div>
             <?php endif; ?>
@@ -429,12 +430,12 @@ class WhatAuth_Auth {
 
                 <!-- Título Claro -->
                 <div style="font-weight: 700; font-size: 16px; color: #111827; margin-bottom: 4px;">
-                    <?php esc_html_e('Iniciar sesión con WhatsApp', 'whatauth-for-wordpress'); ?>
+                    <?php esc_html_e('Iniciar sesión con WhatsApp', 'whatauth'); ?>
                 </div>
 
                 <!-- Microtexto Explicativo -->
                 <p style="font-size: 12px; color: #6b7280; line-height: 1.4; margin: 0 0 16px 0;">
-                    <?php esc_html_e('Toca el botón para abrir WhatsApp y verificar tu acceso en 1 segundo.', 'whatauth-for-wordpress'); ?>
+                    <?php esc_html_e('Toca el botón para abrir WhatsApp y verificar tu acceso en 1 segundo.', 'whatauth'); ?>
                 </p>
 
                 <!-- Botón de WhatsApp a Pantalla Completa -->
@@ -445,7 +446,7 @@ class WhatAuth_Auth {
 
                 <!-- Estado en móvil -->
                 <div id="wa-mobile-status" class="whatauth-status-text" style="margin-top: 10px; font-size: 12px; color: #6b7280;">
-                    <?php esc_html_e('Esperando apertura de WhatsApp...', 'whatauth-for-wordpress'); ?>
+                    <?php esc_html_e('Esperando apertura de WhatsApp...', 'whatauth'); ?>
                 </div>
 
                 <!-- Badge Starter en Móvil -->
@@ -453,7 +454,7 @@ class WhatAuth_Auth {
                 <div class="whatauth-branding-footer" style="margin-top: 14px; padding-top: 10px; border-top: 1px dashed #e5e7eb;">
                     <a href="https://whatauth.com?utm_source=wp_plugin&utm_medium=mobile_card_footer&utm_campaign=powered_by" target="_blank" rel="noopener noreferrer" style="font-size: 11px; color: #16a34a; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; font-weight: 600;">
                         <img src="<?php echo esc_url($official_logo); ?>" alt="WhatAuth" style="width: 14px; height: 14px; object-fit: contain;">
-                        <span><?php esc_html_e('Crea tu login con QR con Whatauth.com', 'whatauth-for-wordpress'); ?></span>
+                        <span><?php esc_html_e('Crea tu login con QR con Whatauth.com', 'whatauth'); ?></span>
                     </a>
                 </div>
                 <?php endif; ?>
@@ -476,7 +477,7 @@ class WhatAuth_Auth {
         $a = shortcode_atts(array(
             'redirect' => home_url(),
             'size'     => 280,
-            'text'     => __('Iniciar sesión con WhatsApp', 'whatauth-for-wordpress'),
+            'text'     => __('Iniciar sesión con WhatsApp', 'whatauth'),
             'mode'     => 'button' // 'button' o 'inline'
         ), $atts, 'whatauth_login');
 
@@ -507,7 +508,7 @@ class WhatAuth_Auth {
         register_block_type('whatauth/qr-login', array(
             'render_callback' => function($attributes) {
                 $redirect = !empty($attributes['redirectUrl']) ? $attributes['redirectUrl'] : home_url();
-                $text     = !empty($attributes['buttonText']) ? $attributes['buttonText'] : __('Iniciar sesión con WhatsApp', 'whatauth-for-wordpress');
+                $text     = !empty($attributes['buttonText']) ? $attributes['buttonText'] : __('Iniciar sesión con WhatsApp', 'whatauth');
                 $mode     = !empty($attributes['displayMode']) ? $attributes['displayMode'] : 'button';
                 return self::render_shortcode(array(
                     'redirect' => $redirect,

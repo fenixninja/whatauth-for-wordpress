@@ -30,8 +30,8 @@ class WhatAuth_Admin {
 
         add_submenu_page(
             'whatauth',
-            __('WhatAuth – Resumen', 'whatauth-for-wordpress'),
-            __('Resumen', 'whatauth-for-wordpress'),
+            __('WhatAuth – Resumen', 'whatauth'),
+            __('Resumen', 'whatauth'),
             WhatAuth_Roles::CAP_MANAGE_QRS,
             'whatauth',
             array(__CLASS__, 'render_dashboard_page')
@@ -39,8 +39,8 @@ class WhatAuth_Admin {
 
         add_submenu_page(
             'whatauth',
-            __('WhatAuth – Gestor de QRs', 'whatauth-for-wordpress'),
-            __('Gestor de QRs', 'whatauth-for-wordpress'),
+            __('WhatAuth – Gestor de QRs', 'whatauth'),
+            __('Gestor de QRs', 'whatauth'),
             WhatAuth_Roles::CAP_MANAGE_QRS,
             'whatauth-qrs',
             array(__CLASS__, 'render_qr_manager_page')
@@ -48,8 +48,8 @@ class WhatAuth_Admin {
 
         add_submenu_page(
             'whatauth',
-            __('WhatAuth – Ajustes & Roles', 'whatauth-for-wordpress'),
-            __('Ajustes & Roles', 'whatauth-for-wordpress'),
+            __('WhatAuth – Ajustes & Roles', 'whatauth'),
+            __('Ajustes & Roles', 'whatauth'),
             WhatAuth_Roles::CAP_MANAGE_SETTINGS,
             'whatauth-settings',
             array(__CLASS__, 'render_settings_page')
@@ -58,8 +58,8 @@ class WhatAuth_Admin {
         // Submenú oculto para el asistente de instalación
         add_submenu_page(
             null,
-            __('WhatAuth – Asistente de Configuración', 'whatauth-for-wordpress'),
-            __('Asistente', 'whatauth-for-wordpress'),
+            __('WhatAuth – Asistente de Configuración', 'whatauth'),
+            __('Asistente', 'whatauth'),
             WhatAuth_Roles::CAP_MANAGE_SETTINGS,
             'whatauth-wizard',
             array(__CLASS__, 'render_wizard_page')
@@ -140,51 +140,51 @@ class WhatAuth_Admin {
             'defaultLineId' => !empty($settings['line_id']) ? $settings['line_id'] : '',
             'defaultLogo'   => WHATAUTH_PLUGIN_URL . 'public/images/whatauth-logo.png',
             'i18n'    => array(
-                'confirmDelete'       => __('¿Estás seguro de que deseas eliminar este código QR?', 'whatauth-for-wordpress'),
-                'deleting'            => __('Eliminando...', 'whatauth-for-wordpress'),
-                'saving'              => __('Guardando...', 'whatauth-for-wordpress'),
-                'saved'               => __('¡Guardado con éxito!', 'whatauth-for-wordpress'),
-                'verifying'           => __('Verificando conexión...', 'whatauth-for-wordpress'),
-                'verifiedSuccess'     => __('¡Credencial verificada correctamente!', 'whatauth-for-wordpress'),
-                'verifiedFailed'      => __('Fallo de verificación.', 'whatauth-for-wordpress'),
-                'errorGeneric'        => __('Ha ocurrido un error inesperado.', 'whatauth-for-wordpress'),
-                'noQrsFound'          => __('No se encontraron códigos QR en esta categoría.', 'whatauth-for-wordpress'),
-                'loadingQrs'          => __('Cargando códigos QR desde WhatAuth Cloud...', 'whatauth-for-wordpress'),
-                'loadingLogs'         => __('Cargando registros de actividad...', 'whatauth-for-wordpress'),
-                'noLogsFound'         => __('No hay escaneos registrados aún. Cuando un usuario escanee un QR de WhatAuth, la actividad se mostrará aquí en tiempo real.', 'whatauth-for-wordpress'),
-                'verifiedBadge'       => __('Verificado ✓', 'whatauth-for-wordpress'),
-                'edit'                => __('Editar', 'whatauth-for-wordpress'),
-                'delete'              => __('Eliminar', 'whatauth-for-wordpress'),
-                'saveQr'              => __('Guardar Código QR', 'whatauth-for-wordpress'),
-                'createQr'            => __('Crear Nuevo Código QR', 'whatauth-for-wordpress'),
-                'editQr'              => __('Editar Código QR: ', 'whatauth-for-wordpress'),
-                'noActivity'          => __('Sin actividad registrada en los últimos 30 días', 'whatauth-for-wordpress'),
-                'scansTotal'          => __('Scans Totales', 'whatauth-for-wordpress'),
-                'loginScans'          => __('Login', 'whatauth-for-wordpress'),
-                'configured'          => __('✓ Configurado', 'whatauth-for-wordpress'),
-                'active'              => __('✓ Activo', 'whatauth-for-wordpress'),
-                'untitled'            => __('Sin título', 'whatauth-for-wordpress'),
-                'deleteLockedTooltip' => __('Eliminar QRs requiere plan PRO o Agency', 'whatauth-for-wordpress'),
-                'titleRequired'       => __('El título del código QR es obligatorio.', 'whatauth-for-wordpress'),
-                'qrDeleted'           => __('Código QR eliminado correctamente.', 'whatauth-for-wordpress'),
-                'enterToken'          => __('Introduce tu Service Token de WhatAuth.', 'whatauth-for-wordpress'),
-                'configTokenToSync'   => __('Configura tu Service Token en Ajustes para sincronizar la telemetría en vivo.', 'whatauth-for-wordpress'),
-                'saveChanges'         => __('Guardar Cambios', 'whatauth-for-wordpress'),
-                'errorSaving'         => __('Error guardando ajustes', 'whatauth-for-wordpress'),
-                'errorDeleting'       => __('Error al eliminar', 'whatauth-for-wordpress'),
-                'apiConnectionError'  => __('Error de conexión con la API', 'whatauth-for-wordpress'),
-                'loadingEngine'       => __('Cargando motor de QR...', 'whatauth-for-wordpress'),
-                'previewDefaultText'  => __('Escribe tu mensaje en la caja superior para previsualizarlo como en WhatsApp...', 'whatauth-for-wordpress'),
-                'connectedPlan'       => __('✓ Conectado: Plan', 'whatauth-for-wordpress'),
-                'officialHostBot'     => __('Bot Anfitrión Oficial (+34 631 490 990 - Starter)', 'whatauth-for-wordpress'),
-                'linePrefix'          => __('Línea: ', 'whatauth-for-wordpress'),
-                'errorLoadingData'    => __('Error cargando datos', 'whatauth-for-wordpress'),
-                'mediaSelectLogo'     => __('Seleccionar Logotipo para el Código QR', 'whatauth-for-wordpress'),
-                'mediaUseLogo'        => __('Usar este Logo', 'whatauth-for-wordpress'),
-                'characters'          => __('caracteres', 'whatauth-for-wordpress'),
-                'openLink'            => __('Abrir enlace', 'whatauth-for-wordpress'),
-                'previewHostBotNotice'=> __('El Bot Anfitrión Oficial no emite Auto-Reply. Selecciona una línea propia para configurar respuestas automáticas.', 'whatauth-for-wordpress'),
-                'previewInactive'     => __('Respuesta automática inactiva. Marca la casilla "Activar Respuesta Automática" superior para habilitarla.', 'whatauth-for-wordpress'),
+                'confirmDelete'       => __('¿Estás seguro de que deseas eliminar este código QR?', 'whatauth'),
+                'deleting'            => __('Eliminando...', 'whatauth'),
+                'saving'              => __('Guardando...', 'whatauth'),
+                'saved'               => __('¡Guardado con éxito!', 'whatauth'),
+                'verifying'           => __('Verificando conexión...', 'whatauth'),
+                'verifiedSuccess'     => __('¡Credencial verificada correctamente!', 'whatauth'),
+                'verifiedFailed'      => __('Fallo de verificación.', 'whatauth'),
+                'errorGeneric'        => __('Ha ocurrido un error inesperado.', 'whatauth'),
+                'noQrsFound'          => __('No se encontraron códigos QR en esta categoría.', 'whatauth'),
+                'loadingQrs'          => __('Cargando códigos QR desde WhatAuth Cloud...', 'whatauth'),
+                'loadingLogs'         => __('Cargando registros de actividad...', 'whatauth'),
+                'noLogsFound'         => __('No hay escaneos registrados aún. Cuando un usuario escanee un QR de WhatAuth, la actividad se mostrará aquí en tiempo real.', 'whatauth'),
+                'verifiedBadge'       => __('Verificado ✓', 'whatauth'),
+                'edit'                => __('Editar', 'whatauth'),
+                'delete'              => __('Eliminar', 'whatauth'),
+                'saveQr'              => __('Guardar Código QR', 'whatauth'),
+                'createQr'            => __('Crear Nuevo Código QR', 'whatauth'),
+                'editQr'              => __('Editar Código QR: ', 'whatauth'),
+                'noActivity'          => __('Sin actividad registrada en los últimos 30 días', 'whatauth'),
+                'scansTotal'          => __('Scans Totales', 'whatauth'),
+                'loginScans'          => __('Login', 'whatauth'),
+                'configured'          => __('✓ Configurado', 'whatauth'),
+                'active'              => __('✓ Activo', 'whatauth'),
+                'untitled'            => __('Sin título', 'whatauth'),
+                'deleteLockedTooltip' => __('Eliminar QRs requiere plan PRO o Agency', 'whatauth'),
+                'titleRequired'       => __('El título del código QR es obligatorio.', 'whatauth'),
+                'qrDeleted'           => __('Código QR eliminado correctamente.', 'whatauth'),
+                'enterToken'          => __('Introduce tu Service Token de WhatAuth.', 'whatauth'),
+                'configTokenToSync'   => __('Configura tu Service Token en Ajustes para sincronizar la telemetría en vivo.', 'whatauth'),
+                'saveChanges'         => __('Guardar Cambios', 'whatauth'),
+                'errorSaving'         => __('Error guardando ajustes', 'whatauth'),
+                'errorDeleting'       => __('Error al eliminar', 'whatauth'),
+                'apiConnectionError'  => __('Error de conexión con la API', 'whatauth'),
+                'loadingEngine'       => __('Cargando motor de QR...', 'whatauth'),
+                'previewDefaultText'  => __('Escribe tu mensaje en la caja superior para previsualizarlo como en WhatsApp...', 'whatauth'),
+                'connectedPlan'       => __('✓ Conectado: Plan', 'whatauth'),
+                'officialHostBot'     => __('Bot Anfitrión Oficial (+34 631 490 990 - Starter)', 'whatauth'),
+                'linePrefix'          => __('Línea: ', 'whatauth'),
+                'errorLoadingData'    => __('Error cargando datos', 'whatauth'),
+                'mediaSelectLogo'     => __('Seleccionar Logotipo para el Código QR', 'whatauth'),
+                'mediaUseLogo'        => __('Usar este Logo', 'whatauth'),
+                'characters'          => __('caracteres', 'whatauth'),
+                'openLink'            => __('Abrir enlace', 'whatauth'),
+                'previewHostBotNotice'=> __('El Bot Anfitrión Oficial no emite Auto-Reply. Selecciona una línea propia para configurar respuestas automáticas.', 'whatauth'),
+                'previewInactive'     => __('Respuesta automática inactiva. Marca la casilla "Activar Respuesta Automática" superior para habilitarla.', 'whatauth'),
             )
         ));
     }
@@ -207,9 +207,9 @@ class WhatAuth_Admin {
             ?>
             <div class="notice notice-info is-dismissible" style="border-left-color: #25D366;">
                 <p>
-                    <strong>WhatAuth:</strong> <?php esc_html_e('Conecta tu WhatsApp oficial o tu línea dedicada para activar el login Passwordless y los códigos QR.', 'whatauth-for-wordpress'); ?>
+                    <strong>WhatAuth:</strong> <?php esc_html_e('Conecta tu WhatsApp oficial o tu línea dedicada para activar el login Passwordless y los códigos QR.', 'whatauth'); ?>
                     <a href="<?php echo esc_url(admin_url('admin.php?page=whatauth-wizard')); ?>" class="button button-primary" style="margin-left: 10px; background: #25D366; border-color: #20ba5a;">
-                        <?php esc_html_e('Configurar en 1 minuto', 'whatauth-for-wordpress'); ?>
+                        <?php esc_html_e('Configurar en 1 minuto', 'whatauth'); ?>
                     </a>
                 </p>
             </div>
@@ -218,7 +218,7 @@ class WhatAuth_Admin {
     }
 
     public static function add_plugin_action_links($links) {
-        $settings_link = '<a href="' . esc_url(admin_url('admin.php?page=whatauth-settings')) . '">' . __('Ajustes', 'whatauth-for-wordpress') . '</a>';
+        $settings_link = '<a href="' . esc_url(admin_url('admin.php?page=whatauth-settings')) . '">' . __('Ajustes', 'whatauth') . '</a>';
         array_unshift($links, $settings_link);
         return $links;
     }

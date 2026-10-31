@@ -8,7 +8,7 @@
   "icon": "shield",
   "description": "Allow visitors to log in via WhatsApp by scanning a dynamic QR code.",
   "keywords": ["login", "passwordless", "whatauth", "qr", "authentication"],
-  "textdomain": "whatauth-for-wordpress",
+  "textdomain": "whatauth",
   "attributes": {
     "redirectUrl": {
       "type": "string",
