@@ -1,0 +1,1162 @@
+# Spanish (Argentina) translations for WhatAuth WordPress Plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WhatAuth – Passwordless WhatsApp Login & Smart QR Hub 1.0.0\n"
+"Report-Msgid-Bugs-To: https://whatauth.com/support\n"
+"Last-Translator: WhatAuth Team <soporte@whatauth.com>\n"
+"Language-Team: Spanish (Argentina) <soporte@whatauth.com>\n"
+"Language: es_AR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: whatauth-for-wordpress\n"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:80
+msgid "1. Campaña"
+msgstr "1. Campaña"
+
+#: whatauth-for-wordpress/admin/views/settings.php:48
+msgid "1. Conexión y Credenciales"
+msgstr "1. Conexión y Credenciales"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:267
+msgid "1. Logotipo Central del QR"
+msgstr "1. Logotipo Central del QR"
+
+#: whatauth-for-wordpress/admin/views/settings.php:95
+msgid "2. Autenticación y Registro de Usuarios"
+msgstr "2. Autenticación y Registro de Usuarios"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:83
+msgid "2. Auto-Reply"
+msgstr "2. Auto-Reply"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:286
+msgid "2. Módulos y Puntos (Dots)"
+msgstr "2. Módulos y Puntos (Dots)"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:87
+msgid "3. Estilo & Logo"
+msgstr "3. Estilo & Logo"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:317
+msgid "3. Marco Exterior de Esquina"
+msgstr "3. Marco Exterior de Esquina"
+
+#: whatauth-for-wordpress/admin/views/settings.php:270
+msgid "3. Permisos de Gestión de QRs en WP-Admin"
+msgstr "3. Permisos de Gestión de QRs en WP-Admin"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:336
+msgid "4. Punto Interior de Esquina"
+msgstr "4. Punto Interior de Esquina"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:354
+msgid "5. Lienzo y Fondo"
+msgstr "5. Lienzo y Fondo"
+
+#: whatauth-for-wordpress/whatauth.php:105
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:82
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:86
+msgid "Abrir WhatsApp directamente"
+msgstr "Abrir WhatsApp directamente"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:185
+msgid "Abrir enlace"
+msgstr "Abrir enlace"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:48
+msgid "Acciones"
+msgstr "Acciones"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:124
+msgid "Activado de fábrica"
+msgstr "Activado de fábrica"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:166
+msgid "Activar Respuesta Automática (Auto-Reply) al Escanear"
+msgstr "Activar Respuesta Automática (Auto-Reply) al Escanear"
+
+#: whatauth-for-wordpress/admin/views/settings.php:160
+msgid "Activar WhatAuth directamente en la pantalla oficial wp-login.php"
+msgstr "Activar WhatAuth directamente en la pantalla oficial wp-login.php"
+
+#: whatauth-for-wordpress/admin/views/settings.php:164
+msgid "Activar WhatAuth en el formulario de acceso de WooCommerce (Mi Cuenta / Checkout)"
+msgstr "Activar WhatAuth en el formulario de acceso de WooCommerce (Mi Cuenta / Checkout)"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:139
+msgid "Activar envío de webhook para este código QR"
+msgstr "Activar envío de webhook para este código QR"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:91
+msgid "Actividad y Escaneos Verificados (Últimos 30 días)"
+msgstr "Actividad y Escaneos Verificados (Últimos 30 días)"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:187
+msgid "Actualizar"
+msgstr "Actualizar"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:194
+msgid "Admite formato WhatsApp: *negrita*, _cursiva_, ~tachado~"
+msgstr "Admite formato WhatsApp: *negrita*, _cursiva_, ~tachado~"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:221
+msgid "Ajustes"
+msgstr "Ajustes"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:52
+msgid "Ajustes & Roles"
+msgstr "Ajustes & Roles"
+
+#: whatauth-for-wordpress/includes/class-whatauth-qr-manager.php:410
+msgid "Ajustes guardados correctamente."
+msgstr "Ajustes guardados correctamente."
+
+#: whatauth-for-wordpress/admin/views/settings.php:35
+msgid "Ajustes y Roles de WhatAuth"
+msgstr "Ajustes y Roles de WhatAuth"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:307
+msgid "Alto - Q (25% • Recomendado para logos)"
+msgstr "Alto - Q (25% • Recomendado para logos)"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:62
+msgid "Asistente"
+msgstr "Asistente"
+
+#: whatauth-for-wordpress/admin/views/settings.php:100
+msgid "Auto-Registro"
+msgstr "Auto-Registro"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:46
+msgid "Auto-Reply"
+msgstr "Auto-Reply"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:310
+msgid "Bajo - L (7%)"
+msgstr "Bajo - L (7%)"
+
+#: whatauth-for-wordpress/admin/views/wizard.php:12
+msgid "Bienvenido a WhatAuth"
+msgstr "Bienvenido a WhatAuth"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:147
+msgid "Bloque Gutenberg:"
+msgstr "Bloque Gutenberg:"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:106
+msgid "Bot Anfitrión Oficial (+34 631 490 990 - Starter / Básico)"
+msgstr "Bot Anfitrión Oficial (+34 631 490 990 - Starter / Básico)"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:179
+#: whatauth-for-wordpress/admin/views/settings.php:81
+msgid "Bot Anfitrión Oficial (+34 631 490 990 - Starter)"
+msgstr "Bot Anfitrión Oficial (+34 631 490 990 - Starter)"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:149
+msgid "Busca \"WhatAuth QR Login\" en el editor de bloques."
+msgstr "Busca \"WhatAuth QR Login\" en el editor de bloques."
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:197
+msgid "Campaña / Identificador"
+msgstr "Campaña / Identificador"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:70
+msgid "Captura de leads y redirecciones de campaña."
+msgstr "Captura de leads y redirecciones de campaña."
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:95
+msgid "Cargando código QR..."
+msgstr "Cargando código QR..."
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:152
+#: whatauth-for-wordpress/admin/views/qr-manager.php:54
+msgid "Cargando códigos QR desde WhatAuth Cloud..."
+msgstr "Cargando códigos QR desde WhatAuth Cloud..."
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:176
+msgid "Cargando motor de QR..."
+msgstr "Cargando motor de QR..."
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:153
+#: whatauth-for-wordpress/admin/views/dashboard.php:205
+msgid "Cargando registros de actividad..."
+msgstr "Cargando registros de actividad..."
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:91
+#: whatauth-for-wordpress/admin/views/qr-manager.php:399
+msgid "Cerrar"
+msgstr "Cerrar"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:128
+msgid "Ciudad"
+msgstr "Ciudad"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:298
+msgid "Classy"
+msgstr "Classy"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:299
+msgid "Classy Redondeado"
+msgstr "Classy Redondeado"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:320
+msgid "Color Esquinas"
+msgstr "Color Esquinas"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:339
+msgid "Color Punto Interior"
+msgstr "Color Punto Interior"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:289
+msgid "Color Puntos"
+msgstr "Color Puntos"
+
+#: whatauth-for-wordpress/admin/views/settings.php:218
+msgid "Color de Fondo"
+msgstr "Color de Fondo"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:356
+msgid "Color de Fondo (bgColor)"
+msgstr "Color de Fondo (bgColor)"
+
+#: whatauth-for-wordpress/admin/views/settings.php:222
+msgid "Color de Texto"
+msgstr "Color de Texto"
+
+#: whatauth-for-wordpress/admin/views/settings.php:138
+msgid "Comportamiento en Escritorio (Desktop)"
+msgstr "Comportamiento en Escritorio (Desktop)"
+
+#: whatauth-for-wordpress/admin/views/settings.php:147
+msgid "Comportamiento en Móviles"
+msgstr "Comportamiento en Móviles"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:81
+msgid "Con GeoTag nativo y alta resolución."
+msgstr "Con GeoTag nativo y alta resolución."
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:210
+msgid "Conecta tu WhatsApp oficial o tu línea dedicada para activar el login Passwordless y los códigos QR."
+msgstr "Conecta tu WhatsApp oficial o tu línea dedicada para activar el login Passwordless y los códigos QR."
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:18
+msgid "Conectado"
+msgstr "Conectado"
+
+#: whatauth-for-wordpress/includes/class-whatauth-qr-manager.php:326
+msgid "Conexión exitosa con WhatAuth."
+msgstr "Conexión exitosa con WhatAuth."
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:171
+msgid "Configura tu Service Token en Ajustes para sincronizar la telemetría en vivo."
+msgstr "Configura tu Service Token en Ajustes para sincronizar la telemetría en vivo."
+
+#: whatauth-for-wordpress/admin/views/settings.php:37
+msgid "Configura tu conexión con WhatAuth Cloud, tu línea de WhatsApp y las reglas de acceso de WordPress."
+msgstr "Configura tu conexión con WhatAuth Cloud, tu línea de WhatsApp y las reglas de acceso de WordPress."
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:163
+msgid "Configurar Ajustes & Roles"
+msgstr "Configurar Ajustes & Roles"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:67
+msgid "Configurar Código QR"
+msgstr "Configurar Código QR"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:212
+msgid "Configurar en 1 minuto"
+msgstr "Configurar en 1 minuto"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:203
+msgid "Contenido Multimedia Adjunto"
+msgstr "Contenido Multimedia Adjunto"
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:92
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:398
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:446
+msgid "Crea tu login con QR con Whatauth.com"
+msgstr "Crea tu login con QR con Whatauth.com"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:17
+msgid "Crea y administra tus campañas de Login, Pixel y Print con respuestas automáticas."
+msgstr "Crea y administra tus campañas de Login, Pixel y Print con respuestas automáticas."
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:159
+#: whatauth-for-wordpress/admin/views/qr-manager.php:26
+msgid "Crear Nuevo Código QR"
+msgstr "Crear Nuevo Código QR"
+
+#: whatauth-for-wordpress/admin/views/settings.php:104
+msgid "Crear automáticamente cuenta en WordPress si el número de WhatsApp no existe aún."
+msgstr "Crear automáticamente cuenta en WordPress si el número de WhatsApp no existe aún."
+
+#: whatauth-for-wordpress/includes/class-whatauth-qr-manager.php:283
+msgid "Credencial inválida o no reconocida."
+msgstr "Credencial inválida o no reconocida."
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:327
+#: whatauth-for-wordpress/admin/views/qr-manager.php:346
+msgid "Cuadrado"
+msgstr "Cuadrado"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:295
+msgid "Cuadrados (Square)"
+msgstr "Cuadrados (Square)"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:185
+msgid "Cursiva WhatsApp (_texto_)"
+msgstr "Cursiva WhatsApp (_texto_)"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:328
+#: whatauth-for-wordpress/admin/views/qr-manager.php:345
+msgid "Círculo (Dot)"
+msgstr "Círculo (Dot)"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:169
+msgid "Código QR eliminado correctamente."
+msgstr "Código QR eliminado correctamente."
+
+#: whatauth-for-wordpress/includes/class-whatauth-qr-manager.php:255
+msgid "Código QR eliminado."
+msgstr "Código QR eliminado."
+
+#: whatauth-for-wordpress/includes/class-whatauth-qr-manager.php:219
+msgid "Código QR guardado correctamente."
+msgstr "Código QR guardado correctamente."
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:117
+msgid "Cómo insertar el Login en tu sitio"
+msgstr "Cómo insertar el Login en tu sitio"
+
+#: whatauth-for-wordpress/admin/views/settings.php:74
+msgid "Debe coincidir con la lista de dominios autorizados de tu cuenta WhatAuth."
+msgstr "Debe coincidir con la lista de dominios autorizados de tu cuenta WhatAuth."
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:126
+msgid "Desactivado en Ajustes"
+msgstr "Desactivado en Ajustes"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:394
+msgid "Descargar PNG"
+msgstr "Descargar PNG"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:126
+msgid "Dirección (ej. Calle Mayor 12)"
+msgstr "Dirección (ej. Calle Mayor 12)"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:198
+msgid "Dispositivo / Origen"
+msgstr "Dispositivo / Origen"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:209
+msgid "Documento / PDF"
+msgstr "Documento / PDF"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:233
+msgid "Documento o Catálogo (PDF/DOCX)"
+msgstr "Documento o Catálogo (PDF/DOCX)"
+
+#: whatauth-for-wordpress/admin/views/wizard.php:34
+msgid "Dominio Autorizado de este WordPress"
+msgstr "Dominio Autorizado de este WordPress"
+
+#: whatauth-for-wordpress/admin/views/settings.php:71
+msgid "Dominio del Sitio Web"
+msgstr "Dominio del Sitio Web"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:158
+msgid "Dominio registrado para este sitio de WordPress:"
+msgstr "Dominio registrado para este sitio de WordPress:"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:156
+msgid "Editar"
+msgstr "Editar"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:160
+msgid "Editar Código QR: "
+msgstr "Editar Código QR: "
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:120
+msgid "Ej. Iniciar sesión en Mi Tienda"
+msgstr "Ej. Iniciar sesión en Mi Tienda"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:115
+msgid "Ej. Promoción Primavera o Acceso Clientes"
+msgstr "Ej. Promoción Primavera o Acceso Clientes"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:157
+msgid "El Bot Anfitrión Oficial (+34 631 490 990) solo procesa accesos estándar. Para activar respuestas automáticas (Auto-Reply), selecciona tu línea de WhatsApp dedicada en la Pestaña 1 (Campaña)."
+msgstr "El Bot Anfitrión Oficial (+34 631 490 990) solo procesa accesos estándar. Para activar respuestas automáticas (Auto-Reply), selecciona tu línea de WhatsApp dedicada en la Pestaña 1 (Campaña)."
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:186
+msgid "El Bot Anfitrión Oficial no emite Auto-Reply. Selecciona una línea propia para configurar respuestas automáticas."
+msgstr "El Bot Anfitrión Oficial no emite Auto-Reply. Selecciona una línea propia para configurar respuestas automáticas."
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:109
+msgid "El Bot Oficial compartido opera en modo básico. Para activar respuestas automáticas (Auto-Reply), selecciona tu línea dedicada de WhatsApp."
+msgstr "El Bot Oficial compartido opera en modo básico. Para activar respuestas automáticas (Auto-Reply), selecciona tu línea dedicada de WhatsApp."
+
+#: whatauth-for-wordpress/admin/views/settings.php:188
+msgid "El botón utiliza el texto verificado oficial de WhatAuth. Desbloquea textos personalizados en PRO o Agency."
+msgstr "El botón utiliza el texto verificado oficial de WhatAuth. Desbloquea textos personalizados en PRO o Agency."
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:90
+msgid "El código QR ha expirado. Haz clic para recargar."
+msgstr "El código QR ha expirado. Haz clic para recargar."
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:235
+msgid "El registro de nuevos usuarios está deshabilitado en este sitio."
+msgstr "El registro de nuevos usuarios está deshabilitado en este sitio."
+
+#: whatauth-for-wordpress/admin/views/settings.php:174
+msgid "El texto oficial de instrucción está protegido en el plan Starter. Para personalizarlo actualiza a PRO o Agency."
+msgstr "El texto oficial de instrucción está protegido en el plan Starter. Para personalizarlo actualiza a PRO o Agency."
+
+#: whatauth-for-wordpress/includes/class-whatauth-qr-manager.php:147
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:168
+msgid "El título del código QR es obligatorio."
+msgstr "El título del código QR es obligatorio."
+
+#: whatauth-for-wordpress/admin/views/settings.php:112
+msgid "El usuario que inicie sesión con este número de WhatsApp tendrá siempre permisos de Administrador."
+msgstr "El usuario que inicie sesión con este número de WhatsApp tendrá siempre permisos de Administrador."
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:169
+msgid "El usuario recibirá este mensaje y los medios adjuntos instantáneamente tras enviar su mensaje por WhatsApp."
+msgstr "El usuario recibirá este mensaje y los medios adjuntos instantáneamente tras enviar su mensaje por WhatsApp."
+
+#: whatauth-for-wordpress/admin/views/settings.php:86
+msgid "Elige si el login y los QRs se resuelven por el Bot Oficial o por tu línea dedicada (PRO / Agency)."
+msgstr "Elige si el login y los QRs se resuelven por el Bot Oficial o por tu línea dedicada (PRO / Agency)."
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:144
+msgid "Eliminando..."
+msgstr "Eliminando..."
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:157
+msgid "Eliminar"
+msgstr "Eliminar"
+
+#: whatauth-for-wordpress/admin/views/settings.php:151
+msgid "En dispositivos móviles, mostrar botón de WaLink directo en lugar del código QR."
+msgstr "En dispositivos móviles, mostrar botón de WaLink directo en lugar del código QR."
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:149
+msgid "En la versión Starter el Auto-Reply no está disponible. Para enviar mensajes de bienvenida o catálogos automáticos tras escanear, actualiza a PRO o Agency."
+msgstr "En la versión Starter el Auto-Reply no está disponible. Para enviar mensajes de bienvenida o catálogos automáticos tras escanear, actualiza a PRO o Agency."
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:261
+msgid "En la versión Starter el QR se genera con el logotipo oficial de la caja fuerte verde 3D de WhatAuth. Desbloquea colores y logo de marca con PRO o Agency."
+msgstr "En la versión Starter el QR se genera con el logotipo oficial de la caja fuerte verde 3D de WhatAuth. Desbloquea colores y logo de marca con PRO o Agency."
+
+#: whatauth-for-wordpress/admin/views/settings.php:212
+msgid "En la versión Starter el botón utiliza exclusivamente los colores y contrastes verificados de WhatAuth. Desbloquea colores de marca en PRO o Agency."
+msgstr "En la versión Starter el botón utiliza exclusivamente los colores y contrastes verificados de WhatAuth. Desbloquea colores de marca en PRO o Agency."
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:243
+msgid "Enlace de Destino / Botón CTA (Opcional)"
+msgstr "Enlace de Destino / Botón CTA (Opcional)"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:174
+msgid "Error al eliminar"
+msgstr "Error al eliminar"
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:89
+msgid "Error al verificar la sesión. Inténtalo de nuevo."
+msgstr "Error al verificar la sesión. Inténtalo de nuevo."
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:181
+msgid "Error cargando datos"
+msgstr "Error cargando datos"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:175
+msgid "Error de conexión con la API"
+msgstr "Error de conexión con la API"
+
+#: whatauth-for-wordpress/includes/class-whatauth-api-client.php:91
+msgid "Error desconocido en la API de WhatAuth"
+msgstr "Error desconocido en la API de WhatAuth"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:173
+msgid "Error guardando ajustes"
+msgstr "Error guardando ajustes"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:278
+msgid "Escala del Logo"
+msgstr "Escala del Logo"
+
+#: whatauth-for-wordpress/whatauth.php:106
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:81
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:325
+msgid "Escanea con tu WhatsApp para acceder al instante sin contraseñas."
+msgstr "Escanea con tu WhatsApp para acceder al instante sin contraseñas."
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:85
+msgid "Escanea el código QR con tu WhatsApp y envía el mensaje de verificación."
+msgstr "Escanea el código QR con tu WhatsApp y envía el mensaje de verificación."
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:191
+msgid "Escribe el mensaje que recibirá el usuario inmediatamente tras escanear..."
+msgstr "Escribe el mensaje que recibirá el usuario inmediatamente tras escanear..."
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:177
+#: whatauth-for-wordpress/admin/views/qr-manager.php:250
+msgid "Escribe tu mensaje en la caja superior para previsualizarlo como en WhatsApp..."
+msgstr "Escribe tu mensaje en la caja superior para previsualizarlo como en WhatsApp..."
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:438
+msgid "Esperando apertura de WhatsApp..."
+msgstr "Esperando apertura de WhatsApp..."
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:380
+msgid "Esperando escaneo o envío de WhatsApp..."
+msgstr "Esperando escaneo o envío de WhatsApp..."
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:87
+msgid "Esperando verificación..."
+msgstr "Esperando verificación..."
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:199
+msgid "Estado"
+msgstr "Estado"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:156
+msgid "Estado del Dominio"
+msgstr "Estado del Dominio"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:259
+msgid "Estilo Estándar WhatAuth"
+msgstr "Estilo Estándar WhatAuth"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:300
+#: whatauth-for-wordpress/admin/views/qr-manager.php:326
+msgid "Extra Redondeado"
+msgstr "Extra Redondeado"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:149
+msgid "Fallo de verificación."
+msgstr "Fallo de verificación."
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:195
+msgid "Fecha / Hora"
+msgstr "Fecha / Hora"
+
+#: whatauth-for-wordpress/admin/views/settings.php:203
+msgid "Fondo: #25D366 (Oficial)"
+msgstr "Fondo: #25D366 (Oficial)"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:324
+msgid "Forma Marco Exterior"
+msgstr "Forma Marco Exterior"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:343
+msgid "Forma Punto Interior"
+msgstr "Forma Punto Interior"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:293
+msgid "Forma de Puntos"
+msgstr "Forma de Puntos"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:147
+msgid "Función Exclusiva PRO / Agency"
+msgstr "Función Exclusiva PRO / Agency"
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:94
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:366
+msgid "Generando QR WhatAuth..."
+msgstr "Generando QR WhatAuth..."
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:33
+msgid "Gestionar Códigos QR"
+msgstr "Gestionar Códigos QR"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:15
+msgid "Gestor de Códigos QR"
+msgstr "Gestor de Códigos QR"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:43
+msgid "Gestor de QRs"
+msgstr "Gestor de QRs"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:145
+msgid "Guardando..."
+msgstr "Guardando..."
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:172
+#: whatauth-for-wordpress/admin/views/settings.php:290
+msgid "Guardar Cambios"
+msgstr "Guardar Cambios"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:158
+#: whatauth-for-wordpress/admin/views/qr-manager.php:386
+msgid "Guardar Código QR"
+msgstr "Guardar Código QR"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:150
+msgid "Ha ocurrido un error inesperado."
+msgstr "Ha ocurrido un error inesperado."
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:179
+msgid "Histórico de Escaneos y Validaciones Recientes"
+msgstr "Histórico de Escaneos y Validaciones Recientes"
+
+#: whatauth-for-wordpress/includes/class-whatauth-qr-manager.php:245
+msgid "Identificador de QR inválido."
+msgstr "Identificador de QR inválido."
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:207
+msgid "Imagen"
+msgstr "Imagen"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:215
+msgid "Imagen Adjunta (JPG/PNG/WEBP)"
+msgstr "Imagen Adjunta (JPG/PNG/WEBP)"
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:84
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:324
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:327
+msgid "Iniciar sesión con WhatsApp"
+msgstr "Iniciar sesión con WhatsApp"
+
+#: whatauth-for-wordpress/admin/views/wizard.php:25
+msgid "Introduce tu Service Token (prefijo wst_live_...). Lo encuentras en tu panel de WhatAuth en Ajustes > API Keys & Tokens."
+msgstr "Introduce tu Service Token (prefijo wst_live_...). Lo encuentras en tu panel de WhatAuth en Ajustes > API Keys & Tokens."
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:170
+msgid "Introduce tu Service Token de WhatAuth."
+msgstr "Introduce tu Service Token de WhatAuth."
+
+#: whatauth-for-wordpress/includes/class-whatauth-qr-manager.php:272
+msgid "Introduce un token para verificar."
+msgstr "Introduce un token para verificar."
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:167
+msgid "Ir a WhatAuth Cloud ↗"
+msgstr "Ir a WhatAuth Cloud ↗"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:97
+msgid "LOGIN – Acceso Web / Sesión Passwordless"
+msgstr "LOGIN – Acceso Web / Sesión Passwordless"
+
+#: whatauth-for-wordpress/includes/class-whatauth-qr-manager.php:239
+msgid "La eliminación de códigos QR está reservada para cuentas PRO y Agency."
+msgstr "La eliminación de códigos QR está reservada para cuentas PRO y Agency."
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:163
+#: whatauth-for-wordpress/admin/views/dashboard.php:104
+#: whatauth-for-wordpress/admin/views/qr-manager.php:34
+msgid "Login"
+msgstr "Login"
+
+#: whatauth-for-wordpress/admin/views/settings.php:239
+msgid "Logo Oficial WhatAuth (Caja Fuerte Verde 3D)"
+msgstr "Logo Oficial WhatAuth (Caja Fuerte Verde 3D)"
+
+#: whatauth-for-wordpress/admin/views/settings.php:234
+msgid "Logo del Login / Tarjeta"
+msgstr "Logo del Login / Tarjeta"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:155
+msgid "Línea Anfitriona Compartida Seleccionada"
+msgstr "Línea Anfitriona Compartida Seleccionada"
+
+#: whatauth-for-wordpress/admin/views/settings.php:83
+msgid "Línea Dedicada Configurada"
+msgstr "Línea Dedicada Configurada"
+
+#: whatauth-for-wordpress/admin/views/settings.php:78
+msgid "Línea de WhatsApp Activa"
+msgstr "Línea de WhatsApp Activa"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:104
+msgid "Línea de WhatsApp del QR"
+msgstr "Línea de WhatsApp del QR"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:180
+msgid "Línea: "
+msgstr "Línea: "
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:274
+msgid "Margen del Logo (px)"
+msgstr "Margen del Logo (px)"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:309
+msgid "Medio - M (15%)"
+msgstr "Medio - M (15%)"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:218
+#: whatauth-for-wordpress/admin/views/qr-manager.php:227
+#: whatauth-for-wordpress/admin/views/qr-manager.php:236
+msgid "Medios WP"
+msgstr "Medios WP"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:180
+msgid "Mensaje de Respuesta Automática"
+msgstr "Mensaje de Respuesta Automática"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:187
+msgid "Monoespaciado (```texto```)"
+msgstr "Monoespaciado (```texto```)"
+
+#: whatauth-for-wordpress/admin/views/settings.php:142
+msgid "Mostrar botón de enlace directo a WhatsApp (WaLink) además del código QR."
+msgstr "Mostrar botón de enlace directo a WhatsApp (WaLink) además del código QR."
+
+#: whatauth-for-wordpress/admin/views/settings.php:243
+msgid "Muestra el logo 3D oficial de WhatAuth. En planes PRO y Agency puedes reemplazarlo por el logotipo de tu propia empresa."
+msgstr "Muestra el logo 3D oficial de WhatAuth. En planes PRO y Agency puedes reemplazarlo por el logotipo de tu propia empresa."
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:308
+msgid "Máximo - H (30%)"
+msgstr "Máximo - H (30%)"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:184
+msgid "Negrita WhatsApp (*texto*)"
+msgstr "Negrita WhatsApp (*texto*)"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:305
+msgid "Nivel de Corrección y Nitidez"
+msgstr "Nivel de Corrección y Nitidez"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:154
+msgid "No hay escaneos registrados aún. Cuando un usuario escanee un QR de WhatAuth, la actividad se mostrará aquí en tiempo real."
+msgstr "No hay escaneos registrados aún. Cuando un usuario escanee un QR de WhatAuth, la actividad se mostrará aquí en tiempo real."
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:136
+msgid "No instalado"
+msgstr "No instalado"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:151
+msgid "No se encontraron códigos QR en esta categoría."
+msgstr "No se encontraron códigos QR en esta categoría."
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:288
+msgid "No se pudo recuperar la cuenta de usuario."
+msgstr "No se pudo recuperar la cuenta de usuario."
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:175
+msgid "No se pudo resolver el número de teléfono verificado"
+msgstr "No se pudo resolver el número de teléfono verificado"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:238
+msgid "Nombre visible del archivo (ej. catalogo-2026.pdf)"
+msgstr "Nombre visible del archivo (ej. catalogo-2026.pdf)"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:208
+msgid "Nota de Voz / Audio"
+msgstr "Nota de Voz / Audio"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:224
+msgid "Nota de Voz o Audio (MP3/OGG)"
+msgstr "Nota de Voz o Audio (MP3/OGG)"
+
+#: whatauth-for-wordpress/admin/views/settings.php:109
+#: whatauth-for-wordpress/admin/views/wizard.php:39
+msgid "Número de WhatsApp del Administrador"
+msgstr "Número de WhatsApp del Administrador"
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:353
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:409
+msgid "O accede con WhatsApp"
+msgstr "O accede con WhatsApp"
+
+#: whatauth-for-wordpress/admin/views/settings.php:133
+msgid "Ocultar campos de usuario y contraseña de WordPress (dejar exclusivamente acceso con WhatAuth)."
+msgstr "Ocultar campos de usuario y contraseña de WordPress (dejar exclusivamente acceso con WhatAuth)."
+
+#: whatauth-for-wordpress/admin/views/wizard.php:61
+msgid "Omitir por ahora"
+msgstr "Omitir por ahora"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:98
+msgid "PIXEL – Captura de Leads & Redirección Web"
+msgstr "PIXEL – Captura de Leads & Redirección Web"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:99
+msgid "PRINT – Cartelería Física & GeoTagging"
+msgstr "PRINT – Cartelería Física & GeoTagging"
+
+#: whatauth-for-wordpress/admin/views/settings.php:227
+#: whatauth-for-wordpress/admin/views/settings.php:252
+msgid "PRO / AGENCY"
+msgstr "PRO / AGENCY"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:121
+msgid "Pantalla wp-login.php:"
+msgstr "Pantalla wp-login.php:"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:59
+msgid "Para acceso web rápido Passwordless."
+msgstr "Para acceso web rápido Passwordless."
+
+#: whatauth-for-wordpress/admin/views/wizard.php:21
+msgid "Paso 1: Conecta tu Service Token de WhatAuth"
+msgstr "Paso 1: Conecta tu Service Token de WhatAuth"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:129
+msgid "País"
+msgstr "País"
+
+#: whatauth-for-wordpress/includes/class-whatauth-qr-manager.php:25
+#: whatauth-for-wordpress/includes/class-whatauth-qr-manager.php:95
+#: whatauth-for-wordpress/includes/class-whatauth-qr-manager.php:117
+msgid "Permisos insuficientes."
+msgstr "Permisos insuficientes."
+
+#: whatauth-for-wordpress/admin/views/settings.php:228
+msgid "Personaliza la paleta del botón de acceso para adaptarlo a la identidad visual de tu marca o tienda."
+msgstr "Personaliza la paleta del botón de acceso para adaptarlo a la identidad visual de tu marca o tienda."
+
+#: whatauth-for-wordpress/admin/views/settings.php:197
+msgid "Personalización de Colores del Botón"
+msgstr "Personalización de Colores del Botón"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:35
+msgid "Pixel (Marketing)"
+msgstr "Pixel (Marketing)"
+
+#: whatauth-for-wordpress/admin/views/settings.php:67
+msgid "Por defecto: https://api.whatauth.com (o http://localhost:3000 para desarrollo local)."
+msgstr "Por defecto: https://api.whatauth.com (o http://localhost:3000 para desarrollo local)."
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:248
+msgid "Previsualización en WhatsApp:"
+msgstr "Previsualización en WhatsApp:"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:36
+msgid "Print (Cartelería)"
+msgstr "Print (Cartelería)"
+
+#: whatauth-for-wordpress/admin/views/settings.php:56
+msgid "Probar Conexión"
+msgstr "Probar Conexión"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:391
+msgid "Probar QR ↗"
+msgstr "Probar QR ↗"
+
+#: whatauth-for-wordpress/admin/views/settings.php:59
+msgid "Puedes obtener tu Service Token en el panel de WhatAuth en Ajustes > API Keys & Tokens."
+msgstr "Puedes obtener tu Service Token en el panel de WhatAuth en Ajustes > API Keys & Tokens."
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:296
+msgid "Puntos (Dots)"
+msgstr "Puntos (Dots)"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:43
+msgid "QR"
+msgstr "QR"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:53
+msgid "QRs de Login"
+msgstr "QRs de Login"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:64
+msgid "QRs de Pixel (Marketing)"
+msgstr "QRs de Pixel (Marketing)"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:75
+msgid "QRs de Print (Cartelería)"
+msgstr "QRs de Print (Cartelería)"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:297
+msgid "Redondeados (Rounded)"
+msgstr "Redondeados (Rounded)"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:182
+msgid "Registro de accesos y eventos de escaneo de WhatsApp para este usuario en tiempo real."
+msgstr "Registro de accesos y eventos de escaneo de WhatsApp para este usuario en tiempo real."
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:187
+msgid "Respuesta automática inactiva. Marca la casilla \"Activar Respuesta Automática\" superior para habilitarla."
+msgstr "Respuesta automática inactiva. Marca la casilla \"Activar Respuesta Automática\" superior para habilitarla."
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:34
+msgid "Resumen"
+msgstr "Resumen"
+
+#: whatauth-for-wordpress/admin/views/settings.php:125
+msgid "Rol asignado a los visitantes que inicien sesión por primera vez con su WhatsApp (excepto el número de Administrador)."
+msgstr "Rol asignado a los visitantes que inicien sesión por primera vez con su WhatsApp (excepto el número de Administrador)."
+
+#: whatauth-for-wordpress/admin/views/wizard.php:47
+msgid "Rol para Nuevos Registros por WhatsApp"
+msgstr "Rol para Nuevos Registros por WhatsApp"
+
+#: whatauth-for-wordpress/admin/views/settings.php:116
+msgid "Rol por Defecto para Nuevos Registros"
+msgstr "Rol por Defecto para Nuevos Registros"
+
+#: whatauth-for-wordpress/admin/views/settings.php:211
+#: whatauth-for-wordpress/admin/views/settings.php:242
+msgid "STARTER (Estándar WhatAuth)"
+msgstr "STARTER (Estándar WhatAuth)"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:162
+#: whatauth-for-wordpress/admin/views/dashboard.php:100
+msgid "Scans Totales"
+msgstr "Scans Totales"
+
+#: whatauth-for-wordpress/admin/views/wizard.php:42
+msgid "Se autocompleta con tu número al verificar el Token. Este número tendrá rol Administrador siempre."
+msgstr "Se autocompleta con tu número al verificar el Token. Este número tendrá rol Administrador siempre."
+
+#: whatauth-for-wordpress/admin/views/settings.php:272
+msgid "Selecciona qué roles de WordPress tienen permiso para ver y crear códigos QR de WhatAuth (el rol Administrador siempre tiene acceso total):"
+msgstr "Selecciona qué roles de WordPress tienen permiso para ver y crear códigos QR de WhatAuth (el rol Administrador siempre tiene acceso total):"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:182
+msgid "Seleccionar Logotipo para el Código QR"
+msgstr "Seleccionar Logotipo para el Código QR"
+
+#: whatauth-for-wordpress/admin/views/settings.php:249
+msgid "Seleccionar de Medios"
+msgstr "Seleccionar de Medios"
+
+#: whatauth-for-wordpress/admin/views/wizard.php:29
+msgid "Service Token"
+msgstr "Service Token"
+
+#: whatauth-for-wordpress/admin/views/settings.php:53
+msgid "Service Token (API Key)"
+msgstr "Service Token (API Key)"
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:300
+msgid "Sesión iniciada con éxito"
+msgstr "Sesión iniciada con éxito"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:141
+msgid "Shortcode para cualquier página:"
+msgstr "Shortcode para cualquier página:"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:20
+msgid "Sin Configurar"
+msgstr "Sin Configurar"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:161
+msgid "Sin actividad registrada en los últimos 30 días"
+msgstr "Sin actividad registrada en los últimos 30 días"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:166
+msgid "Sin título"
+msgstr "Sin título"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:376
+msgid "Sincronizado en tiempo real"
+msgstr "Sincronizado en tiempo real"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:48
+msgid "Sincronizados en tiempo real con WhatAuth Cloud."
+msgstr "Sincronizados en tiempo real con WhatAuth Cloud."
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:206
+msgid "Solo Texto"
+msgstr "Solo Texto"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:186
+msgid "Tachado WhatsApp (~texto~)"
+msgstr "Tachado WhatsApp (~texto~)"
+
+#: whatauth-for-wordpress/admin/views/settings.php:259
+msgid "Tamaño del Código QR (px)"
+msgstr "Tamaño del Código QR (px)"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:94
+msgid "Tendencia temporal de lecturas de QR y validaciones de acceso en tu cuenta."
+msgstr "Tendencia temporal de lecturas de QR y validaciones de acceso en tu cuenta."
+
+#: whatauth-for-wordpress/admin/views/settings.php:169
+msgid "Texto de Instrucción del Login"
+msgstr "Texto de Instrucción del Login"
+
+#: whatauth-for-wordpress/admin/views/settings.php:183
+msgid "Texto del Botón WaLink"
+msgstr "Texto del Botón WaLink"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:119
+msgid "Texto del Mensaje que enviará el usuario por WhatsApp"
+msgstr "Texto del Mensaje que enviará el usuario por WhatsApp"
+
+#: whatauth-for-wordpress/admin/views/settings.php:192
+msgid "Texto del botón para abrir WhatsApp directamente."
+msgstr "Texto del botón para abrir WhatsApp directamente."
+
+#: whatauth-for-wordpress/admin/views/settings.php:178
+msgid "Texto explicativo visible sobre el código QR en la pantalla de login."
+msgstr "Texto explicativo visible sobre el código QR en la pantalla de login."
+
+#: whatauth-for-wordpress/admin/views/settings.php:207
+msgid "Texto: #FFFFFF"
+msgstr "Texto: #FFFFFF"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:196
+#: whatauth-for-wordpress/admin/views/qr-manager.php:45
+msgid "Tipo"
+msgstr "Tipo"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:95
+msgid "Tipo de Código QR"
+msgstr "Tipo de Código QR"
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:93
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:427
+msgid "Toca el botón para abrir WhatsApp y verificar tu acceso en 1 segundo."
+msgstr "Toca el botón para abrir WhatsApp y verificar tu acceso en 1 segundo."
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:33
+msgid "Todos los QRs"
+msgstr "Todos los QRs"
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:149
+msgid "Token de sesión de WhatsApp ausente"
+msgstr "Token de sesión de WhatsApp ausente"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:42
+msgid "Total QRs Activos"
+msgstr "Total QRs Activos"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:44
+msgid "Título / Identificador"
+msgstr "Título / Identificador"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:114
+msgid "Título de la Campaña / QR"
+msgstr "Título de la Campaña / QR"
+
+#: whatauth-for-wordpress/admin/views/settings.php:64
+msgid "URL de la API"
+msgstr "URL de la API"
+
+#: whatauth-for-wordpress/admin/views/settings.php:253
+msgid "URL de tu logotipo personalizado para la tarjeta de login móvil y el botón. Si se deja vacío se utiliza el logo WhatAuth por defecto."
+msgstr "URL de tu logotipo personalizado para la tarjeta de login móvil y el botón. Si se deja vacío se utiliza el logo WhatAuth por defecto."
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:269
+msgid "URL del logotipo personalizado"
+msgstr "URL del logotipo personalizado"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:125
+msgid "Ubicación Física (Print QR)"
+msgstr "Ubicación Física (Print QR)"
+
+#: whatauth-for-wordpress/admin/views/settings.php:156
+msgid "Ubicación en el Sitio"
+msgstr "Ubicación en el Sitio"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:183
+msgid "Usar este Logo"
+msgstr "Usar este Logo"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:24
+msgid "Usuarios únicos, fidelización y autenticación passwordless WhatsApp con códigos QR."
+msgstr "Usuarios únicos, fidelización y autenticación passwordless WhatsApp con códigos QR."
+
+#: whatauth-for-wordpress/admin/views/wizard.php:14
+msgid "Usuarios únicos, trazabilidad y autenticación passwordless WhatsApp con códigos QR."
+msgstr "Usuarios únicos, trazabilidad y autenticación passwordless WhatsApp con códigos QR."
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:160
+msgid "Validación de ticket fallida o expirada"
+msgstr "Validación de ticket fallida o expirada"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:155
+msgid "Verificado ✓"
+msgstr "Verificado ✓"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:147
+msgid "Verificando conexión..."
+msgstr "Verificando conexión..."
+
+#: whatauth-for-wordpress/admin/views/wizard.php:64
+msgid "Verificar y Activar WhatAuth"
+msgstr "Verificar y Activar WhatAuth"
+
+#: whatauth-for-wordpress/admin/views/settings.php:129
+msgid "Visibilidad del Formulario Nativo"
+msgstr "Visibilidad del Formulario Nativo"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:367
+msgid "Vista Previa del QR (En Vivo)"
+msgstr "Vista Previa del QR (En Vivo)"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:47
+msgid "Webhook"
+msgstr "Webhook"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:135
+msgid "Webhook Saliente al Escanear (Opcional)"
+msgstr "Webhook Saliente al Escanear (Opcional)"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:118
+msgid "WhatAuth se integra de forma transparente en tus páginas de acceso:"
+msgstr "WhatAuth se integra de forma transparente en tus páginas de acceso:"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:51
+msgid "WhatAuth – Ajustes & Roles"
+msgstr "WhatAuth – Ajustes & Roles"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:61
+msgid "WhatAuth – Asistente de Configuración"
+msgstr "WhatAuth – Asistente de Configuración"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:42
+msgid "WhatAuth – Gestor de QRs"
+msgstr "WhatAuth – Gestor de QRs"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:33
+msgid "WhatAuth – Resumen"
+msgstr "WhatAuth – Resumen"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:131
+msgid "WooCommerce (Mi Cuenta):"
+msgstr "WooCommerce (Mi Cuenta):"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:134
+msgid "WooCommerce detectado"
+msgstr "WooCommerce detectado"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:184
+#: whatauth-for-wordpress/admin/views/qr-manager.php:196
+msgid "caracteres"
+msgstr "caracteres"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:217
+#: whatauth-for-wordpress/admin/views/qr-manager.php:226
+#: whatauth-for-wordpress/admin/views/qr-manager.php:235
+msgid "https://... o selecciona de medios"
+msgstr "https://... o selecciona de medios"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:148
+msgid "¡Credencial verificada correctamente!"
+msgstr "¡Credencial verificada correctamente!"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:146
+msgid "¡Guardado con éxito!"
+msgstr "¡Guardado con éxito!"
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:88
+msgid "¡Verificado con éxito! Redirigiendo..."
+msgstr "¡Verificado con éxito! Redirigiendo..."
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:143
+msgid "¿Estás seguro de que deseas eliminar este código QR?"
+msgstr "¿Estás seguro de que deseas eliminar este código QR?"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:165
+msgid "✓ Activo"
+msgstr "✓ Activo"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:178
+msgid "✓ Conectado: Plan"
+msgstr "✓ Conectado: Plan"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:164
+msgid "✓ Configurado"
+msgstr "✓ Configurado"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:167
+msgid "🔒 Eliminar QRs requiere plan PRO o Agency"
+msgstr "🔒 Eliminar QRs requiere plan PRO o Agency"
+

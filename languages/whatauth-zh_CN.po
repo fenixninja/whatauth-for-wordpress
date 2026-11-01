@@ -1,0 +1,1162 @@
+# Chinese (Simplified) translations for WhatAuth WordPress Plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WhatAuth – Passwordless WhatsApp Login & Smart QR Hub 1.0.0\n"
+"Report-Msgid-Bugs-To: https://whatauth.com/support\n"
+"Last-Translator: WhatAuth Team <soporte@whatauth.com>\n"
+"Language-Team: Chinese (Simplified) <soporte@whatauth.com>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: whatauth-for-wordpress\n"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:80
+msgid "1. Campaña"
+msgstr "1. 营销活动"
+
+#: whatauth-for-wordpress/admin/views/settings.php:48
+msgid "1. Conexión y Credenciales"
+msgstr "1. 连接与凭据"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:267
+msgid "1. Logotipo Central del QR"
+msgstr "1. 二维码中心图标"
+
+#: whatauth-for-wordpress/admin/views/settings.php:95
+msgid "2. Autenticación y Registro de Usuarios"
+msgstr "2. 用户认证与注册"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:83
+msgid "2. Auto-Reply"
+msgstr "2. 自动回复"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:286
+msgid "2. Módulos y Puntos (Dots)"
+msgstr "2. 模块与点阵 (Dots)"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:87
+msgid "3. Estilo & Logo"
+msgstr "3. 样式与标志"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:317
+msgid "3. Marco Exterior de Esquina"
+msgstr "3. 边角外框"
+
+#: whatauth-for-wordpress/admin/views/settings.php:270
+msgid "3. Permisos de Gestión de QRs en WP-Admin"
+msgstr "3. WP后台QR管理权限"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:336
+msgid "4. Punto Interior de Esquina"
+msgstr "4. 边角内点"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:354
+msgid "5. Lienzo y Fondo"
+msgstr "5. 画布与背景"
+
+#: whatauth-for-wordpress/whatauth.php:105
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:82
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:86
+msgid "Abrir WhatsApp directamente"
+msgstr "直接打开 WhatsApp"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:185
+msgid "Abrir enlace"
+msgstr "打开链接"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:48
+msgid "Acciones"
+msgstr "操作"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:124
+msgid "Activado de fábrica"
+msgstr "默认已启用"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:166
+msgid "Activar Respuesta Automática (Auto-Reply) al Escanear"
+msgstr "扫码时激活自动回复 (Auto-Reply)"
+
+#: whatauth-for-wordpress/admin/views/settings.php:160
+msgid "Activar WhatAuth directamente en la pantalla oficial wp-login.php"
+msgstr "在官方 wp-login.php 页面直接启用 WhatAuth"
+
+#: whatauth-for-wordpress/admin/views/settings.php:164
+msgid "Activar WhatAuth en el formulario de acceso de WooCommerce (Mi Cuenta / Checkout)"
+msgstr "在 WooCommerce 登录界面启用 WhatAuth（我的账户 / 结账页）"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:139
+msgid "Activar envío de webhook para este código QR"
+msgstr "为此QR码启用 Webhook 发送"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:91
+msgid "Actividad y Escaneos Verificados (Últimos 30 días)"
+msgstr "近30天活动与已验证扫描"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:187
+msgid "Actualizar"
+msgstr "刷新"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:194
+msgid "Admite formato WhatsApp: *negrita*, _cursiva_, ~tachado~"
+msgstr "支持 WhatsApp 格式：*粗体*、_斜体_、~删除线~"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:221
+msgid "Ajustes"
+msgstr "设置"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:52
+msgid "Ajustes & Roles"
+msgstr "设置与角色"
+
+#: whatauth-for-wordpress/includes/class-whatauth-qr-manager.php:410
+msgid "Ajustes guardados correctamente."
+msgstr "设置保存成功。"
+
+#: whatauth-for-wordpress/admin/views/settings.php:35
+msgid "Ajustes y Roles de WhatAuth"
+msgstr "WhatAuth 设置与角色"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:307
+msgid "Alto - Q (25% • Recomendado para logos)"
+msgstr "高 - Q（25% • 推荐用于带图标）"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:62
+msgid "Asistente"
+msgstr "向导"
+
+#: whatauth-for-wordpress/admin/views/settings.php:100
+msgid "Auto-Registro"
+msgstr "自动注册"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:46
+msgid "Auto-Reply"
+msgstr "自动回复"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:310
+msgid "Bajo - L (7%)"
+msgstr "低 - L (7%)"
+
+#: whatauth-for-wordpress/admin/views/wizard.php:12
+msgid "Bienvenido a WhatAuth"
+msgstr "欢迎使用 WhatAuth"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:147
+msgid "Bloque Gutenberg:"
+msgstr "Gutenberg 区块："
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:106
+msgid "Bot Anfitrión Oficial (+34 631 490 990 - Starter / Básico)"
+msgstr "官方托管机器人 (+34 631 490 990 - Starter / 基础)"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:179
+#: whatauth-for-wordpress/admin/views/settings.php:81
+msgid "Bot Anfitrión Oficial (+34 631 490 990 - Starter)"
+msgstr "官方主机机器人 (+34 631 490 990 - Starter)"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:149
+msgid "Busca \"WhatAuth QR Login\" en el editor de bloques."
+msgstr "在区块编辑器中搜索 \"WhatAuth QR Login\"。"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:197
+msgid "Campaña / Identificador"
+msgstr "营销活动 / 标识符"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:70
+msgid "Captura de leads y redirecciones de campaña."
+msgstr "线索捕获与营销活动跳转。"
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:95
+msgid "Cargando código QR..."
+msgstr "正在加载二维码..."
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:152
+#: whatauth-for-wordpress/admin/views/qr-manager.php:54
+msgid "Cargando códigos QR desde WhatAuth Cloud..."
+msgstr "正在从 WhatAuth Cloud 加载QR码..."
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:176
+msgid "Cargando motor de QR..."
+msgstr "正在加载QR生成引擎..."
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:153
+#: whatauth-for-wordpress/admin/views/dashboard.php:205
+msgid "Cargando registros de actividad..."
+msgstr "正在加载活动日志..."
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:91
+#: whatauth-for-wordpress/admin/views/qr-manager.php:399
+msgid "Cerrar"
+msgstr "关闭"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:128
+msgid "Ciudad"
+msgstr "城市"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:298
+msgid "Classy"
+msgstr "经典精雅 (Classy)"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:299
+msgid "Classy Redondeado"
+msgstr "精雅圆角"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:320
+msgid "Color Esquinas"
+msgstr "定位角颜色"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:339
+msgid "Color Punto Interior"
+msgstr "内点颜色"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:289
+msgid "Color Puntos"
+msgstr "点阵颜色"
+
+#: whatauth-for-wordpress/admin/views/settings.php:218
+msgid "Color de Fondo"
+msgstr "背景颜色"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:356
+msgid "Color de Fondo (bgColor)"
+msgstr "背景颜色 (bgColor)"
+
+#: whatauth-for-wordpress/admin/views/settings.php:222
+msgid "Color de Texto"
+msgstr "文本颜色"
+
+#: whatauth-for-wordpress/admin/views/settings.php:138
+msgid "Comportamiento en Escritorio (Desktop)"
+msgstr "桌面端交互设置"
+
+#: whatauth-for-wordpress/admin/views/settings.php:147
+msgid "Comportamiento en Móviles"
+msgstr "移动端交互设置"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:81
+msgid "Con GeoTag nativo y alta resolución."
+msgstr "原生支持地理定位与高清晰度。"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:210
+msgid "Conecta tu WhatsApp oficial o tu línea dedicada para activar el login Passwordless y los códigos QR."
+msgstr "连接您的官方 WhatsApp 或专属线路以启用免密登录与二维码功能。"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:18
+msgid "Conectado"
+msgstr "已连接"
+
+#: whatauth-for-wordpress/includes/class-whatauth-qr-manager.php:326
+msgid "Conexión exitosa con WhatAuth."
+msgstr "成功连接至 WhatAuth。"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:171
+msgid "Configura tu Service Token en Ajustes para sincronizar la telemetría en vivo."
+msgstr "请在设置中配置服务令牌以同步实时遥测数据。"
+
+#: whatauth-for-wordpress/admin/views/settings.php:37
+msgid "Configura tu conexión con WhatAuth Cloud, tu línea de WhatsApp y las reglas de acceso de WordPress."
+msgstr "配置与 WhatAuth Cloud 的连接、WhatsApp 线路及 WordPress 访问权限。"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:163
+msgid "Configurar Ajustes & Roles"
+msgstr "配置设置与角色"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:67
+msgid "Configurar Código QR"
+msgstr "配置QR码"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:212
+msgid "Configurar en 1 minuto"
+msgstr "1分钟内快速完成配置"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:203
+msgid "Contenido Multimedia Adjunto"
+msgstr "附加多媒体内容"
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:92
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:398
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:446
+msgid "Crea tu login con QR con Whatauth.com"
+msgstr "通过 Whatauth.com 创建二维码登录"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:17
+msgid "Crea y administra tus campañas de Login, Pixel y Print con respuestas automáticas."
+msgstr "创建并管理带有自动回复的 Login、Pixel 和 Print 营销活动。"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:159
+#: whatauth-for-wordpress/admin/views/qr-manager.php:26
+msgid "Crear Nuevo Código QR"
+msgstr "创建新QR码"
+
+#: whatauth-for-wordpress/admin/views/settings.php:104
+msgid "Crear automáticamente cuenta en WordPress si el número de WhatsApp no existe aún."
+msgstr "如果 WhatsApp 号码尚不存在，则自动创建 WordPress 账户。"
+
+#: whatauth-for-wordpress/includes/class-whatauth-qr-manager.php:283
+msgid "Credencial inválida o no reconocida."
+msgstr "凭据无效或无法识别。"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:327
+#: whatauth-for-wordpress/admin/views/qr-manager.php:346
+msgid "Cuadrado"
+msgstr "正方形"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:295
+msgid "Cuadrados (Square)"
+msgstr "方形 (Square)"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:185
+msgid "Cursiva WhatsApp (_texto_)"
+msgstr "WhatsApp 斜体 (_文本_)"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:328
+#: whatauth-for-wordpress/admin/views/qr-manager.php:345
+msgid "Círculo (Dot)"
+msgstr "圆形"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:169
+msgid "Código QR eliminado correctamente."
+msgstr "QR码已成功删除。"
+
+#: whatauth-for-wordpress/includes/class-whatauth-qr-manager.php:255
+msgid "Código QR eliminado."
+msgstr "QR码已删除。"
+
+#: whatauth-for-wordpress/includes/class-whatauth-qr-manager.php:219
+msgid "Código QR guardado correctamente."
+msgstr "QR码已成功保存。"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:117
+msgid "Cómo insertar el Login en tu sitio"
+msgstr "如何在您的网站嵌入登录"
+
+#: whatauth-for-wordpress/admin/views/settings.php:74
+msgid "Debe coincidir con la lista de dominios autorizados de tu cuenta WhatAuth."
+msgstr "必须与 WhatAuth 账户中的已授权域名列表一致。"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:126
+msgid "Desactivado en Ajustes"
+msgstr "在设置中已禁用"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:394
+msgid "Descargar PNG"
+msgstr "下载 PNG"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:126
+msgid "Dirección (ej. Calle Mayor 12)"
+msgstr "地址（例如：中山路12号）"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:198
+msgid "Dispositivo / Origen"
+msgstr "设备 / 来源"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:209
+msgid "Documento / PDF"
+msgstr "文档 / PDF"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:233
+msgid "Documento o Catálogo (PDF/DOCX)"
+msgstr "文档或产品目录 (PDF/DOCX)"
+
+#: whatauth-for-wordpress/admin/views/wizard.php:34
+msgid "Dominio Autorizado de este WordPress"
+msgstr "此 WordPress 的授权域名"
+
+#: whatauth-for-wordpress/admin/views/settings.php:71
+msgid "Dominio del Sitio Web"
+msgstr "网站域名"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:158
+msgid "Dominio registrado para este sitio de WordPress:"
+msgstr "此 WordPress 网站注册的域名："
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:156
+msgid "Editar"
+msgstr "编辑"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:160
+msgid "Editar Código QR: "
+msgstr "编辑QR码："
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:120
+msgid "Ej. Iniciar sesión en Mi Tienda"
+msgstr "例如：登录我的店铺"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:115
+msgid "Ej. Promoción Primavera o Acceso Clientes"
+msgstr "例如：春季促销或客户专用通道"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:157
+msgid "El Bot Anfitrión Oficial (+34 631 490 990) solo procesa accesos estándar. Para activar respuestas automáticas (Auto-Reply), selecciona tu línea de WhatsApp dedicada en la Pestaña 1 (Campaña)."
+msgstr "官方托管机器人 (+34 631 490 990) 仅处理标准登录。如需启用自动回复（Auto-Reply），请在标签页 1（营销活动）中选择您的专属 WhatsApp 线路。"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:186
+msgid "El Bot Anfitrión Oficial no emite Auto-Reply. Selecciona una línea propia para configurar respuestas automáticas."
+msgstr "官方托管机器人不发送自动回复。请选择您自己的专属线路来配置自动回复。"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:109
+msgid "El Bot Oficial compartido opera en modo básico. Para activar respuestas automáticas (Auto-Reply), selecciona tu línea dedicada de WhatsApp."
+msgstr "共享的官方机器人工作在基础模式下。如需启用自动回复（Auto-Reply），请选择您的 WhatsApp 专属线路。"
+
+#: whatauth-for-wordpress/admin/views/settings.php:188
+msgid "El botón utiliza el texto verificado oficial de WhatAuth. Desbloquea textos personalizados en PRO o Agency."
+msgstr "按钮采用 WhatAuth 官方验证文案。PRO 或 Agency 计划支持自定义。"
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:90
+msgid "El código QR ha expirado. Haz clic para recargar."
+msgstr "二维码已失效，点击刷新。"
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:235
+msgid "El registro de nuevos usuarios está deshabilitado en este sitio."
+msgstr "本站目前已禁止新用户注册。"
+
+#: whatauth-for-wordpress/admin/views/settings.php:174
+msgid "El texto oficial de instrucción está protegido en el plan Starter. Para personalizarlo actualiza a PRO o Agency."
+msgstr "Starter版本中说明文字受保护。升级至 PRO 或 Agency 自定义文本。"
+
+#: whatauth-for-wordpress/includes/class-whatauth-qr-manager.php:147
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:168
+msgid "El título del código QR es obligatorio."
+msgstr "QR码标题为必填项。"
+
+#: whatauth-for-wordpress/admin/views/settings.php:112
+msgid "El usuario que inicie sesión con este número de WhatsApp tendrá siempre permisos de Administrador."
+msgstr "使用此 WhatsApp 号码登录的用户将始终拥有管理员权限。"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:169
+msgid "El usuario recibirá este mensaje y los medios adjuntos instantáneamente tras enviar su mensaje por WhatsApp."
+msgstr "用户通过 WhatsApp 发送消息后将立即收到此消息和附加媒体。"
+
+#: whatauth-for-wordpress/admin/views/settings.php:86
+msgid "Elige si el login y los QRs se resuelven por el Bot Oficial o por tu línea dedicada (PRO / Agency)."
+msgstr "选择由官方机器人还是您的专属线路处理登录和QR码（PRO / Agency）。"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:144
+msgid "Eliminando..."
+msgstr "正在删除..."
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:157
+msgid "Eliminar"
+msgstr "删除"
+
+#: whatauth-for-wordpress/admin/views/settings.php:151
+msgid "En dispositivos móviles, mostrar botón de WaLink directo en lugar del código QR."
+msgstr "在手机上直接显示 WaLink 快捷按钮代替二维码。"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:149
+msgid "En la versión Starter el Auto-Reply no está disponible. Para enviar mensajes de bienvenida o catálogos automáticos tras escanear, actualiza a PRO o Agency."
+msgstr "Starter版本暂不支持自动回复。升级至 PRO 或 Agency 以启用自动回复消息与商品目录。"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:261
+msgid "En la versión Starter el QR se genera con el logotipo oficial de la caja fuerte verde 3D de WhatAuth. Desbloquea colores y logo de marca con PRO o Agency."
+msgstr "Starter版本使用官方绿色3D保险箱标志。升级 PRO 或 Agency 解锁自定义品牌颜色与标志。"
+
+#: whatauth-for-wordpress/admin/views/settings.php:212
+msgid "En la versión Starter el botón utiliza exclusivamente los colores y contrastes verificados de WhatAuth. Desbloquea colores de marca en PRO o Agency."
+msgstr "Starter版本严格采用 WhatAuth 官方配色。升级 PRO 或 Agency 定制品牌主题色。"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:243
+msgid "Enlace de Destino / Botón CTA (Opcional)"
+msgstr "目标链接 / CTA 按钮（可选）"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:174
+msgid "Error al eliminar"
+msgstr "删除时出错"
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:89
+msgid "Error al verificar la sesión. Inténtalo de nuevo."
+msgstr "验证会话失败，请重试。"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:181
+msgid "Error cargando datos"
+msgstr "加载数据出错"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:175
+msgid "Error de conexión con la API"
+msgstr "API 连接错误"
+
+#: whatauth-for-wordpress/includes/class-whatauth-api-client.php:91
+msgid "Error desconocido en la API de WhatAuth"
+msgstr "WhatAuth API 发生未知错误"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:173
+msgid "Error guardando ajustes"
+msgstr "保存设置时出错"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:278
+msgid "Escala del Logo"
+msgstr "图标比例"
+
+#: whatauth-for-wordpress/whatauth.php:106
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:81
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:325
+msgid "Escanea con tu WhatsApp para acceder al instante sin contraseñas."
+msgstr "使用 WhatsApp 扫码即可即时免密登录。"
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:85
+msgid "Escanea el código QR con tu WhatsApp y envía el mensaje de verificación."
+msgstr "使用 WhatsApp 扫描二维码并发送验证信息。"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:191
+msgid "Escribe el mensaje que recibirá el usuario inmediatamente tras escanear..."
+msgstr "输入用户扫码后立即收到的回复消息..."
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:177
+#: whatauth-for-wordpress/admin/views/qr-manager.php:250
+msgid "Escribe tu mensaje en la caja superior para previsualizarlo como en WhatsApp..."
+msgstr "在上方输入框键入消息，即可在此预览 WhatsApp 聊天效果..."
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:438
+msgid "Esperando apertura de WhatsApp..."
+msgstr "等待打开 WhatsApp..."
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:380
+msgid "Esperando escaneo o envío de WhatsApp..."
+msgstr "等待扫描或发送 WhatsApp 消息..."
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:87
+msgid "Esperando verificación..."
+msgstr "等待验证中..."
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:199
+msgid "Estado"
+msgstr "状态"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:156
+msgid "Estado del Dominio"
+msgstr "域名状态"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:259
+msgid "Estilo Estándar WhatAuth"
+msgstr "WhatAuth 标准样式"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:300
+#: whatauth-for-wordpress/admin/views/qr-manager.php:326
+msgid "Extra Redondeado"
+msgstr "大圆角"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:149
+msgid "Fallo de verificación."
+msgstr "验证失败。"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:195
+msgid "Fecha / Hora"
+msgstr "日期 / 时间"
+
+#: whatauth-for-wordpress/admin/views/settings.php:203
+msgid "Fondo: #25D366 (Oficial)"
+msgstr "背景：#25D366 (官方色)"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:324
+msgid "Forma Marco Exterior"
+msgstr "外框形状"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:343
+msgid "Forma Punto Interior"
+msgstr "内点形状"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:293
+msgid "Forma de Puntos"
+msgstr "点阵形状"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:147
+msgid "Función Exclusiva PRO / Agency"
+msgstr "PRO / Agency 专享功能"
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:94
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:366
+msgid "Generando QR WhatAuth..."
+msgstr "正在生成 WhatAuth 二维码..."
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:33
+msgid "Gestionar Códigos QR"
+msgstr "管理QR码"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:15
+msgid "Gestor de Códigos QR"
+msgstr "QR码管理器"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:43
+msgid "Gestor de QRs"
+msgstr "QR码管理"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:145
+msgid "Guardando..."
+msgstr "正在保存..."
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:172
+#: whatauth-for-wordpress/admin/views/settings.php:290
+msgid "Guardar Cambios"
+msgstr "保存更改"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:158
+#: whatauth-for-wordpress/admin/views/qr-manager.php:386
+msgid "Guardar Código QR"
+msgstr "保存QR码"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:150
+msgid "Ha ocurrido un error inesperado."
+msgstr "发生意外错误。"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:179
+msgid "Histórico de Escaneos y Validaciones Recientes"
+msgstr "近期扫描与验证记录"
+
+#: whatauth-for-wordpress/includes/class-whatauth-qr-manager.php:245
+msgid "Identificador de QR inválido."
+msgstr "无效的二维码标识符。"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:207
+msgid "Imagen"
+msgstr "图片"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:215
+msgid "Imagen Adjunta (JPG/PNG/WEBP)"
+msgstr "附加图片 (JPG/PNG/WEBP)"
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:84
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:324
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:327
+msgid "Iniciar sesión con WhatsApp"
+msgstr "使用 WhatsApp 登录"
+
+#: whatauth-for-wordpress/admin/views/wizard.php:25
+msgid "Introduce tu Service Token (prefijo wst_live_...). Lo encuentras en tu panel de WhatAuth en Ajustes > API Keys & Tokens."
+msgstr "输入您的服务令牌（前缀 wst_live_...）。可在 WhatAuth 控制台的 设置 > API Keys & Tokens 中找到。"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:170
+msgid "Introduce tu Service Token de WhatAuth."
+msgstr "请输入您的 WhatAuth 服务令牌。"
+
+#: whatauth-for-wordpress/includes/class-whatauth-qr-manager.php:272
+msgid "Introduce un token para verificar."
+msgstr "请输入待验证的令牌。"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:167
+msgid "Ir a WhatAuth Cloud ↗"
+msgstr "前往 WhatAuth Cloud ↗"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:97
+msgid "LOGIN – Acceso Web / Sesión Passwordless"
+msgstr "LOGIN – 网页访问 / 无密码会话"
+
+#: whatauth-for-wordpress/includes/class-whatauth-qr-manager.php:239
+msgid "La eliminación de códigos QR está reservada para cuentas PRO y Agency."
+msgstr "删除二维码仅面向 PRO 和 Agency 账户开放。"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:163
+#: whatauth-for-wordpress/admin/views/dashboard.php:104
+#: whatauth-for-wordpress/admin/views/qr-manager.php:34
+msgid "Login"
+msgstr "登录"
+
+#: whatauth-for-wordpress/admin/views/settings.php:239
+msgid "Logo Oficial WhatAuth (Caja Fuerte Verde 3D)"
+msgstr "WhatAuth 官方Logo (绿色3D保险箱)"
+
+#: whatauth-for-wordpress/admin/views/settings.php:234
+msgid "Logo del Login / Tarjeta"
+msgstr "登录卡片Logo"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:155
+msgid "Línea Anfitriona Compartida Seleccionada"
+msgstr "已选择共享托管线路"
+
+#: whatauth-for-wordpress/admin/views/settings.php:83
+msgid "Línea Dedicada Configurada"
+msgstr "已配置专属线路"
+
+#: whatauth-for-wordpress/admin/views/settings.php:78
+msgid "Línea de WhatsApp Activa"
+msgstr "活跃的 WhatsApp 线路"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:104
+msgid "Línea de WhatsApp del QR"
+msgstr "二维码的 WhatsApp 线路"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:180
+msgid "Línea: "
+msgstr "线路："
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:274
+msgid "Margen del Logo (px)"
+msgstr "图标边距 (px)"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:309
+msgid "Medio - M (15%)"
+msgstr "中等 - M (15%)"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:218
+#: whatauth-for-wordpress/admin/views/qr-manager.php:227
+#: whatauth-for-wordpress/admin/views/qr-manager.php:236
+msgid "Medios WP"
+msgstr "WP 媒体库"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:180
+msgid "Mensaje de Respuesta Automática"
+msgstr "自动回复消息"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:187
+msgid "Monoespaciado (```texto```)"
+msgstr "等宽字体 (```文本```)"
+
+#: whatauth-for-wordpress/admin/views/settings.php:142
+msgid "Mostrar botón de enlace directo a WhatsApp (WaLink) además del código QR."
+msgstr "除二维码外，同时显示直达 WhatsApp 的快捷按钮 (WaLink)。"
+
+#: whatauth-for-wordpress/admin/views/settings.php:243
+msgid "Muestra el logo 3D oficial de WhatAuth. En planes PRO y Agency puedes reemplazarlo por el logotipo de tu propia empresa."
+msgstr "展示 WhatAuth 官方3D标志。PRO 和 Agency 支持上传企业专属Logo。"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:308
+msgid "Máximo - H (30%)"
+msgstr "最高 - H (30%)"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:184
+msgid "Negrita WhatsApp (*texto*)"
+msgstr "WhatsApp 粗体 (*文本*)"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:305
+msgid "Nivel de Corrección y Nitidez"
+msgstr "纠错级别与清晰度"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:154
+msgid "No hay escaneos registrados aún. Cuando un usuario escanee un QR de WhatAuth, la actividad se mostrará aquí en tiempo real."
+msgstr "尚无扫描记录。用户扫描 WhatAuth 二维码后，活动将在此实时显示。"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:136
+msgid "No instalado"
+msgstr "未安装"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:151
+msgid "No se encontraron códigos QR en esta categoría."
+msgstr "未在此分类下找到QR码。"
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:288
+msgid "No se pudo recuperar la cuenta de usuario."
+msgstr "无法检索该用户账户。"
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:175
+msgid "No se pudo resolver el número de teléfono verificado"
+msgstr "无法解析已验证的手机号码"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:238
+msgid "Nombre visible del archivo (ej. catalogo-2026.pdf)"
+msgstr "可见文件名（例如 catalog-2026.pdf）"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:208
+msgid "Nota de Voz / Audio"
+msgstr "语音留言 / 音频"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:224
+msgid "Nota de Voz o Audio (MP3/OGG)"
+msgstr "语音留言或音频 (MP3/OGG)"
+
+#: whatauth-for-wordpress/admin/views/settings.php:109
+#: whatauth-for-wordpress/admin/views/wizard.php:39
+msgid "Número de WhatsApp del Administrador"
+msgstr "管理员 WhatsApp 号码"
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:353
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:409
+msgid "O accede con WhatsApp"
+msgstr "或者使用 WhatsApp 登录"
+
+#: whatauth-for-wordpress/admin/views/settings.php:133
+msgid "Ocultar campos de usuario y contraseña de WordPress (dejar exclusivamente acceso con WhatAuth)."
+msgstr "隐藏 WordPress 原生账号密码框（仅允许 WhatAuth 登录）。"
+
+#: whatauth-for-wordpress/admin/views/wizard.php:61
+msgid "Omitir por ahora"
+msgstr "暂时跳过"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:98
+msgid "PIXEL – Captura de Leads & Redirección Web"
+msgstr "PIXEL – 线索捕获与网页重定向"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:99
+msgid "PRINT – Cartelería Física & GeoTagging"
+msgstr "PRINT – 实体海报与地理定位"
+
+#: whatauth-for-wordpress/admin/views/settings.php:227
+#: whatauth-for-wordpress/admin/views/settings.php:252
+msgid "PRO / AGENCY"
+msgstr "PRO / AGENCY"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:121
+msgid "Pantalla wp-login.php:"
+msgstr "官方 wp-login.php 页面："
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:59
+msgid "Para acceso web rápido Passwordless."
+msgstr "用于快速无密码网页访问。"
+
+#: whatauth-for-wordpress/admin/views/wizard.php:21
+msgid "Paso 1: Conecta tu Service Token de WhatAuth"
+msgstr "第1步：连接您的 WhatAuth 服务令牌"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:129
+msgid "País"
+msgstr "国家"
+
+#: whatauth-for-wordpress/includes/class-whatauth-qr-manager.php:25
+#: whatauth-for-wordpress/includes/class-whatauth-qr-manager.php:95
+#: whatauth-for-wordpress/includes/class-whatauth-qr-manager.php:117
+msgid "Permisos insuficientes."
+msgstr "权限不足。"
+
+#: whatauth-for-wordpress/admin/views/settings.php:228
+msgid "Personaliza la paleta del botón de acceso para adaptarlo a la identidad visual de tu marca o tienda."
+msgstr "自定义登录按钮色系以契合您的店铺与品牌调性。"
+
+#: whatauth-for-wordpress/admin/views/settings.php:197
+msgid "Personalización de Colores del Botón"
+msgstr "按钮颜色自定义"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:35
+msgid "Pixel (Marketing)"
+msgstr "Pixel（营销）"
+
+#: whatauth-for-wordpress/admin/views/settings.php:67
+msgid "Por defecto: https://api.whatauth.com (o http://localhost:3000 para desarrollo local)."
+msgstr "默认：https://api.whatauth.com（本地开发环境可使用 http://localhost:3000）。"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:248
+msgid "Previsualización en WhatsApp:"
+msgstr "WhatsApp 预览："
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:36
+msgid "Print (Cartelería)"
+msgstr "Print（印刷物）"
+
+#: whatauth-for-wordpress/admin/views/settings.php:56
+msgid "Probar Conexión"
+msgstr "测试连接"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:391
+msgid "Probar QR ↗"
+msgstr "测试QR码 ↗"
+
+#: whatauth-for-wordpress/admin/views/settings.php:59
+msgid "Puedes obtener tu Service Token en el panel de WhatAuth en Ajustes > API Keys & Tokens."
+msgstr "您可以在 WhatAuth 控制台的 设置 > API Keys & Tokens 中获取服务令牌。"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:296
+msgid "Puntos (Dots)"
+msgstr "圆点 (Dots)"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:43
+msgid "QR"
+msgstr "二维码"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:53
+msgid "QRs de Login"
+msgstr "登录QR码"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:64
+msgid "QRs de Pixel (Marketing)"
+msgstr "Pixel营销QR码"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:75
+msgid "QRs de Print (Cartelería)"
+msgstr "印刷海报QR码"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:297
+msgid "Redondeados (Rounded)"
+msgstr "圆角 (Rounded)"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:182
+msgid "Registro de accesos y eventos de escaneo de WhatsApp para este usuario en tiempo real."
+msgstr "此用户的 WhatsApp 实时访问和扫描日志。"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:187
+msgid "Respuesta automática inactiva. Marca la casilla \"Activar Respuesta Automática\" superior para habilitarla."
+msgstr "自动回复未激活。勾选上方的“扫码时激活自动回复”复选框以启用。"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:34
+msgid "Resumen"
+msgstr "概览"
+
+#: whatauth-for-wordpress/admin/views/settings.php:125
+msgid "Rol asignado a los visitantes que inicien sesión por primera vez con su WhatsApp (excepto el número de Administrador)."
+msgstr "首次通过 WhatsApp 登录的用户分配的角色（管理员号码除外）。"
+
+#: whatauth-for-wordpress/admin/views/wizard.php:47
+msgid "Rol para Nuevos Registros por WhatsApp"
+msgstr "通过 WhatsApp 新注册用户的角色"
+
+#: whatauth-for-wordpress/admin/views/settings.php:116
+msgid "Rol por Defecto para Nuevos Registros"
+msgstr "新注册默认角色"
+
+#: whatauth-for-wordpress/admin/views/settings.php:211
+#: whatauth-for-wordpress/admin/views/settings.php:242
+msgid "STARTER (Estándar WhatAuth)"
+msgstr "STARTER（WhatAuth标准）"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:162
+#: whatauth-for-wordpress/admin/views/dashboard.php:100
+msgid "Scans Totales"
+msgstr "总扫描次数"
+
+#: whatauth-for-wordpress/admin/views/wizard.php:42
+msgid "Se autocompleta con tu número al verificar el Token. Este número tendrá rol Administrador siempre."
+msgstr "验证令牌后自动填入您的手机号。该号码在此站点将始终拥有管理员角色。"
+
+#: whatauth-for-wordpress/admin/views/settings.php:272
+msgid "Selecciona qué roles de WordPress tienen permiso para ver y crear códigos QR de WhatAuth (el rol Administrador siempre tiene acceso total):"
+msgstr "选择哪些角色可以查看与创建 WhatAuth 二维码（管理员始终拥有完整权限）："
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:182
+msgid "Seleccionar Logotipo para el Código QR"
+msgstr "选择QR码Logo"
+
+#: whatauth-for-wordpress/admin/views/settings.php:249
+msgid "Seleccionar de Medios"
+msgstr "从媒体库选择"
+
+#: whatauth-for-wordpress/admin/views/wizard.php:29
+msgid "Service Token"
+msgstr "服务令牌"
+
+#: whatauth-for-wordpress/admin/views/settings.php:53
+msgid "Service Token (API Key)"
+msgstr "服务令牌 (API Key)"
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:300
+msgid "Sesión iniciada con éxito"
+msgstr "登录成功"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:141
+msgid "Shortcode para cualquier página:"
+msgstr "任意页面的简码 (Shortcode)："
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:20
+msgid "Sin Configurar"
+msgstr "未配置"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:161
+msgid "Sin actividad registrada en los últimos 30 días"
+msgstr "过去30天无记录活动"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:166
+msgid "Sin título"
+msgstr "无标题"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:376
+msgid "Sincronizado en tiempo real"
+msgstr "实时同步"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:48
+msgid "Sincronizados en tiempo real con WhatAuth Cloud."
+msgstr "与 WhatAuth Cloud 实时同步。"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:206
+msgid "Solo Texto"
+msgstr "仅文本"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:186
+msgid "Tachado WhatsApp (~texto~)"
+msgstr "WhatsApp 删除线 (~文本~)"
+
+#: whatauth-for-wordpress/admin/views/settings.php:259
+msgid "Tamaño del Código QR (px)"
+msgstr "二维码尺寸 (px)"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:94
+msgid "Tendencia temporal de lecturas de QR y validaciones de acceso en tu cuenta."
+msgstr "账户二维码扫描及访问验证趋势。"
+
+#: whatauth-for-wordpress/admin/views/settings.php:169
+msgid "Texto de Instrucción del Login"
+msgstr "登录说明文字"
+
+#: whatauth-for-wordpress/admin/views/settings.php:183
+msgid "Texto del Botón WaLink"
+msgstr "WaLink 按钮文字"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:119
+msgid "Texto del Mensaje que enviará el usuario por WhatsApp"
+msgstr "用户将通过 WhatsApp 发送的消息文本"
+
+#: whatauth-for-wordpress/admin/views/settings.php:192
+msgid "Texto del botón para abrir WhatsApp directamente."
+msgstr "用于直接调起 WhatsApp 的按钮文字。"
+
+#: whatauth-for-wordpress/admin/views/settings.php:178
+msgid "Texto explicativo visible sobre el código QR en la pantalla de login."
+msgstr "登录页面显示在QR码上方的说明文本。"
+
+#: whatauth-for-wordpress/admin/views/settings.php:207
+msgid "Texto: #FFFFFF"
+msgstr "文本：#FFFFFF"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:196
+#: whatauth-for-wordpress/admin/views/qr-manager.php:45
+msgid "Tipo"
+msgstr "类型"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:95
+msgid "Tipo de Código QR"
+msgstr "QR码类型"
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:93
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:427
+msgid "Toca el botón para abrir WhatsApp y verificar tu acceso en 1 segundo."
+msgstr "轻按按钮打开 WhatsApp 并在1秒内完成身份核验。"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:33
+msgid "Todos los QRs"
+msgstr "所有QR码"
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:149
+msgid "Token de sesión de WhatsApp ausente"
+msgstr "缺少 WhatsApp 会话令牌"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:42
+msgid "Total QRs Activos"
+msgstr "活跃QR码总数"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:44
+msgid "Título / Identificador"
+msgstr "标题 / 标识符"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:114
+msgid "Título de la Campaña / QR"
+msgstr "活动 / QR码标题"
+
+#: whatauth-for-wordpress/admin/views/settings.php:64
+msgid "URL de la API"
+msgstr "API 地址"
+
+#: whatauth-for-wordpress/admin/views/settings.php:253
+msgid "URL de tu logotipo personalizado para la tarjeta de login móvil y el botón. Si se deja vacío se utiliza el logo WhatAuth por defecto."
+msgstr "移动端卡片及按钮自定义Logo链接。若留空则使用默认Logo。"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:269
+msgid "URL del logotipo personalizado"
+msgstr "自定义Logo链接"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:125
+msgid "Ubicación Física (Print QR)"
+msgstr "物理位置（Print QR）"
+
+#: whatauth-for-wordpress/admin/views/settings.php:156
+msgid "Ubicación en el Sitio"
+msgstr "站点展示位置"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:183
+msgid "Usar este Logo"
+msgstr "使用此Logo"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:24
+msgid "Usuarios únicos, fidelización y autenticación passwordless WhatsApp con códigos QR."
+msgstr "独立用户、客户忠诚度及基于二维码的WhatsApp无密码认证。"
+
+#: whatauth-for-wordpress/admin/views/wizard.php:14
+msgid "Usuarios únicos, trazabilidad y autenticación passwordless WhatsApp con códigos QR."
+msgstr "独立用户、可追溯性及基于二维码的WhatsApp无密码认证。"
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:160
+msgid "Validación de ticket fallida o expirada"
+msgstr "票据验证失败或已过期"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:155
+msgid "Verificado ✓"
+msgstr "已验证 ✓"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:147
+msgid "Verificando conexión..."
+msgstr "正在验证连接..."
+
+#: whatauth-for-wordpress/admin/views/wizard.php:64
+msgid "Verificar y Activar WhatAuth"
+msgstr "验证并激活 WhatAuth"
+
+#: whatauth-for-wordpress/admin/views/settings.php:129
+msgid "Visibilidad del Formulario Nativo"
+msgstr "原生表单可见性"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:367
+msgid "Vista Previa del QR (En Vivo)"
+msgstr "QR码实时预览"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:47
+msgid "Webhook"
+msgstr "Webhook"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:135
+msgid "Webhook Saliente al Escanear (Opcional)"
+msgstr "扫描时的传出 Webhook（可选）"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:118
+msgid "WhatAuth se integra de forma transparente en tus páginas de acceso:"
+msgstr "WhatAuth 无缝集成到您的登录页面："
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:51
+msgid "WhatAuth – Ajustes & Roles"
+msgstr "WhatAuth – 设置与角色"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:61
+msgid "WhatAuth – Asistente de Configuración"
+msgstr "WhatAuth – 配置向导"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:42
+msgid "WhatAuth – Gestor de QRs"
+msgstr "WhatAuth – QR码管理器"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:33
+msgid "WhatAuth – Resumen"
+msgstr "WhatAuth – 概览"
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:131
+msgid "WooCommerce (Mi Cuenta):"
+msgstr "WooCommerce（我的账户）："
+
+#: whatauth-for-wordpress/admin/views/dashboard.php:134
+msgid "WooCommerce detectado"
+msgstr "检测到 WooCommerce"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:184
+#: whatauth-for-wordpress/admin/views/qr-manager.php:196
+msgid "caracteres"
+msgstr "字符"
+
+#: whatauth-for-wordpress/admin/views/qr-manager.php:217
+#: whatauth-for-wordpress/admin/views/qr-manager.php:226
+#: whatauth-for-wordpress/admin/views/qr-manager.php:235
+msgid "https://... o selecciona de medios"
+msgstr "https://... 或从媒体库中选择"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:148
+msgid "¡Credencial verificada correctamente!"
+msgstr "凭据验证成功！"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:146
+msgid "¡Guardado con éxito!"
+msgstr "保存成功！"
+
+#: whatauth-for-wordpress/includes/class-whatauth-auth.php:88
+msgid "¡Verificado con éxito! Redirigiendo..."
+msgstr "验证成功！正在跳转..."
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:143
+msgid "¿Estás seguro de que deseas eliminar este código QR?"
+msgstr "确定要删除此QR码吗？"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:165
+msgid "✓ Activo"
+msgstr "✓ 已激活"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:178
+msgid "✓ Conectado: Plan"
+msgstr "✓ 已连接：计划"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:164
+msgid "✓ Configurado"
+msgstr "✓ 已配置"
+
+#: whatauth-for-wordpress/admin/class-whatauth-admin.php:167
+msgid "🔒 Eliminar QRs requiere plan PRO o Agency"
+msgstr "🔒 删除QR码需要 PRO 或 Agency 计划"
+
