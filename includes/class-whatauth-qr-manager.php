@@ -355,25 +355,6 @@ class WhatAuth_QR_Manager {
         $enable_wplogin          = !empty($_POST['enable_wplogin']) ? 1 : 0;
         $enable_woocommerce      = !empty($_POST['enable_woocommerce']) ? 1 : 0;
         $qr_size                 = isset($_POST['qr_size']) ? intval(wp_unslash($_POST['qr_size'])) : 280;
-        $button_text             = isset($_POST['button_text']) ? sanitize_text_field(wp_unslash($_POST['button_text'])) : __('Abrir WhatsApp directamente', 'whatauth');
-        $login_instruction_text  = isset($_POST['login_instruction_text']) ? sanitize_text_field(wp_unslash($_POST['login_instruction_text'])) : __('Escanea con tu WhatsApp para acceder al instante sin contraseñas.', 'whatauth');
-
-        $existing_settings       = get_option('whatauth_settings', array());
-        $current_plan            = isset($_POST['plan']) ? sanitize_text_field(wp_unslash($_POST['plan'])) : (!empty($existing_settings['plan']) ? $existing_settings['plan'] : 'STARTER');
-        $is_pro_agency           = in_array(strtoupper($current_plan), array('PRO', 'AGENCY'), true);
-
-        // Si es STARTER, forzar valores oficiales de WhatAuth
-        if (!$is_pro_agency) {
-            $button_text            = __('Abrir WhatsApp directamente', 'whatauth');
-            $login_instruction_text = __('Escanea con tu WhatsApp para acceder al instante sin contraseñas.', 'whatauth');
-            $button_bg_color        = '#25D366';
-            $button_text_color      = '#ffffff';
-            $custom_logo_url        = '';
-        } else {
-            $button_bg_color        = isset($_POST['button_bg_color']) ? sanitize_hex_color(wp_unslash($_POST['button_bg_color'])) : (!empty($existing_settings['button_bg_color']) ? $existing_settings['button_bg_color'] : '#25D366');
-            $button_text_color      = isset($_POST['button_text_color']) ? sanitize_hex_color(wp_unslash($_POST['button_text_color'])) : (!empty($existing_settings['button_text_color']) ? $existing_settings['button_text_color'] : '#ffffff');
-            $custom_logo_url        = isset($_POST['custom_logo_url']) ? esc_url_raw(wp_unslash($_POST['custom_logo_url'])) : (!empty($existing_settings['custom_logo_url']) ? $existing_settings['custom_logo_url'] : '');
-        }
 
         $settings = array(
             'api_key'                 => $api_key,
@@ -389,12 +370,7 @@ class WhatAuth_QR_Manager {
             'enable_wplogin'          => $enable_wplogin,
             'enable_woocommerce'      => $enable_woocommerce,
             'qr_size'                 => $qr_size,
-            'button_text'             => $button_text,
-            'login_instruction_text'  => $login_instruction_text,
-            'button_bg_color'         => $button_bg_color,
-            'button_text_color'       => $button_text_color,
-            'custom_logo_url'         => $custom_logo_url,
-            'plan'                    => $current_plan,
+            'plan'                    => 'STARTER',
             'setup_completed'         => 1,
         );
 

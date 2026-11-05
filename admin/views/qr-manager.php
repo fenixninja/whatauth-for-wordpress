@@ -81,11 +81,9 @@ $whatauth_is_pro_agency = in_array($whatauth_current_plan, array('PRO', 'AGENCY'
                     </button>
                     <button type="button" class="whatauth-studio-tab-btn" data-studio-pane="pane-autoreply">
                         <?php esc_html_e('2. Auto-Reply', 'whatauth'); ?>
-                        <span class="wa-tab-lock" <?php echo $whatauth_is_pro_agency ? 'style="display:none;"' : ''; ?> style="display:inline-flex; vertical-align:middle; margin-left:3px;"><svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg></span>
                     </button>
                     <button type="button" class="whatauth-studio-tab-btn" data-studio-pane="pane-branding">
                         <?php esc_html_e('3. Estilo & Logo', 'whatauth'); ?>
-                        <span class="wa-tab-lock" <?php echo $whatauth_is_pro_agency ? 'style="display:none;"' : ''; ?> style="display:inline-flex; vertical-align:middle; margin-left:3px;"><svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg></span>
                     </button>
                 </div>
 
@@ -143,13 +141,6 @@ $whatauth_is_pro_agency = in_array($whatauth_current_plan, array('PRO', 'AGENCY'
 
                 <!-- SUB-PESTAÑA 2: AUTO-REPLY -->
                 <div class="whatauth-studio-pane" id="pane-autoreply">
-                    <div class="wa-studio-lock-banner" <?php echo $whatauth_is_pro_agency ? 'style="display:none;"' : ''; ?> style="background: #fef3c7; border: 1px solid #fde68a; border-radius: 8px; padding: 12px; color: #92400e; font-size: 13px; margin-bottom: 12px;">
-                        <strong><svg style="display:inline-block;vertical-align:-1px;margin-right:4px;" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg><?php esc_html_e('Función Exclusiva PRO / Agency', 'whatauth'); ?></strong>
-                        <p style="margin: 4px 0 0 0; font-size: 12px;">
-                            <?php esc_html_e('En la versión Starter el Auto-Reply no está disponible. Para enviar mensajes de bienvenida o catálogos automáticos tras escanear, actualiza a PRO o Agency.', 'whatauth'); ?>
-                        </p>
-                    </div>
-
                     <!-- Alerta si se selecciona el Bot Anfitrión -->
                     <div id="wa-autoreply-hostbot-notice" style="display: none; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 12px; color: #1e40af; font-size: 13px; margin-bottom: 12px;">
                         <strong><svg style="display:inline-block;vertical-align:-2px;margin-right:4px;" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg><?php esc_html_e('Línea Anfitriona Compartida Seleccionada', 'whatauth'); ?></strong>
@@ -255,13 +246,6 @@ $whatauth_is_pro_agency = in_array($whatauth_current_plan, array('PRO', 'AGENCY'
 
                 <!-- SUB-PESTAÑA 3: ESTILO & LOGO (BRANDING) -->
                 <div class="whatauth-studio-pane" id="pane-branding">
-                    <div class="wa-studio-lock-banner" <?php echo $whatauth_is_pro_agency ? 'style="display:none;"' : ''; ?> style="background: #fef3c7; border: 1px solid #fde68a; border-radius: 8px; padding: 12px; color: #92400e; font-size: 13px; margin-bottom: 12px;">
-                        <strong><svg style="display:inline-block;vertical-align:-1px;margin-right:4px;" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg><?php esc_html_e('Estilo Estándar WhatAuth', 'whatauth'); ?></strong>
-                        <p style="margin: 4px 0 0 0; font-size: 12px;">
-                            <?php esc_html_e('En la versión Starter el QR se genera con el logotipo oficial de la caja fuerte verde 3D de WhatAuth. Desbloquea colores y logo de marca con PRO o Agency.', 'whatauth'); ?>
-                        </p>
-                    </div>
-
                     <!-- 1. Logotipo Central -->
                     <div style="margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px solid #e2e8f0;">
                         <label style="font-weight: 600; display: block; margin-bottom: 4px; font-size: 13px;"><?php esc_html_e('1. Logotipo Central del QR', 'whatauth'); ?></label>

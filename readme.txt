@@ -1,5 +1,5 @@
 === WhatAuth – Passwordless Login & Smart QR Hub ===
-Contributors: fenixrios, whatauth
+Contributors: fenixninja, fenixrios, whatauth
 Donate link: https://whatauth.com
 Tags: login, passwordless, qr code, woocommerce, authentication
 Requires at least: 6.0
@@ -28,7 +28,7 @@ WhatAuth for WordPress seamlessly connects your website to the WhatAuth ecosyste
 * **Real-Time Outgoing Webhooks:** Dispatch automated webhook payloads to external systems (n8n, Make, Zapier, or custom backends) whenever a QR is scanned.
 * **Dynamic Role-Based Access Control (RBAC):** Choose the default role for newly registered users (Subscriber, Customer) and assign QR management capabilities to custom WordPress team roles (Administrator, Shop Manager, Editor).
 * **Gutenberg Block & Shortcode:** Insert the QR login modal anywhere with `[whatauth_login]` or the dedicated block.
-* **100% Native i18n Multilingual:** Packaged with gettext translations in 12 languages (Spanish, English, French, Italian, Portuguese, German, Russian, Chinese, Hindi, Japanese).
+* **100% Native i18n Multilingual:** Packaged with gettext translations in 10 languages: Spanish (es_ES, es_AR, es_MX), English (en_US), French (fr_FR), Italian (it_IT), Portuguese (pt_BR), German (de_DE), Russian (ru_RU), Chinese (zh_CN), Hindi (hi_IN), and Japanese (ja, ja_JP).
 
 == Installation ==
 
@@ -36,7 +36,7 @@ WhatAuth for WordPress seamlessly connects your website to the WhatAuth ecosyste
 2. Activate the plugin through the **Plugins** menu in WordPress.
 3. Click on **WhatAuth** in the sidebar or launch the wizard under **WhatAuth > Wizard**.
 4. Enter your **Service Token** (`wst_live_...`) generated in your WhatAuth dashboard at [whatauth.com](https://whatauth.com).
-5. Choose your default WhatsApp line (Official Shared Host Bot or your Dedicated PRO/Agency Line).
+5. Choose your default WhatsApp line.
 6. That's it! Passwordless login and QR campaigns are now active on your site.
 
 == Frequently Asked Questions ==
@@ -44,8 +44,8 @@ WhatAuth for WordPress seamlessly connects your website to the WhatAuth ecosyste
 = Do I need a WhatAuth account to use this plugin? =
 Yes. You can create a free account at [whatauth.com](https://whatauth.com) and generate your Service Token under Settings > API Keys.
 
-= Does it work with the Official Bot or do I need my own WhatsApp line? =
-It supports both. You can use WhatAuth's shared official bot with zero setup, or connect your own dedicated line in PRO or Agency plans.
+= Does it work with the Official Bot? =
+Yes. You can use WhatAuth's shared official bot with zero setup to instantly deliver authentication requests.
 
 = Is it compatible with WooCommerce? =
 Yes, WhatAuth automatically adds login buttons to the WooCommerce My Account page and checkout forms.
@@ -90,7 +90,7 @@ WhatsApp is a registered trademark of Meta Platforms, Inc. WhatAuth is an indepe
 * Shortcode `[whatauth_login]` and Gutenberg block `whatauth/qr-login`.
 * Multi-campaign QR studio for LOGIN, PIXEL, and PRINT with Auto-Reply and Webhooks.
 * Setup wizard and service token integration.
-* Fully bundled local assets and 12-language i18n support.
+* Fully bundled local assets and 10-language i18n support.
 
 == License ==
 

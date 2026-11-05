@@ -186,3 +186,15 @@
   }
 }
 
+/* Ocultar campos tradicionales de usuario/clave cuando hide_wp_credentials está activo */
+body.login.whatauth-hide-credentials #loginform > p:not(.whatauth-login-wrapper):not(.whatauth-inline-login-p),
+body.login.whatauth-hide-credentials #loginform .forgetmenot,
+body.login.whatauth-hide-credentials #loginform .user-pass-wrap,
+body.login.whatauth-hide-credentials #loginform .submit {
+  display: none !important;
+}
+
+body.login.whatauth-hide-credentials #loginform {
+  padding-bottom: 26px !important;
+}
+

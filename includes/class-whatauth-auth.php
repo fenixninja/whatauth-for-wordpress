@@ -15,6 +15,12 @@ class WhatAuth_Auth {
         if (!empty($settings['enable_wplogin'])) {
             add_action('login_form', array(__CLASS__, 'render_wplogin_button'));
             add_action('login_enqueue_scripts', array(__CLASS__, 'enqueue_frontend_assets'));
+            if (!empty($settings['hide_wp_credentials'])) {
+                add_filter('login_body_class', function($classes) {
+                    $classes[] = 'whatauth-hide-credentials';
+                    return $classes;
+                });
+            }
         }
 
         // Integración en WooCommerce
@@ -62,12 +68,9 @@ class WhatAuth_Auth {
             true
         );
 
-        $current_plan   = !empty($settings['plan']) ? strtoupper($settings['plan']) : 'STARTER';
-        $is_pro_agency  = in_array($current_plan, array('PRO', 'AGENCY'), true);
         $official_logo  = WHATAUTH_PLUGIN_URL . 'public/images/whatauth-logo.png';
-        $active_logo    = ($is_pro_agency && !empty($settings['custom_logo_url'])) ? $settings['custom_logo_url'] : $official_logo;
-        $btn_bg_color   = ($is_pro_agency && !empty($settings['button_bg_color'])) ? $settings['button_bg_color'] : '#25D366';
-        $btn_txt_color  = ($is_pro_agency && !empty($settings['button_text_color'])) ? $settings['button_text_color'] : '#ffffff';
+        $btn_bg_color   = '#25D366';
+        $btn_txt_color  = '#ffffff';
 
         wp_localize_script('whatauth-sdk-js', 'whatauthData', array(
             'ajaxUrl'               => admin_url('admin-ajax.php'),
@@ -78,21 +81,20 @@ class WhatAuth_Auth {
             'domain'                => $domain,
             'socketIoUrl'           => WHATAUTH_PLUGIN_URL . 'public/js/vendor/socket.io.min.js',
             'lineId'                => !empty($settings['line_id']) ? $settings['line_id'] : '',
-            'plan'                  => $current_plan,
-            'isProAgency'           => $is_pro_agency,
-            'logoUrl'               => esc_url_raw($active_logo),
+            'plan'                  => 'STARTER',
+            'logoUrl'               => esc_url_raw($official_logo),
             'buttonBgColor'         => esc_attr($btn_bg_color),
             'buttonTextColor'       => esc_attr($btn_txt_color),
             'qrSize'                => !empty($settings['qr_size']) ? intval($settings['qr_size']) : 280,
             'hideWpCredentials'     => !empty($settings['hide_wp_credentials']) ? 1 : 0,
             'desktopShowWalink'     => isset($settings['desktop_show_walink']) ? intval($settings['desktop_show_walink']) : 1,
             'mobileShowWalinkOnly'  => isset($settings['mobile_show_walink_only']) ? intval($settings['mobile_show_walink_only']) : 1,
-            'loginInstructionText'  => !empty($settings['login_instruction_text']) ? $settings['login_instruction_text'] : __('Escanea con tu WhatsApp para acceder al instante sin contraseñas.', 'whatauth'),
-            'buttonText'            => !empty($settings['button_text']) ? $settings['button_text'] : __('Abrir WhatsApp directamente', 'whatauth'),
+            'loginInstructionText'  => __('Escanea con tu WhatsApp para acceder al instante sin contraseñas.', 'whatauth'),
+            'buttonText'            => __('Iniciar sesión con WhatsApp', 'whatauth'),
             'i18n'                  => array(
                 'modalTitle'        => __('Iniciar sesión con WhatsApp', 'whatauth'),
-                'scanInstruction'   => !empty($settings['login_instruction_text']) ? $settings['login_instruction_text'] : __('Escanea el código QR con tu WhatsApp y envía el mensaje de verificación.', 'whatauth'),
-                'openWhatsApp'      => !empty($settings['button_text']) ? $settings['button_text'] : __('Abrir WhatsApp directamente', 'whatauth'),
+                'scanInstruction'   => __('Escanea el código QR con tu WhatsApp y envía el mensaje de verificación.', 'whatauth'),
+                'openWhatsApp'      => __('Iniciar sesión con WhatsApp', 'whatauth'),
                 'waitingScan'       => __('Esperando verificación...', 'whatauth'),
                 'successLogin'      => __('¡Verificado con éxito! Redirigiendo...', 'whatauth'),
                 'errorLogin'        => __('Error al verificar la sesión. Inténtalo de nuevo.', 'whatauth'),
@@ -118,7 +120,7 @@ class WhatAuth_Auth {
     }
 
     /**
-     * Normaliza y compara números de teléfono tolerando prefijos internacionales (+34, 0034)
+     * Normaliza y compara números de teléfono en formato internacional canónico exacto
      */
     public static function phones_match($phone1, $phone2) {
         $c1 = preg_replace('/[^0-9]/', '', (string)$phone1);
@@ -126,16 +128,7 @@ class WhatAuth_Auth {
         if (empty($c1) || empty($c2)) {
             return false;
         }
-        if ($c1 === $c2) {
-            return true;
-        }
-        // Comparación de sufijo nacional (últimos 9 dígitos para países como España)
-        if (strlen($c1) >= 9 && strlen($c2) >= 9) {
-            if (substr($c1, -9) === substr($c2, -9)) {
-                return true;
-            }
-        }
-        return false;
+        return ($c1 === $c2);
     }
 
     /**
@@ -159,7 +152,7 @@ class WhatAuth_Auth {
             ), 400);
         }
 
-        // 1. Validar ticket criptográfico contra WhatAuth API
+        // 1. Validar ticket criptográfico contra WhatAuth API exclusivamente
         $api_client = WhatAuth_API_Client::get_instance();
         $verification = $api_client->verify_login_ticket($token);
 
@@ -170,7 +163,8 @@ class WhatAuth_Auth {
             ), 401);
         }
 
-        // Si la API devuelve un teléfono más depurado, priorizarlo
+        // El número verificado proviene exclusivamente de la respuesta firmada por la API de WhatAuth
+        $phone = '';
         if (!empty($verification['data']['profile']['phone'])) {
             $phone = trim($verification['data']['profile']['phone']);
         }
@@ -189,22 +183,6 @@ class WhatAuth_Auth {
         $clean_phone = preg_replace('/[^0-9]/', '', $phone);
         $user_id = null;
 
-        // Comprobar si coincide con el número de teléfono del Administrador configurado (con resolución robusta)
-        $settings = get_option('whatauth_settings', array());
-        $configured_admin_phone = !empty($settings['admin_phone']) ? $settings['admin_phone'] : '';
-
-        // Si admin_phone está vacío en la configuración, obtenerlo en vivo del propietario del token
-        if (empty($configured_admin_phone) && !empty($settings['api_key'])) {
-            $token_info = $api_client->verify_token($settings['api_key']);
-            if ($token_info['success'] && !empty($token_info['data']['profile']['phone'])) {
-                $configured_admin_phone = $token_info['data']['profile']['phone'];
-                $settings['admin_phone'] = $configured_admin_phone;
-                update_option('whatauth_settings', $settings);
-            }
-        }
-
-        $is_admin_phone = (!empty($configured_admin_phone) && self::phones_match($clean_phone, $configured_admin_phone));
-
         // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key, WordPress.DB.SlowDBQuery.slow_db_query_meta_value -- Phone lookup requires meta_key search
         $user_query = new WP_User_Query(array(
             'meta_key'     => 'whatauth_phone', // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
@@ -217,7 +195,7 @@ class WhatAuth_Auth {
         if (!empty($users)) {
             $user_id = $users[0];
         } else {
-            // Intentar buscar por coincidencia en login o email
+            // Intentar buscar por coincidencia exacta en login
             $existing_by_login = get_user_by('login', 'wa_' . $clean_phone);
             if ($existing_by_login) {
                 $user_id = $existing_by_login->ID;
@@ -225,34 +203,23 @@ class WhatAuth_Auth {
             }
         }
 
-        // Si es el teléfono de admin y ya existe un usuario administrador, vincularlo
-        if ($is_admin_phone && !$user_id) {
-            $admin_users = get_users(array('role' => 'administrator', 'number' => 1));
-            if (!empty($admin_users)) {
-                $first_admin = $admin_users[0];
-                $user_id = $first_admin->ID;
-                update_user_meta($user_id, 'whatauth_phone', $clean_phone);
-            }
-        }
-
         // 3. Si no existe, comprobar si el auto-registro está permitido
+        $settings = get_option('whatauth_settings', array());
         $allow_registration = !empty($settings['allow_registration']);
 
         if (!$user_id) {
-            if (!$allow_registration && !$is_admin_phone && !get_option('users_can_register')) {
+            if (!$allow_registration && !get_option('users_can_register')) {
                 return new WP_REST_Response(array(
                     'success' => false,
                     'error'   => __('El registro de nuevos usuarios está deshabilitado en este sitio.', 'whatauth')
                 ), 403);
             }
 
-            // Crear nuevo usuario
+            // Crear nuevo usuario con rol restringido seguro
             $username = 'wa_' . $clean_phone;
             $email_domain = wp_parse_url(home_url(), PHP_URL_HOST);
             $random_email = 'wa_' . $clean_phone . '@' . $email_domain;
-
-            // Si es el número de admin, asignar rol administrator. Si no, rol configurado.
-            $default_role = $is_admin_phone ? 'administrator' : WhatAuth_Roles::get_default_registration_role();
+            $default_role = WhatAuth_Roles::get_default_registration_role();
 
             $display_name = !empty($name) ? $name : '+' . $clean_phone;
 
@@ -278,25 +245,24 @@ class WhatAuth_Auth {
             update_user_meta($user_id, 'whatauth_registered_at', current_time('mysql'));
         }
 
-        // 4. Si es el teléfono del admin, garantizar SIEMPRE y forzosamente el rol administrator
-        if ($is_admin_phone && $user_id) {
-            $user_obj = get_user_by('id', $user_id);
-            if ($user_obj) {
-                if (!in_array('administrator', (array)$user_obj->roles, true)) {
-                    $user_obj->set_role('administrator');
-                }
-                // Conceder también capacidades de WhatAuth explícitamente
-                $user_obj->add_cap(WhatAuth_Roles::CAP_MANAGE_SETTINGS);
-                $user_obj->add_cap(WhatAuth_Roles::CAP_MANAGE_QRS);
-            }
-        }
-
         $user = get_user_by('id', $user_id);
         if (!$user) {
             return new WP_REST_Response(array(
                 'success' => false,
                 'error'   => __('No se pudo recuperar la cuenta de usuario.', 'whatauth')
             ), 500);
+        }
+
+        // Si la cuenta cuenta con rol de administrador, bloquear login por WhatsApp a menos que el sitio expresamente lo tenga configurado
+        // Esto previene que una cuenta de administrador sea secuestrada si no fue explícitamente enlazada.
+        if (in_array('administrator', (array)$user->roles, true)) {
+            $configured_admin_phone = !empty($settings['admin_phone']) ? preg_replace('/[^0-9]/', '', $settings['admin_phone']) : '';
+            if (empty($configured_admin_phone) || !self::phones_match($clean_phone, $configured_admin_phone)) {
+                return new WP_REST_Response(array(
+                    'success' => false,
+                    'error'   => __('El inicio de sesión mediante WhatsApp está restringido para cuentas con privilegios administrativos.', 'whatauth')
+                ), 403);
+            }
         }
 
         // 4. Iniciar sesión oficialmente en WordPress
@@ -323,39 +289,14 @@ class WhatAuth_Auth {
      */
     public static function render_wplogin_button() {
         $settings       = get_option('whatauth_settings', array());
-        $current_plan   = !empty($settings['plan']) ? strtoupper($settings['plan']) : 'STARTER';
-        $is_pro_agency  = in_array($current_plan, array('PRO', 'AGENCY'), true);
         $official_logo  = WHATAUTH_PLUGIN_URL . 'public/images/whatauth-logo.png';
-        $active_logo    = ($is_pro_agency && !empty($settings['custom_logo_url'])) ? $settings['custom_logo_url'] : $official_logo;
-        $btn_bg_color   = ($is_pro_agency && !empty($settings['button_bg_color'])) ? $settings['button_bg_color'] : '#25D366';
-        $btn_txt_color  = ($is_pro_agency && !empty($settings['button_text_color'])) ? $settings['button_text_color'] : '#ffffff';
-
-        // En Starter los textos están protegidos y estandarizados con WhatAuth
-        if (!$is_pro_agency) {
-            $btn_text    = __('Iniciar sesión con WhatsApp', 'whatauth');
-            $instruction = __('Escanea con tu WhatsApp para acceder al instante sin contraseñas.', 'whatauth');
-        } else {
-            $btn_text    = !empty($settings['button_text']) ? $settings['button_text'] : __('Iniciar sesión con WhatsApp', 'whatauth');
-            $instruction = !empty($settings['login_instruction_text']) ? $settings['login_instruction_text'] : __('Escanea con tu WhatsApp para acceder al instante sin contraseñas.', 'whatauth');
-        }
-
-        $hide_wp_cred       = !empty($settings['hide_wp_credentials']);
-        $desktop_walink     = isset($settings['desktop_show_walink']) ? !empty($settings['desktop_show_walink']) : true;
+        $btn_bg_color   = '#25D366';
+        $btn_txt_color  = '#ffffff';
+        $btn_text       = __('Iniciar sesión con WhatsApp', 'whatauth');
+        $instruction    = __('Escanea con tu WhatsApp para acceder al instante sin contraseñas.', 'whatauth');
+        $hide_wp_cred   = !empty($settings['hide_wp_credentials']);
+        $desktop_walink = isset($settings['desktop_show_walink']) ? !empty($settings['desktop_show_walink']) : true;
         ?>
-        <?php if ($hide_wp_cred) : ?>
-        <style>
-            #loginform > p:not(.whatauth-login-wrapper):not(.whatauth-inline-login-p),
-            #loginform .forgetmenot,
-            #loginform .user-pass-wrap,
-            #loginform .submit {
-                display: none !important;
-            }
-            #loginform {
-                padding-bottom: 26px !important;
-            }
-        </style>
-        <?php endif; ?>
-
         <!-- CONTENEDOR ESCRITORIO (Visible en pantallas > 768px con QR + PIN + WaLink opcional) -->
         <div class="whatauth-login-wrapper whatauth-inline-login-box wa-hide-on-mobile" style="margin: 16px 0 16px 0; text-align: center;">
             <?php if (!$hide_wp_cred) : ?>
@@ -395,18 +336,8 @@ class WhatAuth_Auth {
             <?php if ($desktop_walink) : ?>
             <div class="whatauth-walink-wrapper" style="margin-top: 6px;">
                 <a id="wa-inline-walink-btn" href="#" target="_blank" rel="noopener noreferrer" class="whatauth-trigger-btn whatauth-walink-btn" style="background-color: <?php echo esc_attr($btn_bg_color); ?>; color: <?php echo esc_attr($btn_txt_color); ?>; width: 100%; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; text-decoration: none;">
-                    <img src="<?php echo esc_url($active_logo); ?>" alt="WhatAuth" class="whatauth-btn-brand-icon" style="width: 22px; height: 22px; object-fit: contain; margin-right: 6px; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));">
+                    <img src="<?php echo esc_url($official_logo); ?>" alt="WhatAuth" class="whatauth-btn-brand-icon" style="width: 22px; height: 22px; object-fit: contain; margin-right: 6px; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));">
                     <span><?php echo esc_html($btn_text); ?></span>
-                </a>
-            </div>
-            <?php endif; ?>
-
-            <!-- Badge promocional Whatauth.com (para plan Starter) -->
-            <?php if (!$is_pro_agency) : ?>
-            <div class="whatauth-branding-footer" style="margin-top: 14px; padding-top: 10px; border-top: 1px dashed #e5e7eb;">
-                <a href="https://whatauth.com?utm_source=wp_plugin&utm_medium=login_footer&utm_campaign=powered_by" target="_blank" rel="noopener noreferrer" style="font-size: 11px; color: #16a34a; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; font-weight: 600; opacity: 0.9; transition: opacity 0.2s ease;">
-                    <img src="<?php echo esc_url($official_logo); ?>" alt="WhatAuth" style="width: 14px; height: 14px; object-fit: contain;">
-                    <span><?php esc_html_e('Crea tu login con QR con Whatauth.com', 'whatauth'); ?></span>
                 </a>
             </div>
             <?php endif; ?>
@@ -423,9 +354,9 @@ class WhatAuth_Auth {
             <?php endif; ?>
 
             <div class="whatauth-mobile-card-inner" style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 20px 16px; box-shadow: 0 4px 18px rgba(0,0,0,0.06);">
-                <!-- Logo con gran protagonismo (Oficial 3D en Starter, Personalizado en PRO/Agency) -->
+                <!-- Logo oficial -->
                 <div style="margin-bottom: 10px;">
-                    <img src="<?php echo esc_url($active_logo); ?>" alt="WhatAuth" style="width: 58px; height: 58px; object-fit: contain; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.12)); display: inline-block;">
+                    <img src="<?php echo esc_url($official_logo); ?>" alt="WhatAuth" style="width: 58px; height: 58px; object-fit: contain; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.12)); display: inline-block;">
                 </div>
 
                 <!-- Título Claro -->
@@ -440,7 +371,7 @@ class WhatAuth_Auth {
 
                 <!-- Botón de WhatsApp a Pantalla Completa -->
                 <a id="wa-mobile-card-btn" href="#" target="_blank" rel="noopener noreferrer" class="whatauth-trigger-btn whatauth-walink-btn" style="background-color: <?php echo esc_attr($btn_bg_color); ?>; color: <?php echo esc_attr($btn_txt_color); ?>; width: 100%; box-sizing: border-box; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; padding: 13px 18px; border-radius: 12px; font-weight: 700; font-size: 15px; box-shadow: 0 4px 14px rgba(37,211,102,0.28);">
-                    <img src="<?php echo esc_url($active_logo); ?>" alt="WhatAuth" style="width: 22px; height: 22px; object-fit: contain;">
+                    <img src="<?php echo esc_url($official_logo); ?>" alt="WhatAuth" style="width: 22px; height: 22px; object-fit: contain;">
                     <span><?php echo esc_html($btn_text); ?></span>
                 </a>
 
@@ -448,16 +379,6 @@ class WhatAuth_Auth {
                 <div id="wa-mobile-status" class="whatauth-status-text" style="margin-top: 10px; font-size: 12px; color: #6b7280;">
                     <?php esc_html_e('Esperando apertura de WhatsApp...', 'whatauth'); ?>
                 </div>
-
-                <!-- Badge Starter en Móvil -->
-                <?php if (!$is_pro_agency) : ?>
-                <div class="whatauth-branding-footer" style="margin-top: 14px; padding-top: 10px; border-top: 1px dashed #e5e7eb;">
-                    <a href="https://whatauth.com?utm_source=wp_plugin&utm_medium=mobile_card_footer&utm_campaign=powered_by" target="_blank" rel="noopener noreferrer" style="font-size: 11px; color: #16a34a; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; font-weight: 600;">
-                        <img src="<?php echo esc_url($official_logo); ?>" alt="WhatAuth" style="width: 14px; height: 14px; object-fit: contain;">
-                        <span><?php esc_html_e('Crea tu login con QR con Whatauth.com', 'whatauth'); ?></span>
-                    </a>
-                </div>
-                <?php endif; ?>
             </div>
         </div>
         <?php

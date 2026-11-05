@@ -100,6 +100,16 @@ class WhatAuth_Admin {
             true
         );
 
+        if (strpos($hook, 'whatauth-wizard') !== false) {
+            wp_enqueue_script(
+                'whatauth-wizard-js',
+                WHATAUTH_PLUGIN_URL . 'admin/js/whatauth-wizard.js',
+                array('jquery'),
+                WHATAUTH_VERSION,
+                true
+            );
+        }
+
         $settings = get_option('whatauth_settings', array());
         $current_plan  = !empty($settings['plan']) ? strtoupper($settings['plan']) : 'STARTER';
 
@@ -138,6 +148,7 @@ class WhatAuth_Admin {
             'isProAgency'   => $is_pro_agency,
             'lines'         => !empty($settings['lines']) && is_array($settings['lines']) ? $settings['lines'] : array(),
             'defaultLineId' => !empty($settings['line_id']) ? $settings['line_id'] : '',
+            'redirectUrl'   => admin_url('admin.php?page=whatauth-qrs'),
             'defaultLogo'   => WHATAUTH_PLUGIN_URL . 'public/images/whatauth-logo.png',
             'i18n'    => array(
                 'confirmDelete'       => __('¿Estás seguro de que deseas eliminar este código QR?', 'whatauth'),

@@ -19,8 +19,8 @@ Official WordPress plugin for **[WhatAuth](https://whatauth.com)**: passwordless
   * **PRINT QR:** High-resolution physical signage with native GeoTagging.
 * 🎨 **Bespoke QR Styling:** Customize dots shapes (square, dots, rounded, classy), corner styles, custom logo margin & scaling, error correction levels (Q, H, M, L), and live Canvas rendering via `qr-code-styling`.
 * 💬 **WhatsApp Chat Composer (Auto-Reply):** Built-in WYSIWYG editor supporting native WhatsApp formatting (`*bold*`, `_italic_`, `~strikethrough~`), rich media attachments (Images, Audio voice notes, PDF documents), interactive CTA links, and real-time chat bubble preview.
-* 📞 **Flexible WhatsApp Line Routing:** Operate on WhatAuth's shared Official Host Bot or connect your own dedicated WhatsApp line (PRO / Agency) via Native Gateway or Meta Cloud API.
-* 🌐 **100% Native i18n Multilingual:** Packaged with gettext translations in 12 languages (Spanish, English, French, Italian, Portuguese, German, Russian, Chinese, Hindi, Japanese).
+* 📞 **Flexible WhatsApp Line Routing:** Operate with WhatAuth's shared Official Host Bot or connect your dedicated WhatsApp line.
+* 🌐 **100% Native i18n Multilingual:** Packaged with gettext translations in 10 languages: Spanish (es_ES, es_AR, es_MX), English (en_US), French (fr_FR), Italian (it_IT), Portuguese (pt_BR), German (de_DE), Russian (ru_RU), Chinese (zh_CN), Hindi (hi_IN), and Japanese (ja, ja_JP).
 * 🛡️ **Role-Based Access Control (RBAC):** Restrict QR management capabilities to specific WordPress roles (`manage_whatauth_qrs`).
 
 ---

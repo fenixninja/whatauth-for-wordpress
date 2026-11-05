@@ -36,11 +36,17 @@ class WhatAuth_Roles {
     }
 
     /**
-     * Obtiene el rol configurado para nuevos registros
+     * Obtiene el rol configurado para nuevos registros garantizando privilegios mínimos
      */
     public static function get_default_registration_role() {
         $settings = get_option('whatauth_settings', array());
         $role = !empty($settings['default_role']) ? $settings['default_role'] : 'subscriber';
+
+        // Prohibir explícitamente roles privilegiados en registros automáticos públicos
+        $disallowed_roles = array('administrator', 'editor', 'author');
+        if (in_array(strtolower($role), $disallowed_roles, true)) {
+            return 'subscriber';
+        }
 
         $available = self::get_available_roles();
         if (!isset($available[$role])) {

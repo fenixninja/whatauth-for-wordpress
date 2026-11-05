@@ -371,12 +371,7 @@
           lineInfo = '<br><span style="display:inline-block; font-size:10px; background:#ede9fe; color:#6d28d9; padding:1px 6px; border-radius:4px; font-weight:600; margin-top:3px;">' + (whatauthAdminData.i18n.linePrefix || 'Línea: ') + self.escapeHtml(lineLabel) + '</span>';
         }
 
-        let deleteBtn = '';
-        if (isProAgency) {
-          deleteBtn = '<button type="button" class="button button-small button-link-delete btn-delete-qr" data-id="' + qr.id + '">' + (whatauthAdminData.i18n.delete || 'Eliminar') + '</button>';
-        } else {
-          deleteBtn = '<button type="button" class="button button-small disabled" style="opacity:0.45; cursor:not-allowed;" title="' + (whatauthAdminData.i18n.deleteLockedTooltip || 'Eliminar QRs requiere plan PRO o Agency') + '" disabled><span class="dashicons dashicons-lock" style="font-size:12px;width:12px;height:12px;vertical-align:middle;margin-right:2px;"></span>' + (whatauthAdminData.i18n.delete || 'Eliminar') + '</button>';
-        }
+        let deleteBtn = '<button type="button" class="button button-small button-link-delete btn-delete-qr" data-id="' + qr.id + '">' + (whatauthAdminData.i18n.delete || 'Eliminar') + '</button>';
 
         // Resumen enriquecido de Auto-Reply
         let autoReplyBadge = '<span style="color:#888;">—</span>';
@@ -698,21 +693,15 @@
       } else {
         // Línea dedicada de WhatsApp
         $notice.slideUp(150);
-        if (isProAgency) {
-          $autoreplyCheck.prop('disabled', false);
-          self.toggleAutoReplyControls($autoreplyCheck.is(':checked'));
-        } else {
-          $autoreplyCheck.prop('checked', false).prop('disabled', true);
-          self.toggleAutoReplyControls(false);
-        }
+        $autoreplyCheck.prop('disabled', false);
+        self.toggleAutoReplyControls($autoreplyCheck.is(':checked'));
       }
       self.updatePreviewBubble($('#wa-field-autoreply-text').val());
       self.updateStudioQrPreview();
     },
 
     toggleAutoReplyControls: function (enabled) {
-      const isProAgency = Boolean(whatauthAdminData.isProAgency);
-      const canEdit = enabled && isProAgency;
+      const canEdit = Boolean(enabled);
 
       $('#wa-field-autoreply-text').prop('readonly', !canEdit);
       if (canEdit) {
@@ -1100,35 +1089,13 @@
         }
       }
 
-      // 2. Desbloquear o bloquear campos en la vista de Ajustes
-      if (isPro) {
-        $('.wa-plan-starter-view').hide();
-        $('.wa-plan-pro-view').show();
-        $('#whatauth-instruction-text').prop('readonly', false).removeAttr('style');
-        $('#whatauth-btn-text').prop('readonly', false).removeAttr('style');
-        $('#whatauth-btn-bg-color, #whatauth-btn-txt-color, #whatauth-custom-logo').prop('disabled', false);
-      } else {
-        $('.wa-plan-starter-view').show();
-        $('.wa-plan-pro-view').hide();
-        $('#whatauth-instruction-text').prop('readonly', true).css({ background: '#f3f4f6', color: '#6b7280', cursor: 'not-allowed' });
-        $('#whatauth-btn-text').prop('readonly', true).css({ background: '#f3f4f6', color: '#6b7280', cursor: 'not-allowed' });
-      }
-
-      // 3. Desbloquear pestañas y controles en el Modal Studio de QRs
-      if (isPro) {
-        $('.wa-tab-lock').hide();
-        $('.wa-studio-lock-banner').hide();
-        $('.wa-studio-pro-controls').css('display', 'flex');
-        $('#btn-upload-qr-logo').show();
-        $('#wa-field-qr-logo').prop('readonly', false).removeAttr('style');
-        $('#wa-field-qr-logo-margin, #wa-field-qr-logo-scale, #wa-field-qr-color-dots, #wa-field-qr-shape-dots, #wa-field-qr-ec-level, #wa-field-qr-color-corners, #wa-field-qr-shape-corners, #wa-field-qr-color-corner-dot, #wa-field-qr-shape-corner-dot, #wa-field-qr-color-bg').prop('disabled', false);
-      } else {
-        $('.wa-tab-lock').show();
-        $('.wa-studio-lock-banner').show();
-        $('.wa-studio-pro-controls').hide();
-        $('#wa-field-qr-logo').prop('readonly', true).css({ background: '#f3f4f6' });
-        $('#wa-field-qr-logo-margin, #wa-field-qr-logo-scale, #wa-field-qr-color-dots, #wa-field-qr-shape-dots, #wa-field-qr-ec-level, #wa-field-qr-color-corners, #wa-field-qr-shape-corners, #wa-field-qr-color-corner-dot, #wa-field-qr-shape-corner-dot, #wa-field-qr-color-bg').prop('disabled', true);
-      }
+      // 3. Controles en el Modal Studio de QRs
+      $('.wa-tab-lock').hide();
+      $('.wa-studio-lock-banner').hide();
+      $('.wa-studio-pro-controls').css('display', 'flex');
+      $('#btn-upload-qr-logo').show();
+      $('#wa-field-qr-logo').prop('readonly', false).removeAttr('style');
+      $('#wa-field-qr-logo-margin, #wa-field-qr-logo-scale, #wa-field-qr-color-dots, #wa-field-qr-shape-dots, #wa-field-qr-ec-level, #wa-field-qr-color-corners, #wa-field-qr-shape-corners, #wa-field-qr-color-corner-dot, #wa-field-qr-shape-corner-dot, #wa-field-qr-color-bg').prop('disabled', false);
     },
 
     testConnection: function () {
